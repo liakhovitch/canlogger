@@ -127,15 +127,22 @@ int main(void)
 
   // Set chip select low to indicate that we are ready to receive
   HAL_GPIO_WritePin(SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_RESET);
-  HAL_Delay(1);
-  // Receive data, one byte at a time
-  for(int i = 0; i < DAT_SIZE; i++){
-      HAL_StatusTypeDef recv_status = HAL_SPI_Receive(&hspi1, recv, 1, 100);
-      if( recv_status != HAL_OK ){
-          errcnt++;
-          break;
-      }
+
+  // Receive Data
+  uint8_t* recv_ptr = recv;
+  SPI1->CR1 |= SPI_CR1_SSI;
+  LL_SPI_SetMode(SPI1, LL_SPI_MODE_MASTER);
+  LL_SPI_Enable(SPI1);
+  for(uint32_t i = 0; i < DAT_SIZE; i++){
+      while(!LL_SPI_IsActiveFlag_RXNE(SPI1));
+      *recv_ptr = LL_SPI_ReceiveData8(SPI1);
+      recv_ptr++;
   }
+  // Wait for SPI peripheral to finish anything it's doing
+  while(LL_SPI_IsActiveFlag_BSY(SPI1));
+  LL_SPI_Disable(SPI1);
+  SPI1->CR1 &= ~(SPI_CR1_SSI);
+
   // Make sure the data is what it's supposed to be
   for(unsigned int i = 0; i < DAT_SIZE; i++){
       if(recv[i] != dat[i]){

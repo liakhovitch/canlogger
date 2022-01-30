@@ -114,7 +114,22 @@ int main(void)
 
   // Wait for first chip select to go low, indicating that master is ready to receive
   while(HAL_GPIO_ReadPin(SPI1_CS_GPIO_Port, SPI1_CS_Pin));
-  HAL_SPI_Transmit(&hspi1, dat, DAT_SIZE, HAL_MAX_DELAY);
+
+  // Transmit Data
+  uint8_t* tx_ptr = dat;
+  SPI1->CR1 |= SPI_CR1_SSI;
+  LL_SPI_SetMode(SPI1, LL_SPI_MODE_SLAVE);
+  LL_SPI_Enable(SPI1);
+  for(uint32_t i = 0; i < DAT_SIZE; i++){
+      while(!LL_SPI_IsActiveFlag_TXE(SPI1));
+      LL_SPI_TransmitData8(SPI1, *tx_ptr);
+      tx_ptr++;
+  }
+  // Wait for SPI peripheral to finish anything it's doing
+  while(LL_SPI_IsActiveFlag_BSY(SPI1));
+  LL_SPI_Disable(SPI1);
+  SPI1->CR1 &= ~(SPI_CR1_SSI);
+
 
   // Light up the LED to indicate that transmission is complete
   HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);

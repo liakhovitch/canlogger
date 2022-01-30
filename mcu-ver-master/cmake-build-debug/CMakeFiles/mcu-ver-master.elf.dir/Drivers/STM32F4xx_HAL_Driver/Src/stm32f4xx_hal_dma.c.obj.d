@@ -35,5 +35,4 @@ CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h \
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h \
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h \
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h

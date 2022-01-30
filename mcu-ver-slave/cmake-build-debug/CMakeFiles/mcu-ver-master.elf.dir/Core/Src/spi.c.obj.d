@@ -37,5 +37,14 @@ CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj: \
  /home/liakhova/Documents/classes/capstone/mcu-ver-slave/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  /home/liakhova/Documents/classes/capstone/mcu-ver-slave/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h \
  /home/liakhova/Documents/classes/capstone/mcu-ver-slave/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h \
- /home/liakhova/Documents/classes/capstone/mcu-ver-slave/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h \
- /home/liakhova/Documents/classes/capstone/mcu-ver-slave/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-slave/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
+ /home/liakhova/Documents/classes/capstone/mcu-ver-slave/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_spi.h \
+ /home/liakhova/Documents/classes/capstone/mcu-ver-slave/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_bus.h \
+ /home/liakhova/Documents/classes/capstone/mcu-ver-slave/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_cortex.h \
+ /home/liakhova/Documents/classes/capstone/mcu-ver-slave/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_rcc.h \
+ /home/liakhova/Documents/classes/capstone/mcu-ver-slave/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_system.h \
+ /home/liakhova/Documents/classes/capstone/mcu-ver-slave/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_utils.h \
+ /home/liakhova/Documents/classes/capstone/mcu-ver-slave/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_pwr.h \
+ /home/liakhova/Documents/classes/capstone/mcu-ver-slave/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_gpio.h \
+ /home/liakhova/Documents/classes/capstone/mcu-ver-slave/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dma.h \
+ /home/liakhova/Documents/classes/capstone/mcu-ver-slave/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_exti.h

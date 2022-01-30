@@ -40,8 +40,17 @@ CMakeFiles/mcu-ver-master.elf.dir/Core/Src/gpio.c.obj
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_spi.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_bus.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_cortex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_rcc.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_system.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_utils.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_pwr.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_gpio.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dma.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_exti.h
 
 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Core/Src/main.c
@@ -81,8 +90,17 @@ CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_spi.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_bus.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_cortex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_rcc.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_system.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_utils.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_pwr.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_gpio.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dma.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_exti.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Core/Inc/rtc.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Core/Inc/main.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Core/Inc/spi.h
@@ -128,8 +146,17 @@ CMakeFiles/mcu-ver-master.elf.dir/Core/Src/rtc.c.obj
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_spi.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_bus.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_cortex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_rcc.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_system.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_utils.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_pwr.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_gpio.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dma.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_exti.h
 
 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Core/Src/spi.c
@@ -170,8 +197,17 @@ CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_spi.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_bus.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_cortex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_rcc.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_system.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_utils.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_pwr.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_gpio.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dma.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_exti.h
 
 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Core/Src/stm32f4xx_hal_msp.c
@@ -211,8 +247,17 @@ CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_spi.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_bus.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_cortex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_rcc.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_system.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_utils.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_pwr.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_gpio.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dma.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_exti.h
 
 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Core/Src/stm32f4xx_it.c
@@ -252,8 +297,17 @@ CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_spi.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_bus.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_cortex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_rcc.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_system.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_utils.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_pwr.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_gpio.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dma.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_exti.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Core/Inc/stm32f4xx_it.h
 
 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/sysmem.c.obj
@@ -314,7 +368,6 @@ CMakeFiles/mcu-ver-master.elf.dir/Core/Src/system_stm32f4xx.c.obj
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 
 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/usart.c.obj
@@ -356,8 +409,17 @@ CMakeFiles/mcu-ver-master.elf.dir/Core/Src/usart.c.obj
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_spi.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_bus.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_cortex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_rcc.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_system.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_utils.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_pwr.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_gpio.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dma.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_exti.h
 
 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c
@@ -396,7 +458,6 @@ CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 
 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
@@ -436,7 +497,6 @@ CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 
 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
@@ -476,7 +536,6 @@ CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 
 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj
@@ -516,7 +575,6 @@ CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 
 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj
@@ -556,7 +614,6 @@ CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 
 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
@@ -596,7 +653,6 @@ CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 
 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
@@ -636,7 +692,6 @@ CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 
 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj
@@ -676,7 +731,6 @@ CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 
 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
@@ -716,7 +770,6 @@ CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 
 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj
@@ -756,7 +809,6 @@ CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 
 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
@@ -796,7 +848,6 @@ CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 
 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
@@ -836,7 +887,6 @@ CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 
 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
@@ -876,7 +926,6 @@ CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 
 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
@@ -916,7 +965,6 @@ CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 
 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.c.obj
@@ -956,47 +1004,6 @@ CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
-
-CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Core/Inc/stm32f4xx_hal_conf.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Include/core_cm4.h
- /usr/lib64/gcc/arm-none-eabi/11/include/stdint.h
- /usr/arm-none-eabi/include/stdint.h
- /usr/arm-none-eabi/include/machine/_default_types.h
- /usr/arm-none-eabi/include/sys/features.h
- /usr/arm-none-eabi/include/_newlib_version.h
- /usr/arm-none-eabi/include/sys/_intsup.h
- /usr/arm-none-eabi/include/sys/_stdint.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Include/cmsis_version.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Include/cmsis_compiler.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Include/cmsis_gcc.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Include/mpu_armv7.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
- /usr/lib64/gcc/arm-none-eabi/11/include/stddef.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 
 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
@@ -1036,7 +1043,6 @@ CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 
 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
@@ -1076,7 +1082,6 @@ CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 
 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
@@ -1116,6 +1121,252 @@ CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
- /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
  /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+
+CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c.obj
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dma.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Include/core_cm4.h
+ /usr/lib64/gcc/arm-none-eabi/11/include/stdint.h
+ /usr/arm-none-eabi/include/stdint.h
+ /usr/arm-none-eabi/include/machine/_default_types.h
+ /usr/arm-none-eabi/include/sys/features.h
+ /usr/arm-none-eabi/include/_newlib_version.h
+ /usr/arm-none-eabi/include/sys/_intsup.h
+ /usr/arm-none-eabi/include/sys/_stdint.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Include/cmsis_version.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Include/cmsis_compiler.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Include/cmsis_gcc.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Include/mpu_armv7.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Core/Inc/stm32f4xx_hal_conf.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
+ /usr/lib64/gcc/arm-none-eabi/11/include/stddef.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_bus.h
+
+CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c.obj
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_exti.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Include/core_cm4.h
+ /usr/lib64/gcc/arm-none-eabi/11/include/stdint.h
+ /usr/arm-none-eabi/include/stdint.h
+ /usr/arm-none-eabi/include/machine/_default_types.h
+ /usr/arm-none-eabi/include/sys/features.h
+ /usr/arm-none-eabi/include/_newlib_version.h
+ /usr/arm-none-eabi/include/sys/_intsup.h
+ /usr/arm-none-eabi/include/sys/_stdint.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Include/cmsis_version.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Include/cmsis_compiler.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Include/cmsis_gcc.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Include/mpu_armv7.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Core/Inc/stm32f4xx_hal_conf.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
+ /usr/lib64/gcc/arm-none-eabi/11/include/stddef.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+
+CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c.obj
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_gpio.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Include/core_cm4.h
+ /usr/lib64/gcc/arm-none-eabi/11/include/stdint.h
+ /usr/arm-none-eabi/include/stdint.h
+ /usr/arm-none-eabi/include/machine/_default_types.h
+ /usr/arm-none-eabi/include/sys/features.h
+ /usr/arm-none-eabi/include/_newlib_version.h
+ /usr/arm-none-eabi/include/sys/_intsup.h
+ /usr/arm-none-eabi/include/sys/_stdint.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Include/cmsis_version.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Include/cmsis_compiler.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Include/cmsis_gcc.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Include/mpu_armv7.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Core/Inc/stm32f4xx_hal_conf.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
+ /usr/lib64/gcc/arm-none-eabi/11/include/stddef.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_bus.h
+
+CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c.obj
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_rcc.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Include/core_cm4.h
+ /usr/lib64/gcc/arm-none-eabi/11/include/stdint.h
+ /usr/arm-none-eabi/include/stdint.h
+ /usr/arm-none-eabi/include/machine/_default_types.h
+ /usr/arm-none-eabi/include/sys/features.h
+ /usr/arm-none-eabi/include/_newlib_version.h
+ /usr/arm-none-eabi/include/sys/_intsup.h
+ /usr/arm-none-eabi/include/sys/_stdint.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Include/cmsis_version.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Include/cmsis_compiler.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Include/cmsis_gcc.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Include/mpu_armv7.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Core/Inc/stm32f4xx_hal_conf.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
+ /usr/lib64/gcc/arm-none-eabi/11/include/stddef.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+
+CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.c.obj
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.c
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_spi.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Include/core_cm4.h
+ /usr/lib64/gcc/arm-none-eabi/11/include/stdint.h
+ /usr/arm-none-eabi/include/stdint.h
+ /usr/arm-none-eabi/include/machine/_default_types.h
+ /usr/arm-none-eabi/include/sys/features.h
+ /usr/arm-none-eabi/include/_newlib_version.h
+ /usr/arm-none-eabi/include/sys/_intsup.h
+ /usr/arm-none-eabi/include/sys/_stdint.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Include/cmsis_version.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Include/cmsis_compiler.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Include/cmsis_gcc.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Include/mpu_armv7.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Core/Inc/stm32f4xx_hal_conf.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
+ /usr/lib64/gcc/arm-none-eabi/11/include/stddef.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_bus.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_rcc.h
+
+CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c.obj
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_utils.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Include/core_cm4.h
+ /usr/lib64/gcc/arm-none-eabi/11/include/stdint.h
+ /usr/arm-none-eabi/include/stdint.h
+ /usr/arm-none-eabi/include/machine/_default_types.h
+ /usr/arm-none-eabi/include/sys/features.h
+ /usr/arm-none-eabi/include/_newlib_version.h
+ /usr/arm-none-eabi/include/sys/_intsup.h
+ /usr/arm-none-eabi/include/sys/_stdint.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Include/cmsis_version.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Include/cmsis_compiler.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Include/cmsis_gcc.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Include/mpu_armv7.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Core/Inc/stm32f4xx_hal_conf.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
+ /usr/lib64/gcc/arm-none-eabi/11/include/stddef.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_rcc.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_system.h
+ /home/liakhova/Documents/classes/capstone/mcu-ver-master/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_pwr.h
 

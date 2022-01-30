@@ -81,12 +81,12 @@ clean: CMakeFiles/mcu-ver-master.elf.dir/clean
 CMakeFiles/mcu-ver-master.elf.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mcu-ver-master.elf.dir/build.make CMakeFiles/mcu-ver-master.elf.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mcu-ver-master.elf.dir/build.make CMakeFiles/mcu-ver-master.elf.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/liakhova/Documents/classes/capstone/mcu-ver-slave/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30 "Built target mcu-ver-master.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/liakhova/Documents/classes/capstone/mcu-ver-slave/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35 "Built target mcu-ver-master.elf"
 .PHONY : CMakeFiles/mcu-ver-master.elf.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/mcu-ver-master.elf.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/liakhova/Documents/classes/capstone/mcu-ver-slave/cmake-build-debug/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/liakhova/Documents/classes/capstone/mcu-ver-slave/cmake-build-debug/CMakeFiles 35
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/mcu-ver-master.elf.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/liakhova/Documents/classes/capstone/mcu-ver-slave/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/mcu-ver-master.elf.dir/rule
