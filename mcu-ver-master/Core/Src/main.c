@@ -36,6 +36,9 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "EndlessLoop"
+#define DAT_SIZE 10000
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -57,7 +60,14 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+uint8_t dumb_prng(){
+    static uint8_t prev1 = 220;
+    static uint8_t prev2 = 6;
+    uint8_t ret = prev1 + prev2;
+    prev1 = prev2;
+    prev2 = ret;
+    return ret;
+}
 /* USER CODE END 0 */
 
 /**
@@ -94,6 +104,10 @@ int main(void)
   MX_SPI3_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
+  uint8_t dat[DAT_SIZE];
+  for(unsigned int i = 0; i < DAT_SIZE; i++){
+      dat[i] = dumb_prng();
+  }
 
   /* USER CODE END 2 */
 
@@ -101,10 +115,16 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+      // LED ON
+      HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET);
+      HAL_Delay(100);
+      // LED OFF
+      HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
+      HAL_Delay(100);
+  }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-  }
   /* USER CODE END 3 */
 }
 
@@ -193,3 +213,5 @@ void assert_failed(uint8_t *file, uint32_t line)
 #endif /* USE_FULL_ASSERT */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+
+#pragma clang diagnostic pop

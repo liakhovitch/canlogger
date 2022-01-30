@@ -54,7 +54,7 @@ extern "C" {
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
-
+uint8_t dumb_prng();
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
