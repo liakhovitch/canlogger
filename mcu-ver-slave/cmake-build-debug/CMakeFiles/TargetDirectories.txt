@@ -1,0 +1,3 @@
+/home/liakhova/Documents/classes/capstone/mcu-ver-slave/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/liakhova/Documents/classes/capstone/mcu-ver-slave/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/liakhova/Documents/classes/capstone/mcu-ver-slave/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir

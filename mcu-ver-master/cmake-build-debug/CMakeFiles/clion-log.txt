@@ -1,0 +1,5 @@
+/home/liakhova/bin/clion-2019.3.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/liakhova/Documents/classes/capstone/mcu-ver-master
+-- Minimal optimization, debug info included
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/liakhova/Documents/classes/capstone/mcu-ver-master/cmake-build-debug

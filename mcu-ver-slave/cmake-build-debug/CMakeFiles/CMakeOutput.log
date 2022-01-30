@@ -1,0 +1,272 @@
+The target system is: Generic - 1 - 
+The host system is: Linux - 5.16.1-1-default - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/arm-none-eabi-gcc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/liakhova/Documents/classes/capstone/mcu-ver-slave/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /usr/bin/arm-none-eabi-g++ 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/home/liakhova/Documents/classes/capstone/mcu-ver-slave/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdCXX/a.out"
+
+Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+arm-none-eabi-gcc (SUSE Linux) 11.2.1 20220103 [revision d4a1d3c4b377f1d4acb34fe1b55b5088a3f293f6]
+Copyright (C) 2021 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/liakhova/Documents/classes/capstone/mcu-ver-slave/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_33d99/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_33d99.dir/build.make CMakeFiles/cmTC_33d99.dir/build
+gmake[1]: Entering directory '/home/liakhova/Documents/classes/capstone/mcu-ver-slave/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_33d99.dir/CMakeCCompilerABI.c.obj
+/usr/bin/arm-none-eabi-gcc   -v -o CMakeFiles/cmTC_33d99.dir/CMakeCCompilerABI.c.obj -c /home/liakhova/bin/clion-2019.3.4/bin/cmake/linux/share/cmake-3.21/Modules/CMakeCCompilerABI.c
+Using built-in specs.
+COLLECT_GCC=/usr/bin/arm-none-eabi-gcc
+Target: arm-none-eabi
+Configured with: ../configure --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man --libdir=/usr/lib64 --libexecdir=/usr/lib64 --enable-languages=c,c++ --enable-checking=release --disable-werror --with-gxx-include-dir=/usr/include/c++/11 --enable-ssp --disable-libssp --disable-libvtv --enable-cet=auto --disable-libcc1 --disable-plugin --with-bugurl=https://bugs.opensuse.org/ --with-pkgversion='SUSE Linux' --with-slibdir=/usr/arm-suse-linux-gnueabi/sys-root/lib64 --with-system-zlib --enable-libstdcxx-allocator=new --disable-libstdcxx-pch --enable-version-specific-runtime-libs --with-gcc-major-version-only --enable-linux-futex --enable-gnu-indirect-function --program-suffix=-11 --program-prefix=arm-none-eabi- --target=arm-none-eabi --disable-nls --with-sysroot=/usr/arm-suse-linux-gnueabi/sys-root --with-build-sysroot=/usr/arm-suse-linux-gnueabi/sys-root --with-build-time-tools=/usr/arm-suse-linux-gnueabi/bin --with-newlib --enable-multilib --with-multilib-list=aprofile,rmprofile --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-shared --disable-threads --disable-tls --disable-libsanitizer --build=x86_64-suse-linux --host=x86_64-suse-linux
+Thread model: single
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.2.1 20220103 [revision d4a1d3c4b377f1d4acb34fe1b55b5088a3f293f6] (SUSE Linux) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_33d99.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_33d99.dir/'
+ /usr/lib64/gcc/arm-none-eabi/11/cc1 -quiet -v -D__USES_INITFINI__ /home/liakhova/bin/clion-2019.3.4/bin/cmake/linux/share/cmake-3.21/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_33d99.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o /tmp/cc4IpWrk.s
+GNU C17 (SUSE Linux) version 11.2.1 20220103 [revision d4a1d3c4b377f1d4acb34fe1b55b5088a3f293f6] (arm-none-eabi)
+	compiled by GNU C version 11.2.1 20220103 [revision d4a1d3c4b377f1d4acb34fe1b55b5088a3f293f6], GMP version 6.2.1, MPFR version 4.1.0-p7, MPC version 1.2.1, isl version isl-0.24-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/usr/arm-suse-linux-gnueabi/sys-root/usr/local/include"
+ignoring nonexistent directory "/usr/arm-suse-linux-gnueabi/sys-root/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib64/gcc/arm-none-eabi/11/include
+ /usr/lib64/gcc/arm-none-eabi/11/include-fixed
+ /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/include
+End of search list.
+GNU C17 (SUSE Linux) version 11.2.1 20220103 [revision d4a1d3c4b377f1d4acb34fe1b55b5088a3f293f6] (arm-none-eabi)
+	compiled by GNU C version 11.2.1 20220103 [revision d4a1d3c4b377f1d4acb34fe1b55b5088a3f293f6], GMP version 6.2.1, MPFR version 4.1.0-p7, MPC version 1.2.1, isl version isl-0.24-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 00000000000000000000000000000000
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_33d99.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_33d99.dir/'
+ /usr/lib64/gcc/arm-none-eabi/11/as -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_33d99.dir/CMakeCCompilerABI.c.obj /tmp/cc4IpWrk.s
+COMPILER_PATH=/usr/lib64/gcc/arm-none-eabi/11/:/usr/lib64/gcc/arm-none-eabi/11/:/usr/lib64/gcc/arm-none-eabi/:/usr/lib64/gcc/arm-none-eabi/11/:/usr/lib64/gcc/arm-none-eabi/
+LIBRARY_PATH=/usr/lib64/gcc/arm-none-eabi/11/:/usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_33d99.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_33d99.dir/CMakeCCompilerABI.c.'
+Linking C static library libcmTC_33d99.a
+/home/liakhova/bin/clion-2019.3.4/bin/cmake/linux/bin/cmake -P CMakeFiles/cmTC_33d99.dir/cmake_clean_target.cmake
+/home/liakhova/bin/clion-2019.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_33d99.dir/link.txt --verbose=1
+arm-none-eabi-ar qc libcmTC_33d99.a CMakeFiles/cmTC_33d99.dir/CMakeCCompilerABI.c.obj
+/usr/bin/arm-none-eabi-ranlib libcmTC_33d99.a
+gmake[1]: Leaving directory '/home/liakhova/Documents/classes/capstone/mcu-ver-slave/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/usr/lib64/gcc/arm-none-eabi/11/include]
+    add: [/usr/lib64/gcc/arm-none-eabi/11/include-fixed]
+    add: [/usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/include]
+  end of search list found
+  collapse include dir [/usr/lib64/gcc/arm-none-eabi/11/include] ==> [/usr/lib64/gcc/arm-none-eabi/11/include]
+  collapse include dir [/usr/lib64/gcc/arm-none-eabi/11/include-fixed] ==> [/usr/lib64/gcc/arm-none-eabi/11/include-fixed]
+  collapse include dir [/usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/include] ==> [/usr/arm-none-eabi/include]
+  implicit include dirs: [/usr/lib64/gcc/arm-none-eabi/11/include;/usr/lib64/gcc/arm-none-eabi/11/include-fixed;/usr/arm-none-eabi/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(arm-none-eabi-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/liakhova/Documents/classes/capstone/mcu-ver-slave/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_33d99/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_33d99.dir/build.make CMakeFiles/cmTC_33d99.dir/build]
+  ignore line: [gmake[1]: Entering directory '/home/liakhova/Documents/classes/capstone/mcu-ver-slave/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_33d99.dir/CMakeCCompilerABI.c.obj]
+  ignore line: [/usr/bin/arm-none-eabi-gcc   -v -o CMakeFiles/cmTC_33d99.dir/CMakeCCompilerABI.c.obj -c /home/liakhova/bin/clion-2019.3.4/bin/cmake/linux/share/cmake-3.21/Modules/CMakeCCompilerABI.c]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/arm-none-eabi-gcc]
+  ignore line: [Target: arm-none-eabi]
+  ignore line: [Configured with: ../configure --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man --libdir=/usr/lib64 --libexecdir=/usr/lib64 --enable-languages=c c++ --enable-checking=release --disable-werror --with-gxx-include-dir=/usr/include/c++/11 --enable-ssp --disable-libssp --disable-libvtv --enable-cet=auto --disable-libcc1 --disable-plugin --with-bugurl=https://bugs.opensuse.org/ --with-pkgversion='SUSE Linux' --with-slibdir=/usr/arm-suse-linux-gnueabi/sys-root/lib64 --with-system-zlib --enable-libstdcxx-allocator=new --disable-libstdcxx-pch --enable-version-specific-runtime-libs --with-gcc-major-version-only --enable-linux-futex --enable-gnu-indirect-function --program-suffix=-11 --program-prefix=arm-none-eabi- --target=arm-none-eabi --disable-nls --with-sysroot=/usr/arm-suse-linux-gnueabi/sys-root --with-build-sysroot=/usr/arm-suse-linux-gnueabi/sys-root --with-build-time-tools=/usr/arm-suse-linux-gnueabi/bin --with-newlib --enable-multilib --with-multilib-list=aprofile rmprofile --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-shared --disable-threads --disable-tls --disable-libsanitizer --build=x86_64-suse-linux --host=x86_64-suse-linux]
+  ignore line: [Thread model: single]
+  ignore line: [Supported LTO compression algorithms: zlib zstd]
+  ignore line: [gcc version 11.2.1 20220103 [revision d4a1d3c4b377f1d4acb34fe1b55b5088a3f293f6] (SUSE Linux) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_33d99.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_33d99.dir/']
+  ignore line: [ /usr/lib64/gcc/arm-none-eabi/11/cc1 -quiet -v -D__USES_INITFINI__ /home/liakhova/bin/clion-2019.3.4/bin/cmake/linux/share/cmake-3.21/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_33d99.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o /tmp/cc4IpWrk.s]
+  ignore line: [GNU C17 (SUSE Linux) version 11.2.1 20220103 [revision d4a1d3c4b377f1d4acb34fe1b55b5088a3f293f6] (arm-none-eabi)]
+  ignore line: [	compiled by GNU C version 11.2.1 20220103 [revision d4a1d3c4b377f1d4acb34fe1b55b5088a3f293f6]  GMP version 6.2.1  MPFR version 4.1.0-p7  MPC version 1.2.1  isl version isl-0.24-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/usr/arm-suse-linux-gnueabi/sys-root/usr/local/include"]
+  ignore line: [ignoring nonexistent directory "/usr/arm-suse-linux-gnueabi/sys-root/usr/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/lib64/gcc/arm-none-eabi/11/include]
+  ignore line: [ /usr/lib64/gcc/arm-none-eabi/11/include-fixed]
+  ignore line: [ /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C17 (SUSE Linux) version 11.2.1 20220103 [revision d4a1d3c4b377f1d4acb34fe1b55b5088a3f293f6] (arm-none-eabi)]
+  ignore line: [	compiled by GNU C version 11.2.1 20220103 [revision d4a1d3c4b377f1d4acb34fe1b55b5088a3f293f6]  GMP version 6.2.1  MPFR version 4.1.0-p7  MPC version 1.2.1  isl version isl-0.24-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: 00000000000000000000000000000000]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_33d99.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_33d99.dir/']
+  ignore line: [ /usr/lib64/gcc/arm-none-eabi/11/as -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_33d99.dir/CMakeCCompilerABI.c.obj /tmp/cc4IpWrk.s]
+  ignore line: [COMPILER_PATH=/usr/lib64/gcc/arm-none-eabi/11/:/usr/lib64/gcc/arm-none-eabi/11/:/usr/lib64/gcc/arm-none-eabi/:/usr/lib64/gcc/arm-none-eabi/11/:/usr/lib64/gcc/arm-none-eabi/]
+  ignore line: [LIBRARY_PATH=/usr/lib64/gcc/arm-none-eabi/11/:/usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_33d99.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_33d99.dir/CMakeCCompilerABI.c.']
+  ignore line: [Linking C static library libcmTC_33d99.a]
+  ignore line: [/home/liakhova/bin/clion-2019.3.4/bin/cmake/linux/bin/cmake -P CMakeFiles/cmTC_33d99.dir/cmake_clean_target.cmake]
+  ignore line: [/home/liakhova/bin/clion-2019.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_33d99.dir/link.txt --verbose=1]
+  ignore line: [arm-none-eabi-ar qc libcmTC_33d99.a CMakeFiles/cmTC_33d99.dir/CMakeCCompilerABI.c.obj]
+  ignore line: [/usr/bin/arm-none-eabi-ranlib libcmTC_33d99.a]
+  ignore line: [gmake[1]: Leaving directory '/home/liakhova/Documents/classes/capstone/mcu-ver-slave/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: []
+  ignore line: []
+  implicit libs: []
+  implicit objs: []
+  implicit dirs: []
+  implicit fwks: []
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/liakhova/Documents/classes/capstone/mcu-ver-slave/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_5afdb/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_5afdb.dir/build.make CMakeFiles/cmTC_5afdb.dir/build
+gmake[1]: Entering directory '/home/liakhova/Documents/classes/capstone/mcu-ver-slave/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_5afdb.dir/CMakeCXXCompilerABI.cpp.obj
+/usr/bin/arm-none-eabi-g++   -v -o CMakeFiles/cmTC_5afdb.dir/CMakeCXXCompilerABI.cpp.obj -c /home/liakhova/bin/clion-2019.3.4/bin/cmake/linux/share/cmake-3.21/Modules/CMakeCXXCompilerABI.cpp
+Using built-in specs.
+COLLECT_GCC=/usr/bin/arm-none-eabi-g++
+Target: arm-none-eabi
+Configured with: ../configure --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man --libdir=/usr/lib64 --libexecdir=/usr/lib64 --enable-languages=c,c++ --enable-checking=release --disable-werror --with-gxx-include-dir=/usr/include/c++/11 --enable-ssp --disable-libssp --disable-libvtv --enable-cet=auto --disable-libcc1 --disable-plugin --with-bugurl=https://bugs.opensuse.org/ --with-pkgversion='SUSE Linux' --with-slibdir=/usr/arm-suse-linux-gnueabi/sys-root/lib64 --with-system-zlib --enable-libstdcxx-allocator=new --disable-libstdcxx-pch --enable-version-specific-runtime-libs --with-gcc-major-version-only --enable-linux-futex --enable-gnu-indirect-function --program-suffix=-11 --program-prefix=arm-none-eabi- --target=arm-none-eabi --disable-nls --with-sysroot=/usr/arm-suse-linux-gnueabi/sys-root --with-build-sysroot=/usr/arm-suse-linux-gnueabi/sys-root --with-build-time-tools=/usr/arm-suse-linux-gnueabi/bin --with-newlib --enable-multilib --with-multilib-list=aprofile,rmprofile --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-shared --disable-threads --disable-tls --disable-libsanitizer --build=x86_64-suse-linux --host=x86_64-suse-linux
+Thread model: single
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.2.1 20220103 [revision d4a1d3c4b377f1d4acb34fe1b55b5088a3f293f6] (SUSE Linux) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5afdb.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_5afdb.dir/'
+ /usr/lib64/gcc/arm-none-eabi/11/cc1plus -quiet -v -D__USES_INITFINI__ /home/liakhova/bin/clion-2019.3.4/bin/cmake/linux/share/cmake-3.21/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_5afdb.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o /tmp/cc2dWfXj.s
+GNU C++17 (SUSE Linux) version 11.2.1 20220103 [revision d4a1d3c4b377f1d4acb34fe1b55b5088a3f293f6] (arm-none-eabi)
+	compiled by GNU C version 11.2.1 20220103 [revision d4a1d3c4b377f1d4acb34fe1b55b5088a3f293f6], GMP version 6.2.1, MPFR version 4.1.0-p7, MPC version 1.2.1, isl version isl-0.24-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/usr/arm-suse-linux-gnueabi/sys-root/usr/local/include"
+ignoring nonexistent directory "/usr/arm-suse-linux-gnueabi/sys-root/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/include/c++/11
+ /usr/include/c++/11/arm-none-eabi
+ /usr/include/c++/11/backward
+ /usr/lib64/gcc/arm-none-eabi/11/include
+ /usr/lib64/gcc/arm-none-eabi/11/include-fixed
+ /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/include
+End of search list.
+GNU C++17 (SUSE Linux) version 11.2.1 20220103 [revision d4a1d3c4b377f1d4acb34fe1b55b5088a3f293f6] (arm-none-eabi)
+	compiled by GNU C version 11.2.1 20220103 [revision d4a1d3c4b377f1d4acb34fe1b55b5088a3f293f6], GMP version 6.2.1, MPFR version 4.1.0-p7, MPC version 1.2.1, isl version isl-0.24-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 00000000000000000000000000000000
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5afdb.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_5afdb.dir/'
+ /usr/lib64/gcc/arm-none-eabi/11/as -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_5afdb.dir/CMakeCXXCompilerABI.cpp.obj /tmp/cc2dWfXj.s
+COMPILER_PATH=/usr/lib64/gcc/arm-none-eabi/11/:/usr/lib64/gcc/arm-none-eabi/11/:/usr/lib64/gcc/arm-none-eabi/:/usr/lib64/gcc/arm-none-eabi/11/:/usr/lib64/gcc/arm-none-eabi/
+LIBRARY_PATH=/usr/lib64/gcc/arm-none-eabi/11/:/usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5afdb.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_5afdb.dir/CMakeCXXCompilerABI.cpp.'
+Linking CXX static library libcmTC_5afdb.a
+/home/liakhova/bin/clion-2019.3.4/bin/cmake/linux/bin/cmake -P CMakeFiles/cmTC_5afdb.dir/cmake_clean_target.cmake
+/home/liakhova/bin/clion-2019.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5afdb.dir/link.txt --verbose=1
+arm-none-eabi-ar qc libcmTC_5afdb.a CMakeFiles/cmTC_5afdb.dir/CMakeCXXCompilerABI.cpp.obj
+/usr/bin/arm-none-eabi-ranlib libcmTC_5afdb.a
+gmake[1]: Leaving directory '/home/liakhova/Documents/classes/capstone/mcu-ver-slave/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+
+Parsed CXX implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/usr/include/c++/11]
+    add: [/usr/include/c++/11/arm-none-eabi]
+    add: [/usr/include/c++/11/backward]
+    add: [/usr/lib64/gcc/arm-none-eabi/11/include]
+    add: [/usr/lib64/gcc/arm-none-eabi/11/include-fixed]
+    add: [/usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/include]
+  end of search list found
+  collapse include dir [/usr/include/c++/11] ==> [/usr/include/c++/11]
+  collapse include dir [/usr/include/c++/11/arm-none-eabi] ==> [/usr/include/c++/11/arm-none-eabi]
+  collapse include dir [/usr/include/c++/11/backward] ==> [/usr/include/c++/11/backward]
+  collapse include dir [/usr/lib64/gcc/arm-none-eabi/11/include] ==> [/usr/lib64/gcc/arm-none-eabi/11/include]
+  collapse include dir [/usr/lib64/gcc/arm-none-eabi/11/include-fixed] ==> [/usr/lib64/gcc/arm-none-eabi/11/include-fixed]
+  collapse include dir [/usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/include] ==> [/usr/arm-none-eabi/include]
+  implicit include dirs: [/usr/include/c++/11;/usr/include/c++/11/arm-none-eabi;/usr/include/c++/11/backward;/usr/lib64/gcc/arm-none-eabi/11/include;/usr/lib64/gcc/arm-none-eabi/11/include-fixed;/usr/arm-none-eabi/include]
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(arm-none-eabi-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/liakhova/Documents/classes/capstone/mcu-ver-slave/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_5afdb/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_5afdb.dir/build.make CMakeFiles/cmTC_5afdb.dir/build]
+  ignore line: [gmake[1]: Entering directory '/home/liakhova/Documents/classes/capstone/mcu-ver-slave/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_5afdb.dir/CMakeCXXCompilerABI.cpp.obj]
+  ignore line: [/usr/bin/arm-none-eabi-g++   -v -o CMakeFiles/cmTC_5afdb.dir/CMakeCXXCompilerABI.cpp.obj -c /home/liakhova/bin/clion-2019.3.4/bin/cmake/linux/share/cmake-3.21/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/arm-none-eabi-g++]
+  ignore line: [Target: arm-none-eabi]
+  ignore line: [Configured with: ../configure --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man --libdir=/usr/lib64 --libexecdir=/usr/lib64 --enable-languages=c c++ --enable-checking=release --disable-werror --with-gxx-include-dir=/usr/include/c++/11 --enable-ssp --disable-libssp --disable-libvtv --enable-cet=auto --disable-libcc1 --disable-plugin --with-bugurl=https://bugs.opensuse.org/ --with-pkgversion='SUSE Linux' --with-slibdir=/usr/arm-suse-linux-gnueabi/sys-root/lib64 --with-system-zlib --enable-libstdcxx-allocator=new --disable-libstdcxx-pch --enable-version-specific-runtime-libs --with-gcc-major-version-only --enable-linux-futex --enable-gnu-indirect-function --program-suffix=-11 --program-prefix=arm-none-eabi- --target=arm-none-eabi --disable-nls --with-sysroot=/usr/arm-suse-linux-gnueabi/sys-root --with-build-sysroot=/usr/arm-suse-linux-gnueabi/sys-root --with-build-time-tools=/usr/arm-suse-linux-gnueabi/bin --with-newlib --enable-multilib --with-multilib-list=aprofile rmprofile --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-shared --disable-threads --disable-tls --disable-libsanitizer --build=x86_64-suse-linux --host=x86_64-suse-linux]
+  ignore line: [Thread model: single]
+  ignore line: [Supported LTO compression algorithms: zlib zstd]
+  ignore line: [gcc version 11.2.1 20220103 [revision d4a1d3c4b377f1d4acb34fe1b55b5088a3f293f6] (SUSE Linux) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5afdb.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_5afdb.dir/']
+  ignore line: [ /usr/lib64/gcc/arm-none-eabi/11/cc1plus -quiet -v -D__USES_INITFINI__ /home/liakhova/bin/clion-2019.3.4/bin/cmake/linux/share/cmake-3.21/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_5afdb.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o /tmp/cc2dWfXj.s]
+  ignore line: [GNU C++17 (SUSE Linux) version 11.2.1 20220103 [revision d4a1d3c4b377f1d4acb34fe1b55b5088a3f293f6] (arm-none-eabi)]
+  ignore line: [	compiled by GNU C version 11.2.1 20220103 [revision d4a1d3c4b377f1d4acb34fe1b55b5088a3f293f6]  GMP version 6.2.1  MPFR version 4.1.0-p7  MPC version 1.2.1  isl version isl-0.24-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/usr/arm-suse-linux-gnueabi/sys-root/usr/local/include"]
+  ignore line: [ignoring nonexistent directory "/usr/arm-suse-linux-gnueabi/sys-root/usr/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/include/c++/11]
+  ignore line: [ /usr/include/c++/11/arm-none-eabi]
+  ignore line: [ /usr/include/c++/11/backward]
+  ignore line: [ /usr/lib64/gcc/arm-none-eabi/11/include]
+  ignore line: [ /usr/lib64/gcc/arm-none-eabi/11/include-fixed]
+  ignore line: [ /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C++17 (SUSE Linux) version 11.2.1 20220103 [revision d4a1d3c4b377f1d4acb34fe1b55b5088a3f293f6] (arm-none-eabi)]
+  ignore line: [	compiled by GNU C version 11.2.1 20220103 [revision d4a1d3c4b377f1d4acb34fe1b55b5088a3f293f6]  GMP version 6.2.1  MPFR version 4.1.0-p7  MPC version 1.2.1  isl version isl-0.24-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: 00000000000000000000000000000000]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5afdb.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_5afdb.dir/']
+  ignore line: [ /usr/lib64/gcc/arm-none-eabi/11/as -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_5afdb.dir/CMakeCXXCompilerABI.cpp.obj /tmp/cc2dWfXj.s]
+  ignore line: [COMPILER_PATH=/usr/lib64/gcc/arm-none-eabi/11/:/usr/lib64/gcc/arm-none-eabi/11/:/usr/lib64/gcc/arm-none-eabi/:/usr/lib64/gcc/arm-none-eabi/11/:/usr/lib64/gcc/arm-none-eabi/]
+  ignore line: [LIBRARY_PATH=/usr/lib64/gcc/arm-none-eabi/11/:/usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5afdb.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_5afdb.dir/CMakeCXXCompilerABI.cpp.']
+  ignore line: [Linking CXX static library libcmTC_5afdb.a]
+  ignore line: [/home/liakhova/bin/clion-2019.3.4/bin/cmake/linux/bin/cmake -P CMakeFiles/cmTC_5afdb.dir/cmake_clean_target.cmake]
+  ignore line: [/home/liakhova/bin/clion-2019.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5afdb.dir/link.txt --verbose=1]
+  ignore line: [arm-none-eabi-ar qc libcmTC_5afdb.a CMakeFiles/cmTC_5afdb.dir/CMakeCXXCompilerABI.cpp.obj]
+  ignore line: [/usr/bin/arm-none-eabi-ranlib libcmTC_5afdb.a]
+  ignore line: [gmake[1]: Leaving directory '/home/liakhova/Documents/classes/capstone/mcu-ver-slave/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: []
+  ignore line: []
+  implicit libs: []
+  implicit objs: []
+  implicit dirs: []
+  implicit fwks: []
+
+

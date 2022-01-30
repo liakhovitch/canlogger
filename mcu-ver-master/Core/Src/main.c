@@ -49,7 +49,6 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -68,6 +67,7 @@ uint8_t dumb_prng(){
     prev2 = ret;
     return ret;
 }
+
 /* USER CODE END 0 */
 
 /**
@@ -108,6 +108,48 @@ int main(void)
   for(unsigned int i = 0; i < DAT_SIZE; i++){
       dat[i] = dumb_prng();
   }
+  // Data receive buffer
+  uint8_t recv[DAT_SIZE];
+
+  // Initially set LED low
+  HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_SET);
+  // Initially set chip selects high (inactive)
+  HAL_GPIO_WritePin(SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(SPI2_CS_GPIO_Port, SPI2_CS_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(SPI3_CS_GPIO_Port, SPI3_CS_Pin, GPIO_PIN_SET);
+
+
+  // Variable for counting the number of failed tests
+  uint8_t errcnt = 0;
+
+  // Wait for button press
+  while(HAL_GPIO_ReadPin(KEY_GPIO_Port, KEY_Pin));
+
+  // Set chip select low to indicate that we are ready to receive
+  HAL_GPIO_WritePin(SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_RESET);
+  HAL_Delay(1);
+  // Receive data, one byte at a time
+  for(int i = 0; i < DAT_SIZE; i++){
+      HAL_StatusTypeDef recv_status = HAL_SPI_Receive(&hspi1, recv, 1, 100);
+      if( recv_status != HAL_OK ){
+          errcnt++;
+          break;
+      }
+  }
+  // Make sure the data is what it's supposed to be
+  for(unsigned int i = 0; i < DAT_SIZE; i++){
+      if(recv[i] != dat[i]){
+          errcnt++;
+          break;
+      }
+  }
+  // Set chip select high again to indicate that the transaction is over
+  HAL_GPIO_WritePin(SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_SET);
+
+  // Light up the LED if all tests passed
+  if(errcnt == 0){
+      HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
+  }
 
   /* USER CODE END 2 */
 
@@ -115,12 +157,12 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-      // LED ON
+      /*// LED ON
       HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET);
       HAL_Delay(100);
       // LED OFF
       HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
-      HAL_Delay(100);
+      HAL_Delay(100);*/
   }
     /* USER CODE END WHILE */
 
@@ -150,9 +192,9 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.LSEState = RCC_LSE_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
-  RCC_OscInitStruct.PLL.PLLM = 16;
-  RCC_OscInitStruct.PLL.PLLN = 192;
-  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV6;
+  RCC_OscInitStruct.PLL.PLLM = 20;
+  RCC_OscInitStruct.PLL.PLLN = 128;
+  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV4;
   RCC_OscInitStruct.PLL.PLLQ = 4;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
@@ -165,7 +207,7 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
-  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;
 
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
   {
@@ -213,5 +255,3 @@ void assert_failed(uint8_t *file, uint32_t line)
 #endif /* USE_FULL_ASSERT */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
-
-#pragma clang diagnostic pop
