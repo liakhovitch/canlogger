@@ -10,60 +10,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9be2241-c434-4c48-889c-99f975948821" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-806b2d14e1d97ad62004.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/.cmake/api/v1/reply/index-2022-01-30T22-13-59-0987.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-1e6ed0f10c16ca905f9b.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-921e65e16809e3c5f865.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2022-01-30T20-14-47-0459.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-mcu-ver-master.elf-Debug-3f2e95eecf053be1d38d.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c.obj.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c.obj.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c.obj.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c.obj.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.c.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.c.obj.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c.obj.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/compiler_depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/depend.internal" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/.cmake/api/v1/reply/index-2022-01-31T03-38-26-0967.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2022-01-31T03-39-44-0026.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mcu-ver-master/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../mcu-ver-master/Core/Src/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mcu-ver-master/Core/Src/spi.c" beforeDir="false" afterPath="$PROJECT_DIR$/../mcu-ver-master/Core/Src/spi.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-eac2a42f61806a9bbf8b.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/.cmake/api/v1/reply/index-2022-01-30T18-34-55-0116.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/.cmake/api/v1/reply/index-2022-01-30T22-13-59-0987.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/compiler_depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mcu-ver-master/mcu-ver-master.ioc" beforeDir="false" afterPath="$PROJECT_DIR$/../mcu-ver-master/mcu-ver-master.ioc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/spi.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/spi.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2022-01-30T20-14-47-0459.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/flags.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/mcu-ver-master.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/mcu-ver-master.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/mcu-ver-master.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/mcu-ver-master.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/mcu-ver-master.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/mcu-ver-master.elf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/mcu-ver-master.hex" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/mcu-ver-master.hex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/mcu-ver-master.map" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/mcu-ver-master.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mcu-ver-master.ioc" beforeDir="false" afterPath="$PROJECT_DIR$/mcu-ver-slave.ioc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcu-ver-slave.ioc" beforeDir="false" afterPath="$PROJECT_DIR$/mcu-ver-slave.ioc" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +114,7 @@
       <workItem from="1643520829421" duration="5075000" />
       <workItem from="1643527951095" duration="9796000" />
       <workItem from="1643566665485" duration="949000" />
-      <workItem from="1643570227826" duration="10982000" />
+      <workItem from="1643570227826" duration="17110000" />
     </task>
     <task id="LOCAL-00001" summary="Added new mcu verification project, using old version of stm32cubemx">
       <created>1643521390086</created>
@@ -164,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643570168041</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Implemented some funky handcrafted assembly">
+      <created>1643593921947</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1643593921947</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,6 +155,15 @@
     <MESSAGE value="Added new mcu verification project, using old version of stm32cubemx" />
     <MESSAGE value="Deleted old mcu_ver project" />
     <MESSAGE value="Attempt to use LL API for SPI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Attempt to use LL API for SPI" />
+    <MESSAGE value="Implemented some funky handcrafted assembly" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented some funky handcrafted assembly" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="com.jetbrains.cidr.embedded.openocd.conf.type">
+        <watch expression="dat" />
+        <watch expression="*dat @ 50" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

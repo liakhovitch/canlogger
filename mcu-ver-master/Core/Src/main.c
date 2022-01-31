@@ -38,7 +38,7 @@
 /* USER CODE BEGIN PD */
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "EndlessLoop"
-#define DAT_SIZE 10000
+#define DAT_SIZE 50
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -73,6 +73,7 @@ void spi_recv(uint8_t* recv, size_t dat_size, SPI_TypeDef* spi_dev){
     __disable_irq();
 
     // Receive Data
+    LL_SPI_Disable(spi_dev);
     LL_SPI_Enable(spi_dev);
     LL_SPI_SetMode(spi_dev, LL_SPI_MODE_MASTER);
 
@@ -84,6 +85,7 @@ void spi_recv(uint8_t* recv, size_t dat_size, SPI_TypeDef* spi_dev){
     // Setup
     "mov r7, %[ptr]\n\t"          // Set up array pointer
     "mov r0, #0\n\t"              // Set up zero register
+    "ldr r5, [%[SPI_DR]]\n\t"     // Read value from RX buffer to clear anything that might be there already
     // Main loop
     "loop1_start:\n\t"            //
     "cmp r7, %[ptr_end]\n\t"      // Have we reached the end of the array?
@@ -116,9 +118,12 @@ void spi_recv(uint8_t* recv, size_t dat_size, SPI_TypeDef* spi_dev){
 
 uint8_t spi_test(const uint8_t* dat, size_t dat_size, SPI_TypeDef* spi_dev){
     uint8_t recv[dat_size];
+    for(size_t i = 0; i < dat_size; i++){
+        recv[i] = 0;
+    }
     spi_recv(recv, dat_size, spi_dev);
     // Make sure the data is what it's supposed to be
-    for(unsigned int i = 0; i < DAT_SIZE; i++){
+    for(unsigned int i = 0; i < dat_size; i++){
         if(recv[i] != dat[i]){
             return 1;
         }
@@ -134,7 +139,7 @@ uint8_t spi_test(const uint8_t* dat, size_t dat_size, SPI_TypeDef* spi_dev){
   */
 int main(void)
 {
-    /* USER CODE BEGIN 1 */
+  /* USER CODE BEGIN 1 */
 
   /* USER CODE END 1 */
 
@@ -163,37 +168,45 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
-  // Generate test data
-  uint8_t dat[DAT_SIZE];
-  for(unsigned int i = 0; i < DAT_SIZE; i++){
+    // Generate test data
+    uint8_t dat[DAT_SIZE];
+    for(unsigned int i = 0; i < DAT_SIZE; i++){
       dat[i] = dumb_prng();
-  }
+    }
 
-  // Initially set LED low
-  HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_SET);
+    // Initially set LED low
+    HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_SET);
 
-  // Variable for counting the number of failed tests
-  uint8_t errcnt = 0;
+    // Variable for counting the number of failed tests
+    uint8_t errcnt = 0;
 
-  // Wait for button press
-  while(HAL_GPIO_ReadPin(KEY_GPIO_Port, KEY_Pin));
 
-  // Test SPI
-  //errcnt += spi_test(dat, DAT_SIZE, SPI1);
-  errcnt += spi_test(dat, DAT_SIZE, SPI2);
-  //errcnt += spi_test(dat, DAT_SIZE, SPI3);
+    LL_SPI_Disable(SPI1);
+    LL_SPI_Disable(SPI2);
+    LL_SPI_Disable(SPI3);
 
-  // Light up the LED if all tests passed
-  if(errcnt == 0){
+    // Wait for button press
+    while(HAL_GPIO_ReadPin(KEY_GPIO_Port, KEY_Pin));
+
+    // Test SPI
+    errcnt += spi_test(dat, DAT_SIZE, SPI1);
+    HAL_Delay(10);
+    errcnt += spi_test(dat, DAT_SIZE, SPI3);
+    HAL_Delay(10);
+    //errcnt += spi_test(dat, DAT_SIZE, SPI2);
+    HAL_Delay(10);
+
+    // Light up the LED if all tests passed
+    if(errcnt == 0){
       HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
-  }
+    }
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1);
-  /* USER CODE END WHILE */
+    while (1);
+    /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
   /* USER CODE END 3 */

@@ -38,7 +38,7 @@
 /* USER CODE BEGIN PD */
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "EndlessLoop"
-#define DAT_SIZE 10000
+#define DAT_SIZE 50
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -74,8 +74,9 @@ void spi_send(const uint8_t* dat, size_t dat_size, SPI_TypeDef* spi_dev){
     __disable_irq();
 
     // Transmit Data
-    LL_SPI_SetMode(spi_dev, LL_SPI_MODE_SLAVE);
+    LL_SPI_Disable(spi_dev);
     LL_SPI_Enable(spi_dev);
+    LL_SPI_SetMode(spi_dev, LL_SPI_MODE_SLAVE);
 
     __asm__ __volatile__ (
     // r6: Temp storage for SPI status register value
@@ -95,8 +96,12 @@ void spi_send(const uint8_t* dat, size_t dat_size, SPI_TypeDef* spi_dev){
     "strb r8, [%[SPI_DR]]\n\t"    // Write next data point to TX buffer
     "b loop1_start\n\t"           // Loop the loop
     "loop1_end:\n\t"              //
+    // Make sure the TX buffer is empty before continuing
+    "ldr r6, [%[SPI_SR]]\n\t"     // Load SPI status register
+    "tst r6, %[COND]\n\t"         // Is the TX buffer ready?
+    "beq loop1_end\n\t"           // If not, keep polling
     :
-    : [SPI_SR] "r" (&(spi_dev->SR)), [SPI_DR] "r" (&(spi_dev->DR)), [COND] "I" (SPI_SR_TXE), [ptr] "r" (dat), [ptr_end] "r" (dat + dat_size +1)
+    : [SPI_SR] "r" (&(spi_dev->SR)), [SPI_DR] "r" (&(spi_dev->DR)), [COND] "I" (SPI_SR_TXE), [ptr] "r" (dat), [ptr_end] "r" (dat + dat_size)
     : "r6", "r7", "r8",  "memory"
     );
     // Wait for SPI peripheral to finish anything it's doing
@@ -139,29 +144,33 @@ int main(void)
   MX_SPI3_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-  uint8_t dat[DAT_SIZE + 1];
-  for(unsigned int i = 0; i < DAT_SIZE + 1; i++){
+    uint8_t dat[DAT_SIZE];
+    for(unsigned int i = 0; i < DAT_SIZE; i++){
       dat[i] = dumb_prng();
-  }
+    }
 
-  // Initially set LED low
-  HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_SET);
+    // Initially set LED low
+    HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_SET);
 
-  spi_send(dat, DAT_SIZE, SPI1);
-  spi_send(dat, DAT_SIZE, SPI2);
-  spi_send(dat, DAT_SIZE, SPI3);
+    LL_SPI_Disable(SPI1);
+    LL_SPI_Disable(SPI2);
+    LL_SPI_Disable(SPI3);
 
-  // Light up the LED to indicate that transmission is complete
-  HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
+    spi_send(dat, DAT_SIZE, SPI1);
+    spi_send(dat, DAT_SIZE, SPI3);
+    //spi_send(dat, DAT_SIZE, SPI2);
+
+    // Light up the LED to indicate that transmission is complete
+    HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1);
-  /* USER CODE END WHILE */
+    while (1);
+    /* USER CODE END WHILE */
 
-  /* USER CODE BEGIN 3 */
+    /* USER CODE BEGIN 3 */
   /* USER CODE END 3 */
 }
 
