@@ -38,7 +38,7 @@
 /* USER CODE BEGIN PD */
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "EndlessLoop"
-#define DAT_SIZE 50
+#define DAT_SIZE 1000
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -131,6 +131,22 @@ uint8_t spi_test(const uint8_t* dat, size_t dat_size, SPI_TypeDef* spi_dev){
     return 0;
 }
 
+uint8_t uart_test(const uint8_t* dat, size_t dat_size, UART_HandleTypeDef* uart_dev){
+    uint8_t recv[dat_size];
+    for(size_t i = 0; i < dat_size; i++){
+        recv[i] = 0;
+    }
+    HAL_UART_Abort(uart_dev);
+    HAL_UART_Receive(uart_dev, recv, dat_size, HAL_MAX_DELAY);
+    // Make sure the data is what it's supposed to be
+    for(unsigned int i = 0; i < dat_size; i++){
+        if(recv[i] != dat[i]){
+            return 1;
+        }
+    }
+    return 0;
+}
+
 /* USER CODE END 0 */
 
 /**
@@ -191,10 +207,11 @@ int main(void)
     // Test SPI
     errcnt += spi_test(dat, DAT_SIZE, SPI1);
     HAL_Delay(10);
+    errcnt += spi_test(dat, DAT_SIZE, SPI2);
+    HAL_Delay(10);
     errcnt += spi_test(dat, DAT_SIZE, SPI3);
-    HAL_Delay(10);
-    //errcnt += spi_test(dat, DAT_SIZE, SPI2);
-    HAL_Delay(10);
+    HAL_Delay(1);
+    errcnt+= uart_test(dat, DAT_SIZE, &huart2);
 
     // Light up the LED if all tests passed
     if(errcnt == 0){

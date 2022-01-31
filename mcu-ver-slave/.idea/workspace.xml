@@ -10,28 +10,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9be2241-c434-4c48-889c-99f975948821" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/.cmake/api/v1/reply/index-2022-01-31T03-38-26-0967.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2022-01-31T03-39-44-0026.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/.cmake/api/v1/reply/index-2022-01-31T06-23-52-0650.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/compiler_depend.internal" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2022-01-31T06-08-01-0297.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mcu-ver-master/Core/Inc/stm32f4xx_it.h" beforeDir="false" afterPath="$PROJECT_DIR$/../mcu-ver-master/Core/Inc/stm32f4xx_it.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mcu-ver-master/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../mcu-ver-master/Core/Src/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mcu-ver-master/Core/Src/spi.c" beforeDir="false" afterPath="$PROJECT_DIR$/../mcu-ver-master/Core/Src/spi.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/.cmake/api/v1/reply/index-2022-01-30T22-13-59-0987.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mcu-ver-master/Core/Src/stm32f4xx_it.c" beforeDir="false" afterPath="$PROJECT_DIR$/../mcu-ver-master/Core/Src/stm32f4xx_it.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mcu-ver-master/Core/Src/usart.c" beforeDir="false" afterPath="$PROJECT_DIR$/../mcu-ver-master/Core/Src/usart.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/.cmake/api/v1/reply/index-2022-01-31T03-38-26-0967.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Core/Src/usart.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Core/Src/usart.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/compiler_depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mcu-ver-master/mcu-ver-master.ioc" beforeDir="false" afterPath="$PROJECT_DIR$/../mcu-ver-master/mcu-ver-master.ioc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/spi.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/spi.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2022-01-30T20-14-47-0459.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/usart.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/usart.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2022-01-31T03-39-44-0026.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Core/Src/usart.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Core/Src/usart.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/mcu-ver-master.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/mcu-ver-master.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/mcu-ver-master.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/mcu-ver-master.elf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/mcu-ver-master.hex" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/mcu-ver-master.hex" afterDir="false" />
@@ -114,7 +121,7 @@
       <workItem from="1643520829421" duration="5075000" />
       <workItem from="1643527951095" duration="9796000" />
       <workItem from="1643566665485" duration="949000" />
-      <workItem from="1643570227826" duration="17110000" />
+      <workItem from="1643570227826" duration="21990000" />
     </task>
     <task id="LOCAL-00001" summary="Added new mcu verification project, using old version of stm32cubemx">
       <created>1643521390086</created>
@@ -144,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643593921947</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Made some progress, maybe?">
+      <created>1643601574492</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1643601574492</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,7 +170,8 @@
     <MESSAGE value="Deleted old mcu_ver project" />
     <MESSAGE value="Attempt to use LL API for SPI" />
     <MESSAGE value="Implemented some funky handcrafted assembly" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented some funky handcrafted assembly" />
+    <MESSAGE value="Made some progress, maybe?" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made some progress, maybe?" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

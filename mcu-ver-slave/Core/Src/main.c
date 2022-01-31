@@ -38,7 +38,7 @@
 /* USER CODE BEGIN PD */
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "EndlessLoop"
-#define DAT_SIZE 50
+#define DAT_SIZE 1000
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -107,6 +107,7 @@ void spi_send(const uint8_t* dat, size_t dat_size, SPI_TypeDef* spi_dev){
     // Wait for SPI peripheral to finish anything it's doing
     while(LL_SPI_IsActiveFlag_BSY(spi_dev));
     LL_SPI_Disable(spi_dev);
+    __enable_irq();
 }
 /* USER CODE END 0 */
 
@@ -157,8 +158,10 @@ int main(void)
     LL_SPI_Disable(SPI3);
 
     spi_send(dat, DAT_SIZE, SPI1);
+    spi_send(dat, DAT_SIZE, SPI2);
     spi_send(dat, DAT_SIZE, SPI3);
-    //spi_send(dat, DAT_SIZE, SPI2);
+    HAL_Delay(3);
+    HAL_UART_Transmit(&huart2, dat, DAT_SIZE, HAL_MAX_DELAY);
 
     // Light up the LED to indicate that transmission is complete
     HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
