@@ -93,8 +93,6 @@ Discarded input sections
  .text          0x0000000000000000        0x0 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj
- .text.HAL_SPI_MspDeInit
-                0x0000000000000000       0x74 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj
  .text          0x0000000000000000        0x0 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
@@ -441,6 +439,8 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
  .text.HAL_GPIO_DeInit
                 0x0000000000000000      0x110 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+ .text.HAL_GPIO_ReadPin
+                0x0000000000000000        0xe CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
  .text.HAL_GPIO_TogglePin
                 0x0000000000000000       0x12 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
  .text.HAL_GPIO_LockPin
@@ -693,111 +693,6 @@ Discarded input sections
  .debug_frame   0x0000000000000000      0x37c CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.c.obj
  .ARM.attributes
                 0x0000000000000000       0x2e CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.c.obj
- .text          0x0000000000000000        0x0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .data          0x0000000000000000        0x0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .bss           0x0000000000000000        0x0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.SPI_AbortRx_ISR
-                0x0000000000000000       0x60 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.SPI_AbortTx_ISR
-                0x0000000000000000       0x1c CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.SPI_EndRxTransaction
-                0x0000000000000000       0x8c CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.HAL_SPI_MspInit
-                0x0000000000000000        0x2 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.HAL_SPI_MspDeInit
-                0x0000000000000000        0x2 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.HAL_SPI_DeInit
-                0x0000000000000000       0x2c CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.HAL_SPI_TransmitReceive
-                0x0000000000000000      0x238 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.HAL_SPI_Receive
-                0x0000000000000000      0x176 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.HAL_SPI_Transmit_IT
-                0x0000000000000000       0xa0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.HAL_SPI_TransmitReceive_IT
-                0x0000000000000000       0xe8 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.HAL_SPI_Receive_IT
-                0x0000000000000000       0xd0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.HAL_SPI_Transmit_DMA
-                0x0000000000000000       0xd4 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.HAL_SPI_TransmitReceive_DMA
-                0x0000000000000000      0x150 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.HAL_SPI_Receive_DMA
-                0x0000000000000000       0xf0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.HAL_SPI_Abort
-                0x0000000000000000      0x144 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.HAL_SPI_DMAPause
-                0x0000000000000000       0x26 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.HAL_SPI_DMAResume
-                0x0000000000000000       0x26 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.HAL_SPI_DMAStop
-                0x0000000000000000       0x46 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.HAL_SPI_TxCpltCallback
-                0x0000000000000000        0x2 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.HAL_SPI_RxCpltCallback
-                0x0000000000000000        0x2 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.HAL_SPI_TxRxCpltCallback
-                0x0000000000000000        0x2 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.HAL_SPI_TxHalfCpltCallback
-                0x0000000000000000        0x2 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.SPI_DMAHalfTransmitCplt
-                0x0000000000000000        0xa CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.HAL_SPI_RxHalfCpltCallback
-                0x0000000000000000        0x2 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.SPI_DMAHalfReceiveCplt
-                0x0000000000000000        0xa CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.HAL_SPI_TxRxHalfCpltCallback
-                0x0000000000000000        0x2 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.SPI_DMAHalfTransmitReceiveCplt
-                0x0000000000000000        0xa CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.HAL_SPI_ErrorCallback
-                0x0000000000000000        0x2 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.SPI_CloseTx_ISR
-                0x0000000000000000       0x90 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.SPI_TxISR_8BIT
-                0x0000000000000000       0x28 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.SPI_TxISR_16BIT
-                0x0000000000000000       0x28 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.SPI_CloseRx_ISR
-                0x0000000000000000       0x56 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.SPI_RxISR_8BIT
-                0x0000000000000000       0x28 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.SPI_RxISR_16BIT
-                0x0000000000000000       0x28 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.SPI_CloseRxTx_ISR
-                0x0000000000000000       0xb0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.SPI_2linesTxISR_8BIT
-                0x0000000000000000       0x38 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.SPI_2linesRxISR_8BIT
-                0x0000000000000000       0x38 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.SPI_2linesTxISR_16BIT
-                0x0000000000000000       0x38 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.SPI_2linesRxISR_16BIT
-                0x0000000000000000       0x38 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.SPI_DMAError
-                0x0000000000000000       0x22 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.SPI_DMATransmitCplt
-                0x0000000000000000       0x70 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.SPI_DMAReceiveCplt
-                0x0000000000000000       0x6e CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.SPI_DMATransmitReceiveCplt
-                0x0000000000000000       0x5c CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.HAL_SPI_IRQHandler
-                0x0000000000000000      0x118 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.SPI_DMAAbortOnError
-                0x0000000000000000       0x10 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.HAL_SPI_AbortCpltCallback
-                0x0000000000000000        0x2 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.HAL_SPI_Abort_IT
-                0x0000000000000000      0x15c CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.SPI_DMARxAbortCallback
-                0x0000000000000000       0x78 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.SPI_DMATxAbortCallback
-                0x0000000000000000       0x90 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.HAL_SPI_GetState
-                0x0000000000000000        0x6 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.HAL_SPI_GetError
-                0x0000000000000000        0x4 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
  .text          0x0000000000000000        0x0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
@@ -913,6 +808,154 @@ Discarded input sections
                 0x0000000000000000        0xc CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
  .text.HAL_UART_GetError
                 0x0000000000000000        0x4 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+ .text          0x0000000000000000        0x0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c.obj
+ .data          0x0000000000000000        0x0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c.obj
+ .bss           0x0000000000000000        0x0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c.obj
+ .text.LL_DMA_DeInit
+                0x0000000000000000      0x200 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c.obj
+ .text.LL_DMA_Init
+                0x0000000000000000       0x94 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c.obj
+ .text.LL_DMA_StructInit
+                0x0000000000000000       0x22 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c.obj
+ .rodata.STREAM_OFFSET_TAB
+                0x0000000000000000        0x8 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c.obj
+ .debug_info    0x0000000000000000      0xa37 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c.obj
+ .debug_abbrev  0x0000000000000000      0x279 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c.obj
+ .debug_loclists
+                0x0000000000000000      0x3b2 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c.obj
+ .debug_aranges
+                0x0000000000000000       0x30 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c.obj
+ .debug_rnglists
+                0x0000000000000000       0x39 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c.obj
+ .debug_line    0x0000000000000000      0x606 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c.obj
+ .debug_str     0x0000000000000000      0x66d CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c.obj
+ .comment       0x0000000000000000       0x57 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c.obj
+ .debug_frame   0x0000000000000000       0x4c CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c.obj
+ .ARM.attributes
+                0x0000000000000000       0x2e CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c.obj
+ .text          0x0000000000000000        0x0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c.obj
+ .data          0x0000000000000000        0x0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c.obj
+ .bss           0x0000000000000000        0x0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c.obj
+ .text.LL_EXTI_DeInit
+                0x0000000000000000       0x1c CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c.obj
+ .text.LL_EXTI_Init
+                0x0000000000000000       0xd4 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c.obj
+ .text.LL_EXTI_StructInit
+                0x0000000000000000        0xe CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c.obj
+ .debug_info    0x0000000000000000      0x4de CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c.obj
+ .debug_abbrev  0x0000000000000000      0x1b3 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c.obj
+ .debug_loclists
+                0x0000000000000000      0x1b9 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c.obj
+ .debug_aranges
+                0x0000000000000000       0x30 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c.obj
+ .debug_rnglists
+                0x0000000000000000       0x38 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c.obj
+ .debug_line    0x0000000000000000      0x3fb CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c.obj
+ .debug_str     0x0000000000000000      0x414 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c.obj
+ .comment       0x0000000000000000       0x57 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c.obj
+ .debug_frame   0x0000000000000000       0x50 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c.obj
+ .ARM.attributes
+                0x0000000000000000       0x2e CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c.obj
+ .text          0x0000000000000000        0x0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c.obj
+ .data          0x0000000000000000        0x0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c.obj
+ .bss           0x0000000000000000        0x0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c.obj
+ .text.LL_GPIO_DeInit
+                0x0000000000000000       0xd0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c.obj
+ .text.LL_GPIO_StructInit
+                0x0000000000000000       0x16 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c.obj
+ .text          0x0000000000000000        0x0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c.obj
+ .data          0x0000000000000000        0x0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c.obj
+ .bss           0x0000000000000000        0x0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c.obj
+ .text.LL_RCC_DeInit
+                0x0000000000000000       0x9c CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c.obj
+ .text.RCC_GetHCLKClockFreq
+                0x0000000000000000       0x18 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c.obj
+ .text.RCC_GetPCLK1ClockFreq
+                0x0000000000000000       0x18 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c.obj
+ .text.RCC_GetPCLK2ClockFreq
+                0x0000000000000000       0x18 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c.obj
+ .text.RCC_PLL_GetFreqDomain_SYS
+                0x0000000000000000       0x4c CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c.obj
+ .text.RCC_GetSystemClockFreq
+                0x0000000000000000       0x30 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c.obj
+ .text.LL_RCC_GetSystemClocksFreq
+                0x0000000000000000       0x20 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c.obj
+ .text.RCC_PLL_GetFreqDomain_48M
+                0x0000000000000000       0x40 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c.obj
+ .text.LL_RCC_GetSDIOClockFreq
+                0x0000000000000000       0x24 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c.obj
+ .text.LL_RCC_GetUSBClockFreq
+                0x0000000000000000       0x18 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c.obj
+ .text.RCC_PLLI2S_GetFreqDomain_I2S
+                0x0000000000000000       0x44 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c.obj
+ .text.LL_RCC_GetI2SClockFreq
+                0x0000000000000000       0x34 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c.obj
+ .debug_info    0x0000000000000000      0x944 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c.obj
+ .debug_abbrev  0x0000000000000000      0x26f CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c.obj
+ .debug_loclists
+                0x0000000000000000      0x2b2 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c.obj
+ .debug_aranges
+                0x0000000000000000       0x78 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c.obj
+ .debug_rnglists
+                0x0000000000000000       0x56 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c.obj
+ .debug_line    0x0000000000000000      0x6cf CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c.obj
+ .debug_str     0x0000000000000000      0x77d CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c.obj
+ .comment       0x0000000000000000       0x57 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c.obj
+ .debug_frame   0x0000000000000000      0x100 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c.obj
+ .ARM.attributes
+                0x0000000000000000       0x2e CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c.obj
+ .text          0x0000000000000000        0x0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.c.obj
+ .data          0x0000000000000000        0x0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.c.obj
+ .bss           0x0000000000000000        0x0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.c.obj
+ .text.LL_SPI_DeInit
+                0x0000000000000000       0xb4 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.c.obj
+ .text.LL_SPI_StructInit
+                0x0000000000000000       0x1a CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.c.obj
+ .text.LL_I2S_DeInit
+                0x0000000000000000        0x8 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.c.obj
+ .text.LL_I2S_Init
+                0x0000000000000000       0xac CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.c.obj
+ .text.LL_I2S_StructInit
+                0x0000000000000000       0x12 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.c.obj
+ .text.LL_I2S_ConfigPrescaler
+                0x0000000000000000       0x14 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.c.obj
+ .text.LL_I2S_InitFullDuplex
+                0x0000000000000000       0x52 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.c.obj
+ .text          0x0000000000000000        0x0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c.obj
+ .data          0x0000000000000000        0x0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c.obj
+ .bss           0x0000000000000000        0x0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c.obj
+ .text.UTILS_SetFlashLatency
+                0x0000000000000000       0xc4 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c.obj
+ .text.UTILS_GetPLLOutputFrequency
+                0x0000000000000000       0x20 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c.obj
+ .text.UTILS_PLL_IsBusy
+                0x0000000000000000       0x24 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c.obj
+ .text.LL_Init1msTick
+                0x0000000000000000       0x20 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c.obj
+ .text.LL_mDelay
+                0x0000000000000000       0x2a CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c.obj
+ .text.LL_SetSystemCoreClock
+                0x0000000000000000        0xc CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c.obj
+ .text.UTILS_EnablePLLAndSwitchSystem
+                0x0000000000000000       0xac CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c.obj
+ .text.LL_PLL_ConfigSystemClock_HSI
+                0x0000000000000000       0x6c CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c.obj
+ .text.LL_PLL_ConfigSystemClock_HSE
+                0x0000000000000000       0x8c CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c.obj
+ .debug_info    0x0000000000000000      0xc1b CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c.obj
+ .debug_abbrev  0x0000000000000000      0x283 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c.obj
+ .debug_loclists
+                0x0000000000000000      0x3ef CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c.obj
+ .debug_aranges
+                0x0000000000000000       0x60 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c.obj
+ .debug_rnglists
+                0x0000000000000000       0x46 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c.obj
+ .debug_line    0x0000000000000000      0x82a CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c.obj
+ .debug_str     0x0000000000000000      0x795 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c.obj
+ .comment       0x0000000000000000       0x57 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c.obj
+ .debug_frame   0x0000000000000000       0xd4 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c.obj
+ .ARM.attributes
+                0x0000000000000000       0x2e CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c.obj
  .data          0x0000000000000000        0x0 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_aeabi_uldivmod.o)
  .bss           0x0000000000000000        0x0 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_aeabi_uldivmod.o)
  .data          0x0000000000000000        0x0 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_udivmoddi4.o)
@@ -1494,10 +1537,15 @@ LOAD CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4x
 LOAD CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
 LOAD CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
 LOAD CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.c.obj
-LOAD CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
 LOAD CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
 LOAD CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
 LOAD CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+LOAD CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c.obj
+LOAD CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c.obj
+LOAD CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c.obj
+LOAD CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c.obj
+LOAD CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.c.obj
+LOAD CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c.obj
 START GROUP
 LOAD /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a
 LOAD /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a
@@ -1516,7 +1564,7 @@ LOAD /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/crtn.o
                 0x0000000008000000                g_pfnVectors
                 0x0000000008000198                . = ALIGN (0x4)
 
-.text           0x0000000008000198     0x1e98
+.text           0x0000000008000198     0x1d6c
                 0x0000000008000198                . = ALIGN (0x4)
  *(.text)
  .text          0x0000000008000198       0x88 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/crtbegin.o
@@ -1534,333 +1582,325 @@ LOAD /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/crtn.o
  .text.dumb_prng
                 0x00000000080005fc       0x1c CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj
                 0x00000000080005fc                dumb_prng
+ .text.spi_send
+                0x0000000008000618       0x50 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj
+                0x0000000008000618                spi_send
  .text.SystemClock_Config
-                0x0000000008000618       0xb0 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj
-                0x0000000008000618                SystemClock_Config
- .text.main     0x00000000080006c8       0x84 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj
-                0x00000000080006c8                main
+                0x0000000008000668       0xb0 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj
+                0x0000000008000668                SystemClock_Config
+ .text.main     0x0000000008000718       0x90 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj
+                0x0000000008000718                main
  .text.Error_Handler
-                0x000000000800074c        0x2 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj
-                0x000000000800074c                Error_Handler
- *fill*         0x000000000800074e        0x2 
+                0x00000000080007a8        0x2 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj
+                0x00000000080007a8                Error_Handler
+ *fill*         0x00000000080007aa        0x2 
  .text.MX_RTC_Init
-                0x0000000008000750       0x30 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/rtc.c.obj
-                0x0000000008000750                MX_RTC_Init
+                0x00000000080007ac       0x30 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/rtc.c.obj
+                0x00000000080007ac                MX_RTC_Init
  .text.HAL_RTC_MspInit
-                0x0000000008000780       0x1c CMakeFiles/mcu-ver-master.elf.dir/Core/Src/rtc.c.obj
-                0x0000000008000780                HAL_RTC_MspInit
+                0x00000000080007dc       0x1c CMakeFiles/mcu-ver-master.elf.dir/Core/Src/rtc.c.obj
+                0x00000000080007dc                HAL_RTC_MspInit
  .text.MX_SPI1_Init
-                0x000000000800079c       0x3c CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj
-                0x000000000800079c                MX_SPI1_Init
+                0x00000000080007f8       0x94 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj
+                0x00000000080007f8                MX_SPI1_Init
  .text.MX_SPI2_Init
-                0x00000000080007d8       0x3c CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj
-                0x00000000080007d8                MX_SPI2_Init
+                0x000000000800088c       0x98 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj
+                0x000000000800088c                MX_SPI2_Init
  .text.MX_SPI3_Init
-                0x0000000008000814       0x3c CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj
-                0x0000000008000814                MX_SPI3_Init
- .text.HAL_SPI_MspInit
-                0x0000000008000850      0x130 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj
-                0x0000000008000850                HAL_SPI_MspInit
+                0x0000000008000924       0xb0 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj
+                0x0000000008000924                MX_SPI3_Init
  .text.HAL_MspInit
-                0x0000000008000980       0x48 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
-                0x0000000008000980                HAL_MspInit
+                0x00000000080009d4       0x48 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+                0x00000000080009d4                HAL_MspInit
  .text.NMI_Handler
-                0x00000000080009c8        0x2 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
-                0x00000000080009c8                NMI_Handler
+                0x0000000008000a1c        0x2 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
+                0x0000000008000a1c                NMI_Handler
  .text.HardFault_Handler
-                0x00000000080009ca        0x2 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
-                0x00000000080009ca                HardFault_Handler
+                0x0000000008000a1e        0x2 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
+                0x0000000008000a1e                HardFault_Handler
  .text.MemManage_Handler
-                0x00000000080009cc        0x2 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
-                0x00000000080009cc                MemManage_Handler
+                0x0000000008000a20        0x2 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
+                0x0000000008000a20                MemManage_Handler
  .text.BusFault_Handler
-                0x00000000080009ce        0x2 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
-                0x00000000080009ce                BusFault_Handler
+                0x0000000008000a22        0x2 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
+                0x0000000008000a22                BusFault_Handler
  .text.UsageFault_Handler
-                0x00000000080009d0        0x2 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
-                0x00000000080009d0                UsageFault_Handler
+                0x0000000008000a24        0x2 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
+                0x0000000008000a24                UsageFault_Handler
  .text.SVC_Handler
-                0x00000000080009d2        0x2 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
-                0x00000000080009d2                SVC_Handler
+                0x0000000008000a26        0x2 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
+                0x0000000008000a26                SVC_Handler
  .text.DebugMon_Handler
-                0x00000000080009d4        0x2 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
-                0x00000000080009d4                DebugMon_Handler
+                0x0000000008000a28        0x2 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
+                0x0000000008000a28                DebugMon_Handler
  .text.PendSV_Handler
-                0x00000000080009d6        0x2 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
-                0x00000000080009d6                PendSV_Handler
+                0x0000000008000a2a        0x2 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
+                0x0000000008000a2a                PendSV_Handler
  .text.SysTick_Handler
-                0x00000000080009d8        0x8 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
-                0x00000000080009d8                SysTick_Handler
+                0x0000000008000a2c        0x8 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
+                0x0000000008000a2c                SysTick_Handler
  .text.RCC_IRQHandler
-                0x00000000080009e0        0x2 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
-                0x00000000080009e0                RCC_IRQHandler
- *fill*         0x00000000080009e2        0x2 
+                0x0000000008000a34        0x2 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
+                0x0000000008000a34                RCC_IRQHandler
+ *fill*         0x0000000008000a36        0x2 
  .text.USART2_IRQHandler
-                0x00000000080009e4       0x10 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
-                0x00000000080009e4                USART2_IRQHandler
+                0x0000000008000a38       0x10 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
+                0x0000000008000a38                USART2_IRQHandler
  .text.SystemInit
-                0x00000000080009f4       0x10 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/system_stm32f4xx.c.obj
-                0x00000000080009f4                SystemInit
+                0x0000000008000a48       0x10 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/system_stm32f4xx.c.obj
+                0x0000000008000a48                SystemInit
  .text.MX_USART2_UART_Init
-                0x0000000008000a04       0x34 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/usart.c.obj
-                0x0000000008000a04                MX_USART2_UART_Init
+                0x0000000008000a58       0x34 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/usart.c.obj
+                0x0000000008000a58                MX_USART2_UART_Init
  .text.HAL_UART_MspInit
-                0x0000000008000a38       0x7c CMakeFiles/mcu-ver-master.elf.dir/Core/Src/usart.c.obj
-                0x0000000008000a38                HAL_UART_MspInit
+                0x0000000008000a8c       0x7c CMakeFiles/mcu-ver-master.elf.dir/Core/Src/usart.c.obj
+                0x0000000008000a8c                HAL_UART_MspInit
  .text.Reset_Handler
-                0x0000000008000ab4       0x50 CMakeFiles/mcu-ver-master.elf.dir/Core/Startup/startup_stm32f411ceux.s.obj
-                0x0000000008000ab4                Reset_Handler
+                0x0000000008000b08       0x50 CMakeFiles/mcu-ver-master.elf.dir/Core/Startup/startup_stm32f411ceux.s.obj
+                0x0000000008000b08                Reset_Handler
  .text.Default_Handler
-                0x0000000008000b04        0x2 CMakeFiles/mcu-ver-master.elf.dir/Core/Startup/startup_stm32f411ceux.s.obj
-                0x0000000008000b04                RTC_Alarm_IRQHandler
-                0x0000000008000b04                EXTI2_IRQHandler
-                0x0000000008000b04                SPI4_IRQHandler
-                0x0000000008000b04                TIM1_CC_IRQHandler
-                0x0000000008000b04                DMA2_Stream5_IRQHandler
-                0x0000000008000b04                DMA1_Stream5_IRQHandler
-                0x0000000008000b04                PVD_IRQHandler
-                0x0000000008000b04                SDIO_IRQHandler
-                0x0000000008000b04                TAMP_STAMP_IRQHandler
-                0x0000000008000b04                EXTI3_IRQHandler
-                0x0000000008000b04                TIM1_UP_TIM10_IRQHandler
-                0x0000000008000b04                I2C3_ER_IRQHandler
-                0x0000000008000b04                EXTI0_IRQHandler
-                0x0000000008000b04                I2C2_EV_IRQHandler
-                0x0000000008000b04                DMA1_Stream2_IRQHandler
-                0x0000000008000b04                FPU_IRQHandler
-                0x0000000008000b04                DMA2_Stream2_IRQHandler
-                0x0000000008000b04                SPI1_IRQHandler
-                0x0000000008000b04                TIM1_BRK_TIM9_IRQHandler
-                0x0000000008000b04                DMA2_Stream3_IRQHandler
-                0x0000000008000b04                USART6_IRQHandler
-                0x0000000008000b04                DMA2_Stream0_IRQHandler
-                0x0000000008000b04                TIM4_IRQHandler
-                0x0000000008000b04                I2C1_EV_IRQHandler
-                0x0000000008000b04                DMA1_Stream6_IRQHandler
-                0x0000000008000b04                DMA1_Stream1_IRQHandler
-                0x0000000008000b04                TIM3_IRQHandler
-                0x0000000008000b04                Default_Handler
-                0x0000000008000b04                EXTI15_10_IRQHandler
-                0x0000000008000b04                ADC_IRQHandler
-                0x0000000008000b04                DMA1_Stream7_IRQHandler
-                0x0000000008000b04                SPI5_IRQHandler
-                0x0000000008000b04                TIM5_IRQHandler
-                0x0000000008000b04                DMA2_Stream7_IRQHandler
-                0x0000000008000b04                I2C3_EV_IRQHandler
-                0x0000000008000b04                EXTI9_5_IRQHandler
-                0x0000000008000b04                RTC_WKUP_IRQHandler
-                0x0000000008000b04                SPI2_IRQHandler
-                0x0000000008000b04                DMA1_Stream0_IRQHandler
-                0x0000000008000b04                EXTI4_IRQHandler
-                0x0000000008000b04                WWDG_IRQHandler
-                0x0000000008000b04                TIM2_IRQHandler
-                0x0000000008000b04                OTG_FS_WKUP_IRQHandler
-                0x0000000008000b04                TIM1_TRG_COM_TIM11_IRQHandler
-                0x0000000008000b04                EXTI1_IRQHandler
-                0x0000000008000b04                I2C2_ER_IRQHandler
-                0x0000000008000b04                DMA2_Stream1_IRQHandler
-                0x0000000008000b04                FLASH_IRQHandler
-                0x0000000008000b04                DMA2_Stream4_IRQHandler
-                0x0000000008000b04                USART1_IRQHandler
-                0x0000000008000b04                OTG_FS_IRQHandler
-                0x0000000008000b04                SPI3_IRQHandler
-                0x0000000008000b04                DMA1_Stream4_IRQHandler
-                0x0000000008000b04                I2C1_ER_IRQHandler
-                0x0000000008000b04                DMA2_Stream6_IRQHandler
-                0x0000000008000b04                DMA1_Stream3_IRQHandler
- *fill*         0x0000000008000b06        0x2 
+                0x0000000008000b58        0x2 CMakeFiles/mcu-ver-master.elf.dir/Core/Startup/startup_stm32f411ceux.s.obj
+                0x0000000008000b58                RTC_Alarm_IRQHandler
+                0x0000000008000b58                EXTI2_IRQHandler
+                0x0000000008000b58                SPI4_IRQHandler
+                0x0000000008000b58                TIM1_CC_IRQHandler
+                0x0000000008000b58                DMA2_Stream5_IRQHandler
+                0x0000000008000b58                DMA1_Stream5_IRQHandler
+                0x0000000008000b58                PVD_IRQHandler
+                0x0000000008000b58                SDIO_IRQHandler
+                0x0000000008000b58                TAMP_STAMP_IRQHandler
+                0x0000000008000b58                EXTI3_IRQHandler
+                0x0000000008000b58                TIM1_UP_TIM10_IRQHandler
+                0x0000000008000b58                I2C3_ER_IRQHandler
+                0x0000000008000b58                EXTI0_IRQHandler
+                0x0000000008000b58                I2C2_EV_IRQHandler
+                0x0000000008000b58                DMA1_Stream2_IRQHandler
+                0x0000000008000b58                FPU_IRQHandler
+                0x0000000008000b58                DMA2_Stream2_IRQHandler
+                0x0000000008000b58                SPI1_IRQHandler
+                0x0000000008000b58                TIM1_BRK_TIM9_IRQHandler
+                0x0000000008000b58                DMA2_Stream3_IRQHandler
+                0x0000000008000b58                USART6_IRQHandler
+                0x0000000008000b58                DMA2_Stream0_IRQHandler
+                0x0000000008000b58                TIM4_IRQHandler
+                0x0000000008000b58                I2C1_EV_IRQHandler
+                0x0000000008000b58                DMA1_Stream6_IRQHandler
+                0x0000000008000b58                DMA1_Stream1_IRQHandler
+                0x0000000008000b58                TIM3_IRQHandler
+                0x0000000008000b58                Default_Handler
+                0x0000000008000b58                EXTI15_10_IRQHandler
+                0x0000000008000b58                ADC_IRQHandler
+                0x0000000008000b58                DMA1_Stream7_IRQHandler
+                0x0000000008000b58                SPI5_IRQHandler
+                0x0000000008000b58                TIM5_IRQHandler
+                0x0000000008000b58                DMA2_Stream7_IRQHandler
+                0x0000000008000b58                I2C3_EV_IRQHandler
+                0x0000000008000b58                EXTI9_5_IRQHandler
+                0x0000000008000b58                RTC_WKUP_IRQHandler
+                0x0000000008000b58                SPI2_IRQHandler
+                0x0000000008000b58                DMA1_Stream0_IRQHandler
+                0x0000000008000b58                EXTI4_IRQHandler
+                0x0000000008000b58                WWDG_IRQHandler
+                0x0000000008000b58                TIM2_IRQHandler
+                0x0000000008000b58                OTG_FS_WKUP_IRQHandler
+                0x0000000008000b58                TIM1_TRG_COM_TIM11_IRQHandler
+                0x0000000008000b58                EXTI1_IRQHandler
+                0x0000000008000b58                I2C2_ER_IRQHandler
+                0x0000000008000b58                DMA2_Stream1_IRQHandler
+                0x0000000008000b58                FLASH_IRQHandler
+                0x0000000008000b58                DMA2_Stream4_IRQHandler
+                0x0000000008000b58                USART1_IRQHandler
+                0x0000000008000b58                OTG_FS_IRQHandler
+                0x0000000008000b58                SPI3_IRQHandler
+                0x0000000008000b58                DMA1_Stream4_IRQHandler
+                0x0000000008000b58                I2C1_ER_IRQHandler
+                0x0000000008000b58                DMA2_Stream6_IRQHandler
+                0x0000000008000b58                DMA1_Stream3_IRQHandler
+ *fill*         0x0000000008000b5a        0x2 
  .text.HAL_InitTick
-                0x0000000008000b08       0x4c CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
-                0x0000000008000b08                HAL_InitTick
+                0x0000000008000b5c       0x4c CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+                0x0000000008000b5c                HAL_InitTick
  .text.HAL_Init
-                0x0000000008000b54       0x34 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
-                0x0000000008000b54                HAL_Init
+                0x0000000008000ba8       0x34 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+                0x0000000008000ba8                HAL_Init
  .text.HAL_IncTick
-                0x0000000008000b88       0x18 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
-                0x0000000008000b88                HAL_IncTick
+                0x0000000008000bdc       0x18 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+                0x0000000008000bdc                HAL_IncTick
  .text.HAL_GetTick
-                0x0000000008000ba0        0xc CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
-                0x0000000008000ba0                HAL_GetTick
+                0x0000000008000bf4        0xc CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+                0x0000000008000bf4                HAL_GetTick
  .text.HAL_NVIC_SetPriorityGrouping
-                0x0000000008000bac       0x24 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
-                0x0000000008000bac                HAL_NVIC_SetPriorityGrouping
+                0x0000000008000c00       0x24 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+                0x0000000008000c00                HAL_NVIC_SetPriorityGrouping
  .text.HAL_NVIC_SetPriority
-                0x0000000008000bd0       0x70 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
-                0x0000000008000bd0                HAL_NVIC_SetPriority
+                0x0000000008000c24       0x70 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+                0x0000000008000c24                HAL_NVIC_SetPriority
  .text.HAL_NVIC_EnableIRQ
-                0x0000000008000c40       0x1c CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
-                0x0000000008000c40                HAL_NVIC_EnableIRQ
+                0x0000000008000c94       0x1c CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+                0x0000000008000c94                HAL_NVIC_EnableIRQ
  .text.HAL_SYSTICK_Config
-                0x0000000008000c5c       0x28 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
-                0x0000000008000c5c                HAL_SYSTICK_Config
+                0x0000000008000cb0       0x28 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+                0x0000000008000cb0                HAL_SYSTICK_Config
  .text.HAL_DMA_Abort_IT
-                0x0000000008000c84       0x26 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
-                0x0000000008000c84                HAL_DMA_Abort_IT
- *fill*         0x0000000008000caa        0x2 
+                0x0000000008000cd8       0x26 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+                0x0000000008000cd8                HAL_DMA_Abort_IT
+ *fill*         0x0000000008000cfe        0x2 
  .text.HAL_GPIO_Init
-                0x0000000008000cac      0x1ac CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
-                0x0000000008000cac                HAL_GPIO_Init
- .text.HAL_GPIO_ReadPin
-                0x0000000008000e58        0xe CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
-                0x0000000008000e58                HAL_GPIO_ReadPin
+                0x0000000008000d00      0x1ac CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+                0x0000000008000d00                HAL_GPIO_Init
  .text.HAL_GPIO_WritePin
-                0x0000000008000e66        0xc CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
-                0x0000000008000e66                HAL_GPIO_WritePin
- *fill*         0x0000000008000e72        0x2 
+                0x0000000008000eac        0xc CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+                0x0000000008000eac                HAL_GPIO_WritePin
  .text.HAL_RCC_OscConfig
-                0x0000000008000e74      0x3ec CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
-                0x0000000008000e74                HAL_RCC_OscConfig
+                0x0000000008000eb8      0x3ec CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+                0x0000000008000eb8                HAL_RCC_OscConfig
  .text.HAL_RCC_GetSysClockFreq
-                0x0000000008001260       0xa8 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
-                0x0000000008001260                HAL_RCC_GetSysClockFreq
+                0x00000000080012a4       0xa8 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+                0x00000000080012a4                HAL_RCC_GetSysClockFreq
  .text.HAL_RCC_ClockConfig
-                0x0000000008001308      0x160 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
-                0x0000000008001308                HAL_RCC_ClockConfig
+                0x000000000800134c      0x160 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+                0x000000000800134c                HAL_RCC_ClockConfig
  .text.HAL_RCC_GetHCLKFreq
-                0x0000000008001468        0xc CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
-                0x0000000008001468                HAL_RCC_GetHCLKFreq
+                0x00000000080014ac        0xc CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+                0x00000000080014ac                HAL_RCC_GetHCLKFreq
  .text.HAL_RCC_GetPCLK1Freq
-                0x0000000008001474       0x20 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
-                0x0000000008001474                HAL_RCC_GetPCLK1Freq
+                0x00000000080014b8       0x20 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+                0x00000000080014b8                HAL_RCC_GetPCLK1Freq
  .text.HAL_RCC_GetPCLK2Freq
-                0x0000000008001494       0x20 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
-                0x0000000008001494                HAL_RCC_GetPCLK2Freq
+                0x00000000080014d8       0x20 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+                0x00000000080014d8                HAL_RCC_GetPCLK2Freq
  .text.HAL_RCCEx_PeriphCLKConfig
-                0x00000000080014b4      0x170 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
-                0x00000000080014b4                HAL_RCCEx_PeriphCLKConfig
+                0x00000000080014f8      0x170 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
+                0x00000000080014f8                HAL_RCCEx_PeriphCLKConfig
  .text.HAL_RTC_WaitForSynchro
-                0x0000000008001624       0x32 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
-                0x0000000008001624                HAL_RTC_WaitForSynchro
+                0x0000000008001668       0x32 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
+                0x0000000008001668                HAL_RTC_WaitForSynchro
  .text.RTC_EnterInitMode
-                0x0000000008001656       0x3c CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
-                0x0000000008001656                RTC_EnterInitMode
+                0x000000000800169a       0x3c CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
+                0x000000000800169a                RTC_EnterInitMode
  .text.HAL_RTC_Init
-                0x0000000008001692       0xc4 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
-                0x0000000008001692                HAL_RTC_Init
- .text.SPI_WaitFlagStateUntilTimeout
-                0x0000000008001756       0x94 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- *fill*         0x00000000080017ea        0x2 
- .text.SPI_EndRxTxTransaction
-                0x00000000080017ec       0x68 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .text.HAL_SPI_Init
-                0x0000000008001854       0x80 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
-                0x0000000008001854                HAL_SPI_Init
- .text.HAL_SPI_Transmit
-                0x00000000080018d4      0x1ae CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
-                0x00000000080018d4                HAL_SPI_Transmit
+                0x00000000080016d6       0xc4 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
+                0x00000000080016d6                HAL_RTC_Init
  .text.UART_EndRxTransfer
-                0x0000000008001a82       0x1c CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+                0x000000000800179a       0x1c CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
  .text.UART_Transmit_IT
-                0x0000000008001a9e       0x66 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+                0x00000000080017b6       0x66 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
  .text.UART_SetConfig
-                0x0000000008001b04      0x1d4 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+                0x000000000800181c      0x1d4 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
  .text.HAL_UART_Init
-                0x0000000008001cd8       0x5e CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
-                0x0000000008001cd8                HAL_UART_Init
+                0x00000000080019f0       0x5e CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+                0x00000000080019f0                HAL_UART_Init
  .text.HAL_UART_TxCpltCallback
-                0x0000000008001d36        0x2 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
-                0x0000000008001d36                HAL_UART_TxCpltCallback
+                0x0000000008001a4e        0x2 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+                0x0000000008001a4e                HAL_UART_TxCpltCallback
  .text.UART_EndTransmit_IT
-                0x0000000008001d38       0x1a CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+                0x0000000008001a50       0x1a CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
  .text.HAL_UART_RxCpltCallback
-                0x0000000008001d52        0x2 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
-                0x0000000008001d52                HAL_UART_RxCpltCallback
+                0x0000000008001a6a        0x2 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+                0x0000000008001a6a                HAL_UART_RxCpltCallback
  .text.UART_Receive_IT
-                0x0000000008001d54       0x9e CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+                0x0000000008001a6c       0x9e CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
  .text.HAL_UART_ErrorCallback
-                0x0000000008001df2        0x2 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
-                0x0000000008001df2                HAL_UART_ErrorCallback
+                0x0000000008001b0a        0x2 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+                0x0000000008001b0a                HAL_UART_ErrorCallback
  .text.HAL_UART_IRQHandler
-                0x0000000008001df4      0x128 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
-                0x0000000008001df4                HAL_UART_IRQHandler
+                0x0000000008001b0c      0x128 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+                0x0000000008001b0c                HAL_UART_IRQHandler
  .text.UART_DMAAbortOnError
-                0x0000000008001f1c       0x10 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+                0x0000000008001c34       0x10 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+ .text.LL_GPIO_Init
+                0x0000000008001c44      0x148 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c.obj
+                0x0000000008001c44                LL_GPIO_Init
+ .text.LL_SPI_Init
+                0x0000000008001d8c       0x72 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.c.obj
+                0x0000000008001d8c                LL_SPI_Init
+ *fill*         0x0000000008001dfe        0x2 
  .text.__libc_init_array
-                0x0000000008001f2c       0x48 /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
-                0x0000000008001f2c                __libc_init_array
- .text.memset   0x0000000008001f74       0xa4 /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
-                0x0000000008001f74                memset
+                0x0000000008001e00       0x48 /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
+                0x0000000008001e00                __libc_init_array
+ .text.memset   0x0000000008001e48       0xa4 /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
+                0x0000000008001e48                memset
  *(.glue_7)
- .glue_7        0x0000000008002018        0x0 linker stubs
+ .glue_7        0x0000000008001eec        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0000000008002018        0x0 linker stubs
+ .glue_7t       0x0000000008001eec        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x0000000008002018        0x0 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/crtbegin.o
+ .eh_frame      0x0000000008001eec        0x0 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/crtbegin.o
  *(.init)
- .init          0x0000000008002018        0x4 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/crti.o
-                0x0000000008002018                _init
- .init          0x000000000800201c        0x8 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/crtn.o
+ .init          0x0000000008001eec        0x4 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/crti.o
+                0x0000000008001eec                _init
+ .init          0x0000000008001ef0        0x8 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/crtn.o
  *(.fini)
- .fini          0x0000000008002024        0x4 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/crti.o
-                0x0000000008002024                _fini
- .fini          0x0000000008002028        0x8 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/crtn.o
-                0x0000000008002030                . = ALIGN (0x4)
-                0x0000000008002030                _etext = .
+ .fini          0x0000000008001ef8        0x4 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/crti.o
+                0x0000000008001ef8                _fini
+ .fini          0x0000000008001efc        0x8 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/crtn.o
+                0x0000000008001f04                . = ALIGN (0x4)
+                0x0000000008001f04                _etext = .
 
-.vfp11_veneer   0x0000000008002030        0x0
- .vfp11_veneer  0x0000000008002030        0x0 linker stubs
+.vfp11_veneer   0x0000000008001f04        0x0
+ .vfp11_veneer  0x0000000008001f04        0x0 linker stubs
 
-.v4_bx          0x0000000008002030        0x0
- .v4_bx         0x0000000008002030        0x0 linker stubs
+.v4_bx          0x0000000008001f04        0x0
+ .v4_bx         0x0000000008001f04        0x0 linker stubs
 
-.iplt           0x0000000008002030        0x0
- .iplt          0x0000000008002030        0x0 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/crtbegin.o
+.iplt           0x0000000008001f04        0x0
+ .iplt          0x0000000008001f04        0x0 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/crtbegin.o
 
-.rodata         0x0000000008002030       0x18
-                0x0000000008002030                . = ALIGN (0x4)
+.rodata         0x0000000008001f04       0x18
+                0x0000000008001f04                . = ALIGN (0x4)
  *(.rodata)
  *(.rodata*)
  .rodata.AHBPrescTable
-                0x0000000008002030       0x10 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/system_stm32f4xx.c.obj
-                0x0000000008002030                AHBPrescTable
+                0x0000000008001f04       0x10 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/system_stm32f4xx.c.obj
+                0x0000000008001f04                AHBPrescTable
  .rodata.APBPrescTable
-                0x0000000008002040        0x8 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/system_stm32f4xx.c.obj
-                0x0000000008002040                APBPrescTable
-                0x0000000008002048                . = ALIGN (0x4)
+                0x0000000008001f14        0x8 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/system_stm32f4xx.c.obj
+                0x0000000008001f14                APBPrescTable
+                0x0000000008001f1c                . = ALIGN (0x4)
 
-.ARM.extab      0x0000000008002048        0x0
-                0x0000000008002048                . = ALIGN (0x4)
+.ARM.extab      0x0000000008001f1c        0x0
+                0x0000000008001f1c                . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0000000008002048                . = ALIGN (0x4)
+                0x0000000008001f1c                . = ALIGN (0x4)
 
-.ARM            0x0000000008002048        0x8
-                0x0000000008002048                . = ALIGN (0x4)
-                0x0000000008002048                __exidx_start = .
+.ARM            0x0000000008001f1c        0x8
+                0x0000000008001f1c                . = ALIGN (0x4)
+                0x0000000008001f1c                __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x0000000008002048        0x8 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_udivmoddi4.o)
-                0x0000000008002050                __exidx_end = .
-                0x0000000008002050                . = ALIGN (0x4)
+ .ARM.exidx     0x0000000008001f1c        0x8 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_udivmoddi4.o)
+                0x0000000008001f24                __exidx_end = .
+                0x0000000008001f24                . = ALIGN (0x4)
 
-.rel.dyn        0x0000000008002050        0x0
- .rel.iplt      0x0000000008002050        0x0 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/crtbegin.o
+.rel.dyn        0x0000000008001f24        0x0
+ .rel.iplt      0x0000000008001f24        0x0 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/crtbegin.o
 
-.preinit_array  0x0000000008002050        0x0
-                0x0000000008002050                . = ALIGN (0x4)
-                0x0000000008002050                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x0000000008001f24        0x0
+                0x0000000008001f24                . = ALIGN (0x4)
+                0x0000000008001f24                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x0000000008002050                PROVIDE (__preinit_array_end = .)
-                0x0000000008002050                . = ALIGN (0x4)
+                0x0000000008001f24                PROVIDE (__preinit_array_end = .)
+                0x0000000008001f24                . = ALIGN (0x4)
 
-.init_array     0x0000000008002050        0x4
-                0x0000000008002050                . = ALIGN (0x4)
-                0x0000000008002050                PROVIDE (__init_array_start = .)
+.init_array     0x0000000008001f24        0x4
+                0x0000000008001f24                . = ALIGN (0x4)
+                0x0000000008001f24                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x0000000008002050        0x4 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/crtbegin.o
-                0x0000000008002054                PROVIDE (__init_array_end = .)
-                0x0000000008002054                . = ALIGN (0x4)
+ .init_array    0x0000000008001f24        0x4 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/crtbegin.o
+                0x0000000008001f28                PROVIDE (__init_array_end = .)
+                0x0000000008001f28                . = ALIGN (0x4)
 
-.fini_array     0x0000000008002054        0x4
-                0x0000000008002054                . = ALIGN (0x4)
-                0x0000000008002054                PROVIDE (__fini_array_start = .)
+.fini_array     0x0000000008001f28        0x4
+                0x0000000008001f28                . = ALIGN (0x4)
+                0x0000000008001f28                PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0000000008002054        0x4 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/crtbegin.o
-                0x0000000008002058                PROVIDE (__fini_array_end = .)
-                0x0000000008002058                . = ALIGN (0x4)
-                0x0000000008002058                _sidata = LOADADDR (.data)
+ .fini_array    0x0000000008001f28        0x4 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/crtbegin.o
+                0x0000000008001f2c                PROVIDE (__fini_array_end = .)
+                0x0000000008001f2c                . = ALIGN (0x4)
+                0x0000000008001f2c                _sidata = LOADADDR (.data)
 
-.data           0x0000000020000000       0x10 load address 0x0000000008002058
+.data           0x0000000020000000       0x10 load address 0x0000000008001f2c
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -1882,17 +1922,17 @@ LOAD /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/crtn.o
                 0x0000000020000010                _edata = .
 
 .tm_clone_table
-                0x0000000020000010        0x0 load address 0x0000000008002068
+                0x0000000020000010        0x0 load address 0x0000000008001f3c
  .tm_clone_table
                 0x0000000020000010        0x0 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/crtbegin.o
  .tm_clone_table
                 0x0000000020000010        0x0 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/crtend.o
 
-.igot.plt       0x0000000020000010        0x0 load address 0x0000000008002068
+.igot.plt       0x0000000020000010        0x0 load address 0x0000000008001f3c
  .igot.plt      0x0000000020000010        0x0 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/crtbegin.o
                 0x0000000020000010                . = ALIGN (0x4)
 
-.bss            0x0000000020000010      0x188 load address 0x0000000008002068
+.bss            0x0000000020000010       0x80 load address 0x0000000008001f3c
                 0x0000000020000010                _sbss = .
                 0x0000000020000010                __bss_start__ = _sbss
  *(.bss)
@@ -1900,31 +1940,25 @@ LOAD /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/crtn.o
  *(.bss*)
  .bss.hrtc      0x000000002000002c       0x20 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/rtc.c.obj
                 0x000000002000002c                hrtc
- .bss.hspi1     0x000000002000004c       0x58 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj
-                0x000000002000004c                hspi1
- .bss.hspi2     0x00000000200000a4       0x58 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj
-                0x00000000200000a4                hspi2
- .bss.hspi3     0x00000000200000fc       0x58 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj
-                0x00000000200000fc                hspi3
- .bss.huart2    0x0000000020000154       0x40 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/usart.c.obj
-                0x0000000020000154                huart2
- .bss.uwTick    0x0000000020000194        0x4 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
-                0x0000000020000194                uwTick
+ .bss.huart2    0x000000002000004c       0x40 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/usart.c.obj
+                0x000000002000004c                huart2
+ .bss.uwTick    0x000000002000008c        0x4 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+                0x000000002000008c                uwTick
  *(COMMON)
-                0x0000000020000198                . = ALIGN (0x4)
-                0x0000000020000198                _ebss = .
-                0x0000000020000198                __bss_end__ = _ebss
+                0x0000000020000090                . = ALIGN (0x4)
+                0x0000000020000090                _ebss = .
+                0x0000000020000090                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x0000000020000198      0x600 load address 0x0000000008002068
-                0x0000000020000198                . = ALIGN (0x8)
-                0x0000000020000198                PROVIDE (end = .)
-                0x0000000020000198                PROVIDE (_end = .)
-                0x0000000020000398                . = (. + _Min_Heap_Size)
- *fill*         0x0000000020000198      0x200 
-                0x0000000020000798                . = (. + _Min_Stack_Size)
- *fill*         0x0000000020000398      0x400 
-                0x0000000020000798                . = ALIGN (0x8)
+                0x0000000020000090      0x600 load address 0x0000000008001f3c
+                0x0000000020000090                . = ALIGN (0x8)
+                0x0000000020000090                PROVIDE (end = .)
+                0x0000000020000090                PROVIDE (_end = .)
+                0x0000000020000290                . = (. + _Min_Heap_Size)
+ *fill*         0x0000000020000090      0x200 
+                0x0000000020000690                . = (. + _Min_Stack_Size)
+ *fill*         0x0000000020000290      0x400 
+                0x0000000020000690                . = ALIGN (0x8)
 
 /DISCARD/
  libc.a(*)
@@ -1971,243 +2005,254 @@ LOAD /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/crtn.o
  .ARM.attributes
                 0x00000000000002f1       0x2e CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
  .ARM.attributes
-                0x000000000000031f       0x2e CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
+                0x000000000000031f       0x2e CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
  .ARM.attributes
-                0x000000000000034d       0x2e CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+                0x000000000000034d       0x2e CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c.obj
  .ARM.attributes
-                0x000000000000037b       0x1e /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_aeabi_uldivmod.o)
+                0x000000000000037b       0x2e CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.c.obj
  .ARM.attributes
-                0x0000000000000399       0x2e /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_udivmoddi4.o)
+                0x00000000000003a9       0x1e /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_aeabi_uldivmod.o)
  .ARM.attributes
-                0x00000000000003c7       0x1e /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_dvmd_tls.o)
+                0x00000000000003c7       0x2e /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_udivmoddi4.o)
  .ARM.attributes
-                0x00000000000003e5       0x2e /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
+                0x00000000000003f5       0x1e /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_dvmd_tls.o)
  .ARM.attributes
-                0x0000000000000413       0x2e /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
+                0x0000000000000413       0x2e /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
  .ARM.attributes
-                0x0000000000000441       0x2e /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/crtend.o
+                0x0000000000000441       0x2e /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
  .ARM.attributes
-                0x000000000000046f       0x1e /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/crtn.o
+                0x000000000000046f       0x2e /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/crtend.o
+ .ARM.attributes
+                0x000000000000049d       0x1e /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/crtn.o
 OUTPUT(mcu-ver-master.elf elf32-littlearm)
 LOAD linker stubs
 LOAD /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a
 LOAD /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a
 LOAD /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a
 
-.debug_info     0x0000000000000000     0xc7a1
- .debug_info    0x0000000000000000      0x4bb CMakeFiles/mcu-ver-master.elf.dir/Core/Src/gpio.c.obj
- .debug_info    0x00000000000004bb      0xde9 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj
- .debug_info    0x00000000000012a4      0x4a9 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/rtc.c.obj
- .debug_info    0x000000000000174d      0xb63 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj
- .debug_info    0x00000000000022b0      0x48a CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_info    0x000000000000273a      0x622 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
- .debug_info    0x0000000000002d5c      0x553 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/system_stm32f4xx.c.obj
- .debug_info    0x00000000000032af      0xb8c CMakeFiles/mcu-ver-master.elf.dir/Core/Src/usart.c.obj
- .debug_info    0x0000000000003e3b       0x23 CMakeFiles/mcu-ver-master.elf.dir/Core/Startup/startup_stm32f411ceux.s.obj
- .debug_info    0x0000000000003e5e      0x965 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
- .debug_info    0x00000000000047c3      0xf03 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
- .debug_info    0x00000000000056c6      0xad8 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
- .debug_info    0x000000000000619e      0x729 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
- .debug_info    0x00000000000068c7      0xaaf CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
- .debug_info    0x0000000000007376      0x6be CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
- .debug_info    0x0000000000007a34      0xea9 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
- .debug_info    0x00000000000088dd     0x1d24 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .debug_info    0x000000000000a601     0x1835 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
- .debug_info    0x000000000000be36       0x24 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_aeabi_uldivmod.o)
- .debug_info    0x000000000000be5a      0x6e3 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_udivmoddi4.o)
- .debug_info    0x000000000000c53d       0x24 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_dvmd_tls.o)
- .debug_info    0x000000000000c561      0x10b /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
- .debug_info    0x000000000000c66c      0x135 /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
+.debug_info     0x0000000000000000     0xbb82
+ .debug_info    0x0000000000000000      0x502 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/gpio.c.obj
+ .debug_info    0x0000000000000502      0xb16 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj
+ .debug_info    0x0000000000001018      0x4f0 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/rtc.c.obj
+ .debug_info    0x0000000000001508      0x8eb CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj
+ .debug_info    0x0000000000001df3      0x4d1 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_info    0x00000000000022c4      0x651 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
+ .debug_info    0x0000000000002915      0x553 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/system_stm32f4xx.c.obj
+ .debug_info    0x0000000000002e68      0xbbb CMakeFiles/mcu-ver-master.elf.dir/Core/Src/usart.c.obj
+ .debug_info    0x0000000000003a23       0x23 CMakeFiles/mcu-ver-master.elf.dir/Core/Startup/startup_stm32f411ceux.s.obj
+ .debug_info    0x0000000000003a46      0x965 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+ .debug_info    0x00000000000043ab      0xf03 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+ .debug_info    0x00000000000052ae      0xad8 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+ .debug_info    0x0000000000005d86      0x729 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+ .debug_info    0x00000000000064af      0xaaf CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+ .debug_info    0x0000000000006f5e      0x6be CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
+ .debug_info    0x000000000000761c      0xea9 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
+ .debug_info    0x00000000000084c5     0x1835 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+ .debug_info    0x0000000000009cfa      0xb4b CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c.obj
+ .debug_info    0x000000000000a845      0x9d2 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.c.obj
+ .debug_info    0x000000000000b217       0x24 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_aeabi_uldivmod.o)
+ .debug_info    0x000000000000b23b      0x6e3 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_udivmoddi4.o)
+ .debug_info    0x000000000000b91e       0x24 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_dvmd_tls.o)
+ .debug_info    0x000000000000b942      0x10b /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
+ .debug_info    0x000000000000ba4d      0x135 /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
 
-.debug_abbrev   0x0000000000000000     0x26dd
- .debug_abbrev  0x0000000000000000      0x163 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/gpio.c.obj
- .debug_abbrev  0x0000000000000163      0x288 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj
- .debug_abbrev  0x00000000000003eb      0x187 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/rtc.c.obj
- .debug_abbrev  0x0000000000000572      0x213 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj
- .debug_abbrev  0x0000000000000785      0x12d CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_abbrev  0x00000000000008b2      0x184 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
- .debug_abbrev  0x0000000000000a36      0x11e CMakeFiles/mcu-ver-master.elf.dir/Core/Src/system_stm32f4xx.c.obj
- .debug_abbrev  0x0000000000000b54      0x22e CMakeFiles/mcu-ver-master.elf.dir/Core/Src/usart.c.obj
- .debug_abbrev  0x0000000000000d82       0x12 CMakeFiles/mcu-ver-master.elf.dir/Core/Startup/startup_stm32f411ceux.s.obj
- .debug_abbrev  0x0000000000000d94      0x277 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
- .debug_abbrev  0x000000000000100b      0x376 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
- .debug_abbrev  0x0000000000001381      0x27d CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
- .debug_abbrev  0x00000000000015fe      0x1ff CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
- .debug_abbrev  0x00000000000017fd      0x2c5 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
- .debug_abbrev  0x0000000000001ac2      0x1c6 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
- .debug_abbrev  0x0000000000001c88      0x21d CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
- .debug_abbrev  0x0000000000001ea5      0x278 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .debug_abbrev  0x000000000000211d      0x2ae CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
- .debug_abbrev  0x00000000000023cb       0x14 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_aeabi_uldivmod.o)
- .debug_abbrev  0x00000000000023df      0x16a /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_udivmoddi4.o)
- .debug_abbrev  0x0000000000002549       0x14 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_dvmd_tls.o)
- .debug_abbrev  0x000000000000255d       0xc9 /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
- .debug_abbrev  0x0000000000002626       0xb7 /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
+.debug_abbrev   0x0000000000000000     0x2aaf
+ .debug_abbrev  0x0000000000000000      0x17b CMakeFiles/mcu-ver-master.elf.dir/Core/Src/gpio.c.obj
+ .debug_abbrev  0x000000000000017b      0x32a CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj
+ .debug_abbrev  0x00000000000004a5      0x1b1 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/rtc.c.obj
+ .debug_abbrev  0x0000000000000656      0x1ec CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj
+ .debug_abbrev  0x0000000000000842      0x145 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_abbrev  0x0000000000000987      0x1ae CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
+ .debug_abbrev  0x0000000000000b35      0x11e CMakeFiles/mcu-ver-master.elf.dir/Core/Src/system_stm32f4xx.c.obj
+ .debug_abbrev  0x0000000000000c53      0x246 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/usart.c.obj
+ .debug_abbrev  0x0000000000000e99       0x12 CMakeFiles/mcu-ver-master.elf.dir/Core/Startup/startup_stm32f411ceux.s.obj
+ .debug_abbrev  0x0000000000000eab      0x277 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+ .debug_abbrev  0x0000000000001122      0x376 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+ .debug_abbrev  0x0000000000001498      0x27d CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+ .debug_abbrev  0x0000000000001715      0x1ff CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+ .debug_abbrev  0x0000000000001914      0x2c5 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+ .debug_abbrev  0x0000000000001bd9      0x1c6 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
+ .debug_abbrev  0x0000000000001d9f      0x21d CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
+ .debug_abbrev  0x0000000000001fbc      0x2ae CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+ .debug_abbrev  0x000000000000226a      0x265 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c.obj
+ .debug_abbrev  0x00000000000024cf      0x2ce CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.c.obj
+ .debug_abbrev  0x000000000000279d       0x14 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_aeabi_uldivmod.o)
+ .debug_abbrev  0x00000000000027b1      0x16a /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_udivmoddi4.o)
+ .debug_abbrev  0x000000000000291b       0x14 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_dvmd_tls.o)
+ .debug_abbrev  0x000000000000292f       0xc9 /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
+ .debug_abbrev  0x00000000000029f8       0xb7 /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
 
-.debug_aranges  0x0000000000000000      0xa28
+.debug_aranges  0x0000000000000000      0x8d8
  .debug_aranges
                 0x0000000000000000       0x20 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/gpio.c.obj
  .debug_aranges
-                0x0000000000000020       0x38 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj
+                0x0000000000000020       0x40 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj
  .debug_aranges
-                0x0000000000000058       0x30 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/rtc.c.obj
+                0x0000000000000060       0x30 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/rtc.c.obj
  .debug_aranges
-                0x0000000000000088       0x40 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj
+                0x0000000000000090       0x30 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj
  .debug_aranges
-                0x00000000000000c8       0x20 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+                0x00000000000000c0       0x20 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
  .debug_aranges
-                0x00000000000000e8       0x70 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
+                0x00000000000000e0       0x70 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
  .debug_aranges
-                0x0000000000000158       0x28 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/system_stm32f4xx.c.obj
+                0x0000000000000150       0x28 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/system_stm32f4xx.c.obj
  .debug_aranges
-                0x0000000000000180       0x30 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/usart.c.obj
+                0x0000000000000178       0x30 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/usart.c.obj
  .debug_aranges
-                0x00000000000001b0       0x28 CMakeFiles/mcu-ver-master.elf.dir/Core/Startup/startup_stm32f411ceux.s.obj
+                0x00000000000001a8       0x28 CMakeFiles/mcu-ver-master.elf.dir/Core/Startup/startup_stm32f411ceux.s.obj
  .debug_aranges
-                0x00000000000001d8       0xf0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+                0x00000000000001d0       0xf0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
  .debug_aranges
-                0x00000000000002c8       0xa8 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+                0x00000000000002c0       0xa8 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
  .debug_aranges
-                0x0000000000000370       0x90 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+                0x0000000000000368       0x90 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
  .debug_aranges
-                0x0000000000000400       0x58 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+                0x00000000000003f8       0x58 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
  .debug_aranges
-                0x0000000000000458       0x88 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+                0x0000000000000450       0x88 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
  .debug_aranges
-                0x00000000000004e0       0x50 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
+                0x00000000000004d8       0x50 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
  .debug_aranges
-                0x0000000000000530       0xb8 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
+                0x0000000000000528       0xb8 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
  .debug_aranges
-                0x00000000000005e8      0x1d0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
+                0x00000000000005e0      0x1d0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
  .debug_aranges
-                0x00000000000007b8      0x1d0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+                0x00000000000007b0       0x30 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c.obj
  .debug_aranges
-                0x0000000000000988       0x20 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_aeabi_uldivmod.o)
+                0x00000000000007e0       0x58 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.c.obj
  .debug_aranges
-                0x00000000000009a8       0x20 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_udivmoddi4.o)
+                0x0000000000000838       0x20 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_aeabi_uldivmod.o)
  .debug_aranges
-                0x00000000000009c8       0x20 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_dvmd_tls.o)
+                0x0000000000000858       0x20 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_udivmoddi4.o)
  .debug_aranges
-                0x00000000000009e8       0x20 /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
+                0x0000000000000878       0x20 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_dvmd_tls.o)
  .debug_aranges
-                0x0000000000000a08       0x20 /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
+                0x0000000000000898       0x20 /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
+ .debug_aranges
+                0x00000000000008b8       0x20 /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
 
 .debug_rnglists
-                0x0000000000000000      0x7df
+                0x0000000000000000      0x726
  .debug_rnglists
                 0x0000000000000000       0x14 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/gpio.c.obj
  .debug_rnglists
-                0x0000000000000014       0x27 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj
+                0x0000000000000014       0x2d CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj
  .debug_rnglists
-                0x000000000000003b       0x1f CMakeFiles/mcu-ver-master.elf.dir/Core/Src/rtc.c.obj
+                0x0000000000000041       0x1f CMakeFiles/mcu-ver-master.elf.dir/Core/Src/rtc.c.obj
  .debug_rnglists
-                0x000000000000005a       0x2c CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj
+                0x0000000000000060       0x22 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj
  .debug_rnglists
-                0x0000000000000086       0x13 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+                0x0000000000000082       0x13 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
  .debug_rnglists
-                0x0000000000000099       0x4f CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
+                0x0000000000000095       0x4f CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
  .debug_rnglists
-                0x00000000000000e8       0x1a CMakeFiles/mcu-ver-master.elf.dir/Core/Src/system_stm32f4xx.c.obj
+                0x00000000000000e4       0x1a CMakeFiles/mcu-ver-master.elf.dir/Core/Src/system_stm32f4xx.c.obj
  .debug_rnglists
-                0x0000000000000102       0x1f CMakeFiles/mcu-ver-master.elf.dir/Core/Src/usart.c.obj
+                0x00000000000000fe       0x1f CMakeFiles/mcu-ver-master.elf.dir/Core/Src/usart.c.obj
  .debug_rnglists
-                0x0000000000000121       0x19 CMakeFiles/mcu-ver-master.elf.dir/Core/Startup/startup_stm32f411ceux.s.obj
+                0x000000000000011d       0x19 CMakeFiles/mcu-ver-master.elf.dir/Core/Startup/startup_stm32f411ceux.s.obj
  .debug_rnglists
-                0x000000000000013a       0xaf CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+                0x0000000000000136       0xaf CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
  .debug_rnglists
-                0x00000000000001e9       0xa9 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+                0x00000000000001e5       0xa9 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
  .debug_rnglists
-                0x0000000000000292       0x6c CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+                0x000000000000028e       0x6c CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
  .debug_rnglists
-                0x00000000000002fe       0x3f CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+                0x00000000000002fa       0x3f CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
  .debug_rnglists
-                0x000000000000033d       0x75 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+                0x0000000000000339       0x75 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
  .debug_rnglists
-                0x00000000000003b2       0x39 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
+                0x00000000000003ae       0x39 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
  .debug_rnglists
-                0x00000000000003eb       0x8d CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
+                0x00000000000003e7       0x8d CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
  .debug_rnglists
-                0x0000000000000478      0x169 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
+                0x0000000000000474      0x162 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
  .debug_rnglists
-                0x00000000000005e1      0x162 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+                0x00000000000005d6       0x69 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c.obj
  .debug_rnglists
-                0x0000000000000743       0x75 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_udivmoddi4.o)
+                0x000000000000063f       0x4b CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.c.obj
  .debug_rnglists
-                0x00000000000007b8       0x13 /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
+                0x000000000000068a       0x75 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_udivmoddi4.o)
  .debug_rnglists
-                0x00000000000007cb       0x14 /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
+                0x00000000000006ff       0x13 /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
+ .debug_rnglists
+                0x0000000000000712       0x14 /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
 
-.debug_line     0x0000000000000000     0xa977
- .debug_line    0x0000000000000000      0x253 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/gpio.c.obj
- .debug_line    0x0000000000000253      0x434 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj
- .debug_line    0x0000000000000687      0x2d6 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/rtc.c.obj
- .debug_line    0x000000000000095d      0x51e CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj
- .debug_line    0x0000000000000e7b      0x1e4 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_line    0x000000000000105f      0x31d CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
- .debug_line    0x000000000000137c      0x29c CMakeFiles/mcu-ver-master.elf.dir/Core/Src/system_stm32f4xx.c.obj
- .debug_line    0x0000000000001618      0x366 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/usart.c.obj
- .debug_line    0x000000000000197e       0x77 CMakeFiles/mcu-ver-master.elf.dir/Core/Startup/startup_stm32f411ceux.s.obj
- .debug_line    0x00000000000019f5      0x5e9 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
- .debug_line    0x0000000000001fde      0x7fb CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
- .debug_line    0x00000000000027d9      0xe4e CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
- .debug_line    0x0000000000003627      0x6e0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
- .debug_line    0x0000000000003d07      0xb55 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
- .debug_line    0x000000000000485c      0x69b CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
- .debug_line    0x0000000000004ef7     0x1052 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
- .debug_line    0x0000000000005f49     0x2494 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .debug_line    0x00000000000083dd     0x1c73 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
- .debug_line    0x000000000000a050       0x4e /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_aeabi_uldivmod.o)
- .debug_line    0x000000000000a09e      0x5a2 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_udivmoddi4.o)
- .debug_line    0x000000000000a640       0x4a /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_dvmd_tls.o)
- .debug_line    0x000000000000a68a      0x122 /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
- .debug_line    0x000000000000a7ac      0x1cb /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
+.debug_line     0x0000000000000000     0x9395
+ .debug_line    0x0000000000000000      0x269 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/gpio.c.obj
+ .debug_line    0x0000000000000269      0x570 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj
+ .debug_line    0x00000000000007d9      0x2ec CMakeFiles/mcu-ver-master.elf.dir/Core/Src/rtc.c.obj
+ .debug_line    0x0000000000000ac5      0x4f4 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj
+ .debug_line    0x0000000000000fb9      0x1fa CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_line    0x00000000000011b3      0x333 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
+ .debug_line    0x00000000000014e6      0x29c CMakeFiles/mcu-ver-master.elf.dir/Core/Src/system_stm32f4xx.c.obj
+ .debug_line    0x0000000000001782      0x37c CMakeFiles/mcu-ver-master.elf.dir/Core/Src/usart.c.obj
+ .debug_line    0x0000000000001afe       0x77 CMakeFiles/mcu-ver-master.elf.dir/Core/Startup/startup_stm32f411ceux.s.obj
+ .debug_line    0x0000000000001b75      0x5e9 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+ .debug_line    0x000000000000215e      0x7fb CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+ .debug_line    0x0000000000002959      0xe4e CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+ .debug_line    0x00000000000037a7      0x6e0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+ .debug_line    0x0000000000003e87      0xb55 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+ .debug_line    0x00000000000049dc      0x69b CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
+ .debug_line    0x0000000000005077     0x1052 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
+ .debug_line    0x00000000000060c9     0x1c73 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+ .debug_line    0x0000000000007d3c      0x6de CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c.obj
+ .debug_line    0x000000000000841a      0x654 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.c.obj
+ .debug_line    0x0000000000008a6e       0x4e /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_aeabi_uldivmod.o)
+ .debug_line    0x0000000000008abc      0x5a2 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_udivmoddi4.o)
+ .debug_line    0x000000000000905e       0x4a /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_dvmd_tls.o)
+ .debug_line    0x00000000000090a8      0x122 /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
+ .debug_line    0x00000000000091ca      0x1cb /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
 
-.debug_str      0x0000000000000000     0x3b55
+.debug_str      0x0000000000000000     0x39a4
  .debug_str     0x0000000000000000      0x3bb CMakeFiles/mcu-ver-master.elf.dir/Core/Src/gpio.c.obj
-                                        0x412 (size before relaxing)
- .debug_str     0x00000000000003bb      0x70e CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj
-                                        0xafb (size before relaxing)
- .debug_str     0x0000000000000ac9      0x255 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/rtc.c.obj
-                                        0x4cf (size before relaxing)
- .debug_str     0x0000000000000d1e       0x9c CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj
-                                        0x8c5 (size before relaxing)
- .debug_str     0x0000000000000dba      0x429 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
-                                        0x71b (size before relaxing)
- .debug_str     0x00000000000011e3      0x273 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
-                                        0x727 (size before relaxing)
- .debug_str     0x0000000000001456      0x110 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/system_stm32f4xx.c.obj
+                                        0x436 (size before relaxing)
+ .debug_str     0x00000000000003bb      0x3a3 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj
+                                        0x768 (size before relaxing)
+ .debug_str     0x000000000000075e      0x28b CMakeFiles/mcu-ver-master.elf.dir/Core/Src/rtc.c.obj
+                                        0x4f3 (size before relaxing)
+ .debug_str     0x00000000000009e9      0x16e CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj
+                                        0x56c (size before relaxing)
+ .debug_str     0x0000000000000b57      0x429 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+                                        0x73f (size before relaxing)
+ .debug_str     0x0000000000000f80      0x496 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
+                                        0x739 (size before relaxing)
+ .debug_str     0x0000000000001416      0x110 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/system_stm32f4xx.c.obj
                                         0x40d (size before relaxing)
- .debug_str     0x0000000000001566       0x9a CMakeFiles/mcu-ver-master.elf.dir/Core/Src/usart.c.obj
-                                        0xc5d (size before relaxing)
- .debug_str     0x0000000000001600       0x24 CMakeFiles/mcu-ver-master.elf.dir/Core/Startup/startup_stm32f411ceux.s.obj
+ .debug_str     0x0000000000001526       0xaa CMakeFiles/mcu-ver-master.elf.dir/Core/Src/usart.c.obj
+                                        0xc6f (size before relaxing)
+ .debug_str     0x00000000000015d0       0x24 CMakeFiles/mcu-ver-master.elf.dir/Core/Startup/startup_stm32f411ceux.s.obj
                                          0x6e (size before relaxing)
- .debug_str     0x0000000000001624      0x375 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+ .debug_str     0x00000000000015f4      0x375 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
                                         0xaa4 (size before relaxing)
- .debug_str     0x0000000000001999      0x462 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+ .debug_str     0x0000000000001969      0x462 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
                                         0xb5a (size before relaxing)
- .debug_str     0x0000000000001dfb      0x348 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+ .debug_str     0x0000000000001dcb      0x34e CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
                                         0x7fc (size before relaxing)
- .debug_str     0x0000000000002143      0x13e CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+ .debug_str     0x0000000000002119      0x14f CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
                                         0x578 (size before relaxing)
- .debug_str     0x0000000000002281      0x1d9 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+ .debug_str     0x0000000000002268      0x1d9 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
                                         0x79e (size before relaxing)
- .debug_str     0x000000000000245a      0x146 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
+ .debug_str     0x0000000000002441      0x146 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
                                         0x595 (size before relaxing)
- .debug_str     0x00000000000025a0      0x2de CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
+ .debug_str     0x0000000000002587      0x2de CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
                                         0x7cb (size before relaxing)
- .debug_str     0x000000000000287e      0x53d CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
-                                        0xc5f (size before relaxing)
- .debug_str     0x0000000000002dbb      0x526 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+ .debug_str     0x0000000000002865      0x53b CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
                                         0xcb8 (size before relaxing)
- .debug_str     0x00000000000032e1       0x73 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_aeabi_uldivmod.o)
+ .debug_str     0x0000000000002da0      0x167 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c.obj
+                                        0x521 (size before relaxing)
+ .debug_str     0x0000000000002f07      0x230 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.c.obj
+                                        0x625 (size before relaxing)
+ .debug_str     0x0000000000003137       0x73 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_aeabi_uldivmod.o)
                                          0x7f (size before relaxing)
- .debug_str     0x0000000000003354      0x57a /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_udivmoddi4.o)
+ .debug_str     0x00000000000031aa      0x57a /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_udivmoddi4.o)
                                         0x67f (size before relaxing)
- .debug_str     0x00000000000038ce        0xc /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_dvmd_tls.o)
+ .debug_str     0x0000000000003724        0xc /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_dvmd_tls.o)
                                          0x83 (size before relaxing)
- .debug_str     0x00000000000038da      0x1c6 /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
+ .debug_str     0x0000000000003730      0x1bf /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
                                         0x261 (size before relaxing)
- .debug_str     0x0000000000003aa0       0xb5 /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
+ .debug_str     0x00000000000038ef       0xb5 /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
                                         0x216 (size before relaxing)
 
 .comment        0x0000000000000000       0x56
@@ -2227,68 +2272,72 @@ LOAD /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a
  .comment       0x0000000000000056       0x57 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
  .comment       0x0000000000000056       0x57 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
  .comment       0x0000000000000056       0x57 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
- .comment       0x0000000000000056       0x57 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
  .comment       0x0000000000000056       0x57 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+ .comment       0x0000000000000056       0x57 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c.obj
+ .comment       0x0000000000000056       0x57 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.c.obj
  .comment       0x0000000000000056       0x57 /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
  .comment       0x0000000000000056       0x57 /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
 
-.debug_frame    0x0000000000000000     0x1804
+.debug_frame    0x0000000000000000     0x1398
  .debug_frame   0x0000000000000000       0x34 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/gpio.c.obj
- .debug_frame   0x0000000000000034       0x74 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj
- .debug_frame   0x00000000000000a8       0x48 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/rtc.c.obj
- .debug_frame   0x00000000000000f0       0x98 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj
- .debug_frame   0x0000000000000188       0x2c CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_frame   0x00000000000001b4       0xd0 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
- .debug_frame   0x0000000000000284       0x30 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/system_stm32f4xx.c.obj
- .debug_frame   0x00000000000002b4       0x60 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/usart.c.obj
- .debug_frame   0x0000000000000314      0x1ec CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
- .debug_frame   0x0000000000000500      0x148 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
- .debug_frame   0x0000000000000648      0x188 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
- .debug_frame   0x00000000000007d0       0xd8 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
- .debug_frame   0x00000000000008a8      0x16c CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
- .debug_frame   0x0000000000000a14       0xb0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
- .debug_frame   0x0000000000000ac4      0x20c CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
- .debug_frame   0x0000000000000cd0      0x594 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .debug_frame   0x0000000000001264      0x4e8 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
- .debug_frame   0x000000000000174c       0x2c /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_aeabi_uldivmod.o)
- .debug_frame   0x0000000000001778       0x34 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_udivmoddi4.o)
- .debug_frame   0x00000000000017ac       0x2c /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
- .debug_frame   0x00000000000017d8       0x2c /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
+ .debug_frame   0x0000000000000034       0x94 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj
+ .debug_frame   0x00000000000000c8       0x48 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/rtc.c.obj
+ .debug_frame   0x0000000000000110       0x74 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj
+ .debug_frame   0x0000000000000184       0x2c CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_frame   0x00000000000001b0       0xd0 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/stm32f4xx_it.c.obj
+ .debug_frame   0x0000000000000280       0x30 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/system_stm32f4xx.c.obj
+ .debug_frame   0x00000000000002b0       0x60 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/usart.c.obj
+ .debug_frame   0x0000000000000310      0x1ec CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+ .debug_frame   0x00000000000004fc      0x148 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+ .debug_frame   0x0000000000000644      0x188 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+ .debug_frame   0x00000000000007cc       0xd8 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+ .debug_frame   0x00000000000008a4      0x16c CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+ .debug_frame   0x0000000000000a10       0xb0 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
+ .debug_frame   0x0000000000000ac0      0x20c CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
+ .debug_frame   0x0000000000000ccc      0x4e8 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+ .debug_frame   0x00000000000011b4       0x68 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c.obj
+ .debug_frame   0x000000000000121c       0xc4 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.c.obj
+ .debug_frame   0x00000000000012e0       0x2c /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x000000000000130c       0x34 /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x0000000000001340       0x2c /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
+ .debug_frame   0x000000000000136c       0x2c /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
 
 .debug_loclists
-                0x0000000000000000     0x5054
+                0x0000000000000000     0x45a5
  .debug_loclists
-                0x0000000000000000       0x2c CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj
+                0x0000000000000000       0x84 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj
  .debug_loclists
-                0x000000000000002c       0xa7 CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj
+                0x0000000000000084       0xae CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj
  .debug_loclists
-                0x00000000000000d3       0xdb CMakeFiles/mcu-ver-master.elf.dir/Core/Src/system_stm32f4xx.c.obj
+                0x0000000000000132       0xdb CMakeFiles/mcu-ver-master.elf.dir/Core/Src/system_stm32f4xx.c.obj
  .debug_loclists
-                0x00000000000001ae       0x5c CMakeFiles/mcu-ver-master.elf.dir/Core/Src/usart.c.obj
+                0x000000000000020d       0x5c CMakeFiles/mcu-ver-master.elf.dir/Core/Src/usart.c.obj
  .debug_loclists
-                0x000000000000020a       0xc9 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+                0x0000000000000269       0xc9 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
  .debug_loclists
-                0x00000000000002d3      0x4db CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+                0x0000000000000332      0x4db CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
  .debug_loclists
-                0x00000000000007ae      0x763 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+                0x000000000000080d      0x763 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
  .debug_loclists
-                0x0000000000000f11      0x349 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+                0x0000000000000f70      0x349 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
  .debug_loclists
-                0x000000000000125a      0x3a9 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+                0x00000000000012b9      0x3a9 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
  .debug_loclists
-                0x0000000000001603      0x256 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
+                0x0000000000001662      0x256 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
  .debug_loclists
-                0x0000000000001859      0x85a CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
+                0x00000000000018b8      0x85a CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
  .debug_loclists
-                0x00000000000020b3     0x1329 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
+                0x0000000000002112      0xf3e CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
  .debug_loclists
-                0x00000000000033dc      0xf3e CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+                0x0000000000003050      0x3e3 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c.obj
  .debug_loclists
-                0x000000000000431a      0xb1b /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_udivmoddi4.o)
+                0x0000000000003433      0x438 CMakeFiles/mcu-ver-master.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.c.obj
  .debug_loclists
-                0x0000000000004e35       0x7a /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
+                0x000000000000386b      0xb1b /usr/lib64/gcc/arm-none-eabi/11/thumb/v7e-m/nofp/libgcc.a(_udivmoddi4.o)
  .debug_loclists
-                0x0000000000004eaf      0x1a5 /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
+                0x0000000000004386       0x7a /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
+ .debug_loclists
+                0x0000000000004400      0x1a5 /usr/lib64/gcc/arm-none-eabi/11/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
 
 .debug_line_str
                 0x0000000000000000       0x95

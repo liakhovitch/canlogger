@@ -68,6 +68,41 @@ uint8_t dumb_prng(){
     prev2 = ret;
     return ret;
 }
+
+void spi_send(const uint8_t* dat, size_t dat_size, SPI_TypeDef* spi_dev){
+    // Global interrupt disable
+    __disable_irq();
+
+    // Transmit Data
+    LL_SPI_SetMode(spi_dev, LL_SPI_MODE_SLAVE);
+    LL_SPI_Enable(spi_dev);
+
+    __asm__ __volatile__ (
+    // r6: Temp storage for SPI status register value
+    // r7: Array pointer
+    // r8: Temporary storage for fetched data value
+    // Setup
+    "mov r7, %[ptr]\n\t"          // Set up array pointer
+    // Main loop
+    "loop1_start:\n\t"            //
+    "cmp r7, %[ptr_end]\n\t"      // Have we reached the end of the array?
+    "bcs loop1_end\n\t"           // If so, exit the loop
+    "wait_loop:\n\t"              // Beginning of polling loop for TX readiness bits
+    "ldr r6, [%[SPI_SR]]\n\t"     // Load SPI status register
+    "tst r6, %[COND]\n\t"         // Is the TX buffer ready?
+    "beq wait_loop\n\t"           // If not, keep polling
+    "ldr r8, [r7], #1\n\t"        // Load next data point and increment pointer
+    "strb r8, [%[SPI_DR]]\n\t"    // Write next data point to TX buffer
+    "b loop1_start\n\t"           // Loop the loop
+    "loop1_end:\n\t"              //
+    :
+    : [SPI_SR] "r" (&(spi_dev->SR)), [SPI_DR] "r" (&(spi_dev->DR)), [COND] "I" (SPI_SR_TXE), [ptr] "r" (dat), [ptr_end] "r" (dat + dat_size +1)
+    : "r6", "r7", "r8",  "memory"
+    );
+    // Wait for SPI peripheral to finish anything it's doing
+    while(LL_SPI_IsActiveFlag_BSY(spi_dev));
+    LL_SPI_Disable(spi_dev);
+}
 /* USER CODE END 0 */
 
 /**
@@ -104,32 +139,17 @@ int main(void)
   MX_SPI3_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-  uint8_t dat[DAT_SIZE];
-  for(unsigned int i = 0; i < DAT_SIZE; i++){
+  uint8_t dat[DAT_SIZE + 1];
+  for(unsigned int i = 0; i < DAT_SIZE + 1; i++){
       dat[i] = dumb_prng();
   }
 
   // Initially set LED low
   HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_SET);
 
-  // Wait for first chip select to go low, indicating that master is ready to receive
-  while(HAL_GPIO_ReadPin(SPI1_CS_GPIO_Port, SPI1_CS_Pin));
-
-  // Transmit Data
-  uint8_t* tx_ptr = dat;
-  SPI1->CR1 |= SPI_CR1_SSI;
-  LL_SPI_SetMode(SPI1, LL_SPI_MODE_SLAVE);
-  LL_SPI_Enable(SPI1);
-  for(uint32_t i = 0; i < DAT_SIZE; i++){
-      while(!LL_SPI_IsActiveFlag_TXE(SPI1));
-      LL_SPI_TransmitData8(SPI1, *tx_ptr);
-      tx_ptr++;
-  }
-  // Wait for SPI peripheral to finish anything it's doing
-  while(LL_SPI_IsActiveFlag_BSY(SPI1));
-  LL_SPI_Disable(SPI1);
-  SPI1->CR1 &= ~(SPI_CR1_SSI);
-
+  spi_send(dat, DAT_SIZE, SPI1);
+  spi_send(dat, DAT_SIZE, SPI2);
+  spi_send(dat, DAT_SIZE, SPI3);
 
   // Light up the LED to indicate that transmission is complete
   HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
@@ -138,13 +158,10 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
-  {
+  while (1);
+  /* USER CODE END WHILE */
 
-  }
-    /* USER CODE END WHILE */
-
-    /* USER CODE BEGIN 3 */
+  /* USER CODE BEGIN 3 */
   /* USER CODE END 3 */
 }
 
@@ -172,7 +189,7 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
   RCC_OscInitStruct.PLL.PLLM = 20;
   RCC_OscInitStruct.PLL.PLLN = 128;
-  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV4;
+  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
   RCC_OscInitStruct.PLL.PLLQ = 4;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
@@ -184,10 +201,10 @@ void SystemClock_Config(void)
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
   {
     Error_Handler();
   }

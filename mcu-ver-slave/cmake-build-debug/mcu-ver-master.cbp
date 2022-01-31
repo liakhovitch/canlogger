@@ -47,6 +47,7 @@
 					<Add option="-DUSE_HAL_DRIVER"/>
 					<Add option="-DSTM32F411xE"/>
 					<Add option="-DDEBUG"/>
+					<Add option="-DUSE_FULL_LL_DRIVER"/>
 					<Add directory="/home/liakhova/Documents/classes/capstone/mcu-ver-slave/Core/Inc"/>
 					<Add directory="/home/liakhova/Documents/classes/capstone/mcu-ver-slave/Drivers/STM32F4xx_HAL_Driver/Inc"/>
 					<Add directory="/home/liakhova/Documents/classes/capstone/mcu-ver-slave/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"/>
@@ -76,6 +77,7 @@
 					<Add option="-DUSE_HAL_DRIVER"/>
 					<Add option="-DSTM32F411xE"/>
 					<Add option="-DDEBUG"/>
+					<Add option="-DUSE_FULL_LL_DRIVER"/>
 					<Add directory="/home/liakhova/Documents/classes/capstone/mcu-ver-slave/Core/Inc"/>
 					<Add directory="/home/liakhova/Documents/classes/capstone/mcu-ver-slave/Drivers/STM32F4xx_HAL_Driver/Inc"/>
 					<Add directory="/home/liakhova/Documents/classes/capstone/mcu-ver-slave/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"/>

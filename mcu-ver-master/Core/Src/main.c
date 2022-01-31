@@ -68,6 +68,64 @@ uint8_t dumb_prng(){
     return ret;
 }
 
+void spi_recv(uint8_t* recv, size_t dat_size, SPI_TypeDef* spi_dev){
+    // Global interrupt disable to ensure smooth operation
+    __disable_irq();
+
+    // Receive Data
+    LL_SPI_Enable(spi_dev);
+    LL_SPI_SetMode(spi_dev, LL_SPI_MODE_MASTER);
+
+    __asm__ __volatile__ (
+    // r0: A byte of zeroes
+    // r5: Temp storage for received value
+    // r6: Temp storage for SPI status register value
+    // r7: Array pointer
+    // Setup
+    "mov r7, %[ptr]\n\t"          // Set up array pointer
+    "mov r0, #0\n\t"              // Set up zero register
+    // Main loop
+    "loop1_start:\n\t"            //
+    "cmp r7, %[ptr_end]\n\t"      // Have we reached the end of the array?
+    "bcs loop1_end\n\t"           // If so, exit the loop
+    "wait_loop1:\n\t"             // Beginning of polling loop for RX/TX readiness bits
+    "ldr r6, [%[SPI_SR]]\n\t"     // Load SPI status register
+    "tst r6, %[COND]\n\t"         // Is the TX buffer ready?
+    "beq wait_loop1\n\t"          // If not, keep polling
+    "strb r0, [%[SPI_DR]]\n\t"    // Write a bunch of zeroes to the TX buffer
+    "wait_loop2:\n\t"             // Beginning of polling loop for RX/TX readiness bits
+    "ldr r6, [%[SPI_SR]]\n\t"     // Load SPI status register
+    "tst r6, %[COND2]\n\t"        // Is the RX buffer ready?
+    "beq wait_loop2\n\t"          // If not, keep polling
+    "ldr r5, [%[SPI_DR]]\n\t"     // Read value from RX buffer
+    "strb r5, [r7], #1\n\t"       // Store received value and increment pointer
+    "b loop1_start\n\t"           // Loop the loop
+    "loop1_end:\n\t"              //
+    :
+    : [SPI_SR] "r" (&(spi_dev->SR)), [SPI_DR] "r" (&(spi_dev->DR)), [COND] "I" (SPI_SR_TXE), [COND2] "I" (SPI_SR_RXNE), [ptr] "r" (recv), [ptr_end] "r" (recv + dat_size)
+    : "r5", "r6", "r7", "r0", "memory"
+    );
+
+    __enable_irq();
+
+    // Wait for SPI peripheral to finish anything it's doing
+    while(LL_SPI_IsActiveFlag_BSY(spi_dev));
+    LL_SPI_Disable(spi_dev);
+
+}
+
+uint8_t spi_test(const uint8_t* dat, size_t dat_size, SPI_TypeDef* spi_dev){
+    uint8_t recv[dat_size];
+    spi_recv(recv, dat_size, spi_dev);
+    // Make sure the data is what it's supposed to be
+    for(unsigned int i = 0; i < DAT_SIZE; i++){
+        if(recv[i] != dat[i]){
+            return 1;
+        }
+    }
+    return 0;
+}
+
 /* USER CODE END 0 */
 
 /**
@@ -76,7 +134,7 @@ uint8_t dumb_prng(){
   */
 int main(void)
 {
-  /* USER CODE BEGIN 1 */
+    /* USER CODE BEGIN 1 */
 
   /* USER CODE END 1 */
 
@@ -104,20 +162,15 @@ int main(void)
   MX_SPI3_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
+
+  // Generate test data
   uint8_t dat[DAT_SIZE];
   for(unsigned int i = 0; i < DAT_SIZE; i++){
       dat[i] = dumb_prng();
   }
-  // Data receive buffer
-  uint8_t recv[DAT_SIZE];
 
   // Initially set LED low
   HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_SET);
-  // Initially set chip selects high (inactive)
-  HAL_GPIO_WritePin(SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_SET);
-  HAL_GPIO_WritePin(SPI2_CS_GPIO_Port, SPI2_CS_Pin, GPIO_PIN_SET);
-  HAL_GPIO_WritePin(SPI3_CS_GPIO_Port, SPI3_CS_Pin, GPIO_PIN_SET);
-
 
   // Variable for counting the number of failed tests
   uint8_t errcnt = 0;
@@ -125,33 +178,10 @@ int main(void)
   // Wait for button press
   while(HAL_GPIO_ReadPin(KEY_GPIO_Port, KEY_Pin));
 
-  // Set chip select low to indicate that we are ready to receive
-  HAL_GPIO_WritePin(SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_RESET);
-
-  // Receive Data
-  uint8_t* recv_ptr = recv;
-  SPI1->CR1 |= SPI_CR1_SSI;
-  LL_SPI_SetMode(SPI1, LL_SPI_MODE_MASTER);
-  LL_SPI_Enable(SPI1);
-  for(uint32_t i = 0; i < DAT_SIZE; i++){
-      while(!LL_SPI_IsActiveFlag_RXNE(SPI1));
-      *recv_ptr = LL_SPI_ReceiveData8(SPI1);
-      recv_ptr++;
-  }
-  // Wait for SPI peripheral to finish anything it's doing
-  while(LL_SPI_IsActiveFlag_BSY(SPI1));
-  LL_SPI_Disable(SPI1);
-  SPI1->CR1 &= ~(SPI_CR1_SSI);
-
-  // Make sure the data is what it's supposed to be
-  for(unsigned int i = 0; i < DAT_SIZE; i++){
-      if(recv[i] != dat[i]){
-          errcnt++;
-          break;
-      }
-  }
-  // Set chip select high again to indicate that the transaction is over
-  HAL_GPIO_WritePin(SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_SET);
+  // Test SPI
+  //errcnt += spi_test(dat, DAT_SIZE, SPI1);
+  errcnt += spi_test(dat, DAT_SIZE, SPI2);
+  //errcnt += spi_test(dat, DAT_SIZE, SPI3);
 
   // Light up the LED if all tests passed
   if(errcnt == 0){
@@ -162,16 +192,8 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
-  {
-      /*// LED ON
-      HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET);
-      HAL_Delay(100);
-      // LED OFF
-      HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
-      HAL_Delay(100);*/
-  }
-    /* USER CODE END WHILE */
+  while (1);
+  /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
   /* USER CODE END 3 */
@@ -201,7 +223,7 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
   RCC_OscInitStruct.PLL.PLLM = 20;
   RCC_OscInitStruct.PLL.PLLN = 128;
-  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV4;
+  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
   RCC_OscInitStruct.PLL.PLLQ = 4;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
@@ -213,10 +235,10 @@ void SystemClock_Config(void)
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
   {
     Error_Handler();
   }
