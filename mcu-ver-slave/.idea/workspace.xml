@@ -10,193 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9be2241-c434-4c48-889c-99f975948821" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../canlogger/.cproject" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/.idea/canlogger.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/.idea/runConfigurations/OCD_canlogger.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/.mxproject" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/.project" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/CMakeLists_template.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Core/Inc/gpio.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Core/Inc/main.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Core/Inc/stm32f4xx_hal_conf.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Core/Inc/stm32f4xx_it.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Core/Src/gpio.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Core/Src/main.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Core/Src/stm32f4xx_hal_msp.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Core/Src/stm32f4xx_it.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Core/Src/sysmem.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Core/Src/system_stm32f4xx.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Core/Startup/startup_stm32f411ceux.s" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/CMSIS/Include/cmsis_armcc.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/CMSIS/Include/cmsis_armclang.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/CMSIS/Include/cmsis_compiler.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/CMSIS/Include/cmsis_gcc.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/CMSIS/Include/cmsis_iccarm.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/CMSIS/Include/cmsis_version.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/CMSIS/Include/core_armv8mbl.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/CMSIS/Include/core_armv8mml.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/CMSIS/Include/core_cm0.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/CMSIS/Include/core_cm0plus.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/CMSIS/Include/core_cm1.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/CMSIS/Include/core_cm23.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/CMSIS/Include/core_cm3.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/CMSIS/Include/core_cm33.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/CMSIS/Include/core_cm4.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/CMSIS/Include/core_cm7.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/CMSIS/Include/core_sc000.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/CMSIS/Include/core_sc300.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/CMSIS/Include/mpu_armv7.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/CMSIS/Include/mpu_armv8.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/CMSIS/Include/tz_context.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/CMSIS/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/STM32F4xx_HAL_Driver/License.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/STM32F411CEUX_FLASH.ld" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/STM32F411CEUX_RAM.ld" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/canlogger.ioc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/.cmake/api/v1/query/cache-v2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/.cmake/api/v1/reply/cache-v2-958bae7c647048ef02c1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-f5ebdc15457944623624.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-86c7c7389ed6fb73311e.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/3.21.1/CMakeASMCompiler.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/3.21.1/CMakeCCompiler.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/3.21.1/CMakeCXXCompiler.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/3.21.1/CMakeSystem.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdC/a.out" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdCXX/a.out" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/ASM.includecache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Core/Src/gpio.c.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Core/Src/gpio.c.obj.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Core/Src/main.c.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Core/Src/main.c.obj.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Core/Src/stm32f4xx_it.c.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Core/Src/stm32f4xx_it.c.obj.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Core/Src/sysmem.c.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Core/Src/sysmem.c.obj.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Core/Src/system_stm32f4xx.c.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Core/Src/system_stm32f4xx.c.obj.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Core/Startup/startup_stm32f411ceux.s.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/DependInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/build.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/cmake_clean.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/compiler_depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/compiler_depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/compiler_depend.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/flags.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/link.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/canlogger.elf.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/canlogger.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/canlogger.cbp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/canlogger.elf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/canlogger.hex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/canlogger.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../canlogger/openocd.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/.cmake/api/v1/reply/index-2022-01-31T22-34-42-0098.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mcu-ver-master/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../mcu-ver-master/Core/Src/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mcu-ver-master/Core/Src/spi.c" beforeDir="false" afterPath="$PROJECT_DIR$/../mcu-ver-master/Core/Src/spi.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/.cmake/api/v1/reply/index-2022-01-31T06-23-52-0650.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../mcu-ver-master/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Core/Src/spi.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mcu-ver-master/mcu-ver-master.ioc" beforeDir="false" afterPath="$PROJECT_DIR$/../mcu-ver-master/mcu-ver-master.ioc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../canlogger/.mxproject" beforeDir="false" afterPath="$PROJECT_DIR$/../canlogger/.mxproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../canlogger/Core/Inc/main.h" beforeDir="false" afterPath="$PROJECT_DIR$/../canlogger/Core/Inc/main.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../canlogger/Core/Inc/stm32f4xx_hal_conf.h" beforeDir="false" afterPath="$PROJECT_DIR$/../canlogger/Core/Inc/stm32f4xx_hal_conf.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../canlogger/Core/Src/gpio.c" beforeDir="false" afterPath="$PROJECT_DIR$/../canlogger/Core/Src/gpio.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../canlogger/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../canlogger/Core/Src/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../canlogger/canlogger.ioc" beforeDir="false" afterPath="$PROJECT_DIR$/../canlogger/canlogger.ioc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2022-01-31T06-08-01-0297.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
@@ -206,13 +26,6 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/mcu-ver-master.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/mcu-ver-master.elf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/mcu-ver-master.hex" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/mcu-ver-master.hex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/mcu-ver-master.map" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/mcu-ver-master.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mcu-ver-slave.ioc" beforeDir="false" afterPath="$PROJECT_DIR$/mcu-ver-slave.ioc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mcu/mcu-backups/mcu-2022-01-21_180941.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mcu/mcu-backups/mcu-2022-01-21_183027.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mcu/mcu-backups/mcu-2022-01-21_231441.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mcu/mcu.kicad_pcb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mcu/mcu.kicad_prl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mcu/mcu.kicad_sch" beforeDir="false" afterPath="$PROJECT_DIR$/../mcu/mcu.kicad_sch" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,7 +62,7 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="cmake.loaded.for.project" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/mcu-ver-master.ioc" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../networks/RDT_skeleton_code.cpp.v02" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -289,7 +102,9 @@
       <workItem from="1643668229689" duration="5217000" />
       <workItem from="1645931756548" duration="1519000" />
       <workItem from="1645934723684" duration="420000" />
-      <workItem from="1645940219221" duration="5480000" />
+      <workItem from="1645940219221" duration="6150000" />
+      <workItem from="1645997207504" duration="46000" />
+      <workItem from="1646086571206" duration="1000" />
     </task>
     <task id="LOCAL-00001" summary="Added new mcu verification project, using old version of stm32cubemx">
       <created>1643521390086</created>
@@ -326,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643601574492</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Blinky.">
+      <created>1645953596394</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1645953596394</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,7 +161,8 @@
     <MESSAGE value="Attempt to use LL API for SPI" />
     <MESSAGE value="Implemented some funky handcrafted assembly" />
     <MESSAGE value="Made some progress, maybe?" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made some progress, maybe?" />
+    <MESSAGE value="Blinky." />
+    <option name="LAST_COMMIT_MESSAGE" value="Blinky." />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

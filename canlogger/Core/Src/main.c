@@ -19,11 +19,13 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "spi.h"
+#include "usart.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "CANSPI.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -43,11 +45,9 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+uCAN_MSG rxMessage;
 /* USER CODE END PV */
 
-#pragma clang diagnostic push
-#pragma ide diagnostic ignored "EndlessLoop"
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
@@ -87,8 +87,11 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_SPI3_Init();
+  MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-
+  CANSPI_Initialize();
+  HAL_UART_Transmit(&huart1, "Serial Test", 12, HAL_MAX_DELAY);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -98,6 +101,22 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+      if(CANSPI_Receive(&rxMessage))
+      {
+          HAL_UART_Transmit(&huart1, "Data received", 14, HAL_MAX_DELAY);
+          /*txMessage.frame.idType = rxMessage.frame.idType;
+          txMessage.frame.id = rxMessage.frame.id;
+          txMessage.frame.dlc = rxMessage.frame.dlc;
+          txMessage.frame.data0++;
+          txMessage.frame.data1 = rxMessage.frame.data1;
+          txMessage.frame.data2 = rxMessage.frame.data2;
+          txMessage.frame.data3 = rxMessage.frame.data3;
+          txMessage.frame.data4 = rxMessage.frame.data4;
+          txMessage.frame.data5 = rxMessage.frame.data5;
+          txMessage.frame.data6 = rxMessage.frame.data6;
+          txMessage.frame.data7 = rxMessage.frame.data7;
+          CANSPI_Transmit(&txMessage);*/
+      }
     HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
     HAL_Delay(500);
     HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_SET);
@@ -179,5 +198,3 @@ void assert_failed(uint8_t *file, uint32_t line)
 #endif /* USE_FULL_ASSERT */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
-
-#pragma clang diagnostic pop
