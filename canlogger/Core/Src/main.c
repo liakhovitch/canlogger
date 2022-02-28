@@ -18,6 +18,7 @@
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
+#include <stdio.h>
 #include "main.h"
 #include "spi.h"
 #include "usart.h"
@@ -91,7 +92,8 @@ int main(void)
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
   CANSPI_Initialize();
-  HAL_UART_Transmit(&huart1, "Serial Test", 12, HAL_MAX_DELAY);
+  HAL_UART_Transmit(&huart1, "Serial Test\n", 14, HAL_MAX_DELAY);
+  char tempstr[8] = "AAAAAAA";
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -101,10 +103,10 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-      if(CANSPI_Receive(&rxMessage))
+      /*if(CANSPI_Receive(&rxMessage))
       {
-          HAL_UART_Transmit(&huart1, "Data received", 14, HAL_MAX_DELAY);
-          /*txMessage.frame.idType = rxMessage.frame.idType;
+          HAL_UART_Transmit(&huart1, "Data received:\n", 15, HAL_MAX_DELAY);
+          rxMessage.frame.idType;
           txMessage.frame.id = rxMessage.frame.id;
           txMessage.frame.dlc = rxMessage.frame.dlc;
           txMessage.frame.data0++;
@@ -115,8 +117,33 @@ int main(void)
           txMessage.frame.data5 = rxMessage.frame.data5;
           txMessage.frame.data6 = rxMessage.frame.data6;
           txMessage.frame.data7 = rxMessage.frame.data7;
-          CANSPI_Transmit(&txMessage);*/
-      }
+          CANSPI_Transmit(&txMessage);
+          snprintf(tempstr, 8, "%02X", rxMessage.frame.data0);
+          HAL_UART_Transmit(&huart1, tempstr, 2, HAL_MAX_DELAY);
+          HAL_UART_Transmit(&huart1, ",", 1, HAL_MAX_DELAY);
+          snprintf(tempstr, 8, "%02X", rxMessage.frame.data1);
+          HAL_UART_Transmit(&huart1, tempstr, 2, HAL_MAX_DELAY);
+          HAL_UART_Transmit(&huart1, ",", 1, HAL_MAX_DELAY);
+          snprintf(tempstr, 8, "%02X", rxMessage.frame.data2);
+          HAL_UART_Transmit(&huart1, tempstr, 2, HAL_MAX_DELAY);
+          HAL_UART_Transmit(&huart1, ",", 1, HAL_MAX_DELAY);
+          snprintf(tempstr, 8, "%02X", rxMessage.frame.data3);
+          HAL_UART_Transmit(&huart1, tempstr, 2, HAL_MAX_DELAY);
+          HAL_UART_Transmit(&huart1, ",", 1, HAL_MAX_DELAY);
+          snprintf(tempstr, 8, "%02X", rxMessage.frame.data4);
+          HAL_UART_Transmit(&huart1, tempstr, 2, HAL_MAX_DELAY);
+          HAL_UART_Transmit(&huart1, ",", 1, HAL_MAX_DELAY);
+          snprintf(tempstr, 8, "%02X", rxMessage.frame.data5);
+          HAL_UART_Transmit(&huart1, tempstr, 2, HAL_MAX_DELAY);
+          HAL_UART_Transmit(&huart1, ",", 1, HAL_MAX_DELAY);
+          snprintf(tempstr, 8, "%02X", rxMessage.frame.data6);
+          HAL_UART_Transmit(&huart1, tempstr, 2, HAL_MAX_DELAY);
+          HAL_UART_Transmit(&huart1, ",", 1, HAL_MAX_DELAY);
+          snprintf(tempstr, 8, "%02X", rxMessage.frame.data7);
+          HAL_UART_Transmit(&huart1, tempstr, 2, HAL_MAX_DELAY);
+          HAL_UART_Transmit(&huart1, ",", 1, HAL_MAX_DELAY);
+          HAL_UART_Transmit(&huart1, "\n", 1, HAL_MAX_DELAY);
+      }*/
     HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
     HAL_Delay(500);
     HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_SET);

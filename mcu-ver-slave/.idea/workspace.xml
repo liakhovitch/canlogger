@@ -10,22 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9be2241-c434-4c48-889c-99f975948821" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../canlogger/.mxproject" beforeDir="false" afterPath="$PROJECT_DIR$/../canlogger/.mxproject" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../canlogger/Core/Inc/main.h" beforeDir="false" afterPath="$PROJECT_DIR$/../canlogger/Core/Inc/main.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../canlogger/Core/Inc/stm32f4xx_hal_conf.h" beforeDir="false" afterPath="$PROJECT_DIR$/../canlogger/Core/Inc/stm32f4xx_hal_conf.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../canlogger/Core/Src/gpio.c" beforeDir="false" afterPath="$PROJECT_DIR$/../canlogger/Core/Src/gpio.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../canlogger/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../canlogger/Core/Src/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../canlogger/canlogger.ioc" beforeDir="false" afterPath="$PROJECT_DIR$/../canlogger/canlogger.ioc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2022-01-31T06-08-01-0297.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mcu-ver-master.elf.dir/Core/Src/main.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/mcu-ver-master.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/mcu-ver-master.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/mcu-ver-master.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/mcu-ver-master.elf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/mcu-ver-master.hex" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/mcu-ver-master.hex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/mcu-ver-master.map" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/mcu-ver-master.map" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +90,7 @@
       <workItem from="1645934723684" duration="420000" />
       <workItem from="1645940219221" duration="6150000" />
       <workItem from="1645997207504" duration="46000" />
-      <workItem from="1646086571206" duration="1000" />
+      <workItem from="1646086571206" duration="772000" />
     </task>
     <task id="LOCAL-00001" summary="Added new mcu verification project, using old version of stm32cubemx">
       <created>1643521390086</created>
