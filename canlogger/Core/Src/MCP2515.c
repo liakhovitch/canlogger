@@ -1,11 +1,16 @@
 #include "MCP2515.h"
 
 /* Pin 설정에 맞게 수정필요. Modify below items for your SPI configurations */
+// Hacky modification to SPI library:
+// Instead of #define statements defining the SPI port to use, we use global variables.
 extern SPI_HandleTypeDef        hspi3;
-#define SPI_CAN                 &hspi3
+extern SPI_HandleTypeDef        hspi2;
+SPI_HandleTypeDef* SPI_CAN = &hspi3;
+GPIO_TypeDef* SPI_PORT = GPIOA;
+uint16_t SPI_PIN = GPIO_PIN_15;
 #define SPI_TIMEOUT             10
-#define MCP2515_CS_HIGH()   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_15, GPIO_PIN_SET)
-#define MCP2515_CS_LOW()    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_15, GPIO_PIN_RESET)
+#define MCP2515_CS_HIGH()   HAL_GPIO_WritePin(SPI_PORT, SPI_PIN, GPIO_PIN_SET)
+#define MCP2515_CS_LOW()    HAL_GPIO_WritePin(SPI_PORT, SPI_PIN, GPIO_PIN_RESET)
 
 /* Prototypes */
 static void SPI_Tx(uint8_t data);

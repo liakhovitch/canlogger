@@ -10,7 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9be2241-c434-4c48-889c-99f975948821" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../canlogger/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../canlogger/Core/Src/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

@@ -18,15 +18,21 @@
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
-#include <stdio.h>
 #include "main.h"
+#include "dma.h"
 #include "spi.h"
 #include "usart.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "CANSPI.h"
+#include "bluetooth.h"
+#include "can.h"
+#include "storage.h"
+#include "globals.h"
+
+extern struct circularBuffer buf1;
+extern struct circularBuffer buf2;
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -36,6 +42,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -46,7 +53,6 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-uCAN_MSG rxMessage;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -57,6 +63,11 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef * hspi){
+    if(hspi == &hspi2) handle_dma_done1();
+    else if(hspi == &hspi3) handle_dma_done2();
+}
+
 
 /* USER CODE END 0 */
 
@@ -89,65 +100,33 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_SPI3_Init();
+  MX_DMA_Init();
+  MX_SPI1_Init();
+  MX_SPI2_Init();
   MX_USART1_UART_Init();
+  MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-  CANSPI_Initialize();
+  /* INIT CODE HERE */
+  if(init_can()) Error_Handler();
+  if(init_storage()) Error_Handler();
+  if(init_bt()) Error_Handler();
+  // TODO: delete me
   HAL_UART_Transmit(&huart1, "Serial Test\n", 14, HAL_MAX_DELAY);
-  char tempstr[8] = "AAAAAAA";
+
+  #ifdef TEST_DATA_GEN
+    test_generate_data();
+  #endif
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+    if (flush_storage()) Error_Handler();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-      /*if(CANSPI_Receive(&rxMessage))
-      {
-          HAL_UART_Transmit(&huart1, "Data received:\n", 15, HAL_MAX_DELAY);
-          rxMessage.frame.idType;
-          txMessage.frame.id = rxMessage.frame.id;
-          txMessage.frame.dlc = rxMessage.frame.dlc;
-          txMessage.frame.data0++;
-          txMessage.frame.data1 = rxMessage.frame.data1;
-          txMessage.frame.data2 = rxMessage.frame.data2;
-          txMessage.frame.data3 = rxMessage.frame.data3;
-          txMessage.frame.data4 = rxMessage.frame.data4;
-          txMessage.frame.data5 = rxMessage.frame.data5;
-          txMessage.frame.data6 = rxMessage.frame.data6;
-          txMessage.frame.data7 = rxMessage.frame.data7;
-          CANSPI_Transmit(&txMessage);
-          snprintf(tempstr, 8, "%02X", rxMessage.frame.data0);
-          HAL_UART_Transmit(&huart1, tempstr, 2, HAL_MAX_DELAY);
-          HAL_UART_Transmit(&huart1, ",", 1, HAL_MAX_DELAY);
-          snprintf(tempstr, 8, "%02X", rxMessage.frame.data1);
-          HAL_UART_Transmit(&huart1, tempstr, 2, HAL_MAX_DELAY);
-          HAL_UART_Transmit(&huart1, ",", 1, HAL_MAX_DELAY);
-          snprintf(tempstr, 8, "%02X", rxMessage.frame.data2);
-          HAL_UART_Transmit(&huart1, tempstr, 2, HAL_MAX_DELAY);
-          HAL_UART_Transmit(&huart1, ",", 1, HAL_MAX_DELAY);
-          snprintf(tempstr, 8, "%02X", rxMessage.frame.data3);
-          HAL_UART_Transmit(&huart1, tempstr, 2, HAL_MAX_DELAY);
-          HAL_UART_Transmit(&huart1, ",", 1, HAL_MAX_DELAY);
-          snprintf(tempstr, 8, "%02X", rxMessage.frame.data4);
-          HAL_UART_Transmit(&huart1, tempstr, 2, HAL_MAX_DELAY);
-          HAL_UART_Transmit(&huart1, ",", 1, HAL_MAX_DELAY);
-          snprintf(tempstr, 8, "%02X", rxMessage.frame.data5);
-          HAL_UART_Transmit(&huart1, tempstr, 2, HAL_MAX_DELAY);
-          HAL_UART_Transmit(&huart1, ",", 1, HAL_MAX_DELAY);
-          snprintf(tempstr, 8, "%02X", rxMessage.frame.data6);
-          HAL_UART_Transmit(&huart1, tempstr, 2, HAL_MAX_DELAY);
-          HAL_UART_Transmit(&huart1, ",", 1, HAL_MAX_DELAY);
-          snprintf(tempstr, 8, "%02X", rxMessage.frame.data7);
-          HAL_UART_Transmit(&huart1, tempstr, 2, HAL_MAX_DELAY);
-          HAL_UART_Transmit(&huart1, ",", 1, HAL_MAX_DELAY);
-          HAL_UART_Transmit(&huart1, "\n", 1, HAL_MAX_DELAY);
-      }*/
-    HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
-    HAL_Delay(500);
-    HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_SET);
-    HAL_Delay(500);
   }
   /* USER CODE END 3 */
 }
@@ -171,7 +150,12 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
-  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
+  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
+  RCC_OscInitStruct.PLL.PLLM = 16;
+  RCC_OscInitStruct.PLL.PLLN = 160;
+  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
+  RCC_OscInitStruct.PLL.PLLQ = 4;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     Error_Handler();
@@ -180,12 +164,12 @@ void SystemClock_Config(void)
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
   {
     Error_Handler();
   }
@@ -203,6 +187,14 @@ void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
   /* User can add his own implementation to report the HAL error return state */
+
+  // Current error handler is a fast eternal blinky.
+    while(1){
+        HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
+        HAL_Delay(100);
+        HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_SET);
+        HAL_Delay(100);
+    }
 
   /* USER CODE END Error_Handler_Debug */
 }
