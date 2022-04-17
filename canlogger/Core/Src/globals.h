@@ -4,10 +4,12 @@
 // Test defines
 // Comment these for production code
 // #define TEST_DATA_GEN
+// #define TEST_DATA_OFFLOAD
 
 // Uncomment if using PCB rev 2
- #define PCB_V2
+// #define PCB_V2
 
+// Size of data buffers, in data packets (14 bytes each)
 #define BUFF_SIZE 200
 
 struct circularBuffer{
@@ -23,7 +25,7 @@ struct circularBuffer{
  * memory layout consistent with the order in which the bytes are sent over SPI.
 */
 struct bufCell {
-    unsigned char GARBAGE;
+    unsigned char STATUS;
     unsigned char RXB0SIDh;
     unsigned char RXB0SIDL;
     unsigned char RXB0EID8;

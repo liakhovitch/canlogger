@@ -4,14 +4,13 @@
 #include "spi.h"
 #include "stdbool.h"
 #include "globals.h"
+#include "usart.h"
 
 // "Read RX Buffer" command from MCP2515 datasheet
 #define READ_COMMAND 0b10010000
 const unsigned char read_command[14] = {READ_COMMAND,0,0,0,0,0,0,0,0,0,0,0,0,0};
 
 // Variables that point MCP2515 library to a particular SPI port
-extern SPI_HandleTypeDef hspi2;
-extern SPI_HandleTypeDef hspi3;
 extern SPI_HandleTypeDef* SPI_CAN;
 extern GPIO_TypeDef* SPI_PORT;
 extern uint16_t SPI_PIN;
@@ -213,5 +212,15 @@ void handle_dma_done2(){
     // If all DMAs are finished, re-enable EXTI interrupts so that we can handle more incoming data
     if(!dmalock1){
         enable_can_irq();
+    }
+}
+
+void test_offload_data(){
+    struct bufCell* cell;
+    if(!buf_get(&buf1, cell)){
+        HAL_UART_Transmit(&huart1, (uint8_t*)cell, 14, HAL_MAX_DELAY);
+    }
+    if(!buf_get(&buf2, cell)){
+        HAL_UART_Transmit(&huart1, (uint8_t*)cell, 14, HAL_MAX_DELAY);
     }
 }

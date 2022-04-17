@@ -112,8 +112,7 @@ int main(void)
   if(init_can()) Error_Handler();
   if(init_storage()) Error_Handler();
   if(init_bt()) Error_Handler();
-  // TODO: delete me
-  HAL_UART_Transmit(&huart1, "Serial Test\n", 14, HAL_MAX_DELAY);
+  HAL_UART_Transmit(&huart1, (uint8_t*)"Canlogger v0.1 boot successful\n", 31, HAL_MAX_DELAY);
 
   #ifdef TEST_DATA_GEN
     test_generate_data();
@@ -126,6 +125,9 @@ int main(void)
   while (1)
   {
     if (flush_storage()) Error_Handler();
+    #ifdef TEST_DATA_OFFLOAD
+      test_offload_data();
+    #endif
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
