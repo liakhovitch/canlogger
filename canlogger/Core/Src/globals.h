@@ -6,7 +6,7 @@
 // #define TEST_DATA_GEN
 
 // Uncomment if using PCB rev 2
-// #define PCB_V2
+ #define PCB_V2
 
 #define BUFF_SIZE 200
 
@@ -14,8 +14,8 @@ struct circularBuffer{
     const unsigned char* start_ptr;
     const unsigned int len;
     const unsigned int increment;
-    volatile unsigned int read_pos;
-    volatile unsigned int write_pos;
+    _Atomic volatile unsigned int read_pos;
+    _Atomic volatile unsigned int write_pos;
 };
 
 /*

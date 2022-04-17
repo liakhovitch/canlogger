@@ -1,5 +1,8 @@
 #include "globals.h"
 
+// Flag to communicate fail condition from CAN code to main loop
+_Atomic volatile unsigned int overflow_flag = 0;
+
 const unsigned char buf1_array[BUFF_SIZE * sizeof(struct bufCell)];
 struct circularBuffer buf1 = {
         .start_ptr = buf1_array,
