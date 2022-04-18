@@ -50,4 +50,10 @@ int buf_put(struct circularBuffer *buf, struct bufCell *dat) {
     *cell = *dat;
     // *Atomically* set new write position
     buf->write_pos = write_pos_new;
+    return 0;
+}
+
+void buf_clear(struct circularBuffer *buf){
+    buf->read_pos = 0;
+    buf->write_pos = 0;
 }
