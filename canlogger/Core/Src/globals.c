@@ -24,29 +24,29 @@ struct circularBuffer buf2 = {
 // Reference circular buffer implementation
 // IMPORTANT - if reimplementing elsewhere, follow the exact same algorithm! Do not try to further optimize!
 
-int buf_get(struct circularBuffer* buf, struct bufCell* ret){
+int buf_get(struct circularBuffer *buf, struct bufCell *ret) {
     // Check for empty buffer
     if (buf->read_pos == buf->write_pos) return 1;
     // Use the popped value
     // Note: make sure that the value is no longer needed after this. In this case, we achieve this by copying.
-    struct bufCell* cell = (struct bufCell*)(buf->start_ptr + buf->read_pos);
+    struct bufCell *cell = (struct bufCell *) (buf->start_ptr + buf->read_pos);
     *ret = *cell;
     // Determine new read position, with wraparound
     unsigned int read_pos_new = buf->read_pos + buf->increment;
-    if(read_pos_new >= buf->len) read_pos_new = 0;
+    if (read_pos_new >= buf->len) read_pos_new = 0;
     // *Atomically* set new read position
     buf->read_pos = read_pos_new;
     return 0;
 }
 
-int buf_put(struct circularBuffer* buf, struct bufCell* dat){
+int buf_put(struct circularBuffer *buf, struct bufCell *dat) {
     // Determine next write position, with wraparound
     unsigned int write_pos_new = buf->write_pos + buf->increment;
-    if(write_pos_new >= buf->len) write_pos_new = 0;
+    if (write_pos_new >= buf->len) write_pos_new = 0;
     // Check if buffer full
-    if(write_pos_new == buf->read_pos) return 1;
+    if (write_pos_new == buf->read_pos) return 1;
     // Write the data to the current write position
-    struct bufCell* cell = (struct bufCell*)(buf->start_ptr + buf->write_pos);
+    struct bufCell *cell = (struct bufCell *) (buf->start_ptr + buf->write_pos);
     *cell = *dat;
     // *Atomically* set new write position
     buf->write_pos = write_pos_new;

@@ -64,9 +64,9 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef * hspi){
-    if(hspi == &hspi2) handle_dma_done1();
-    else if(hspi == &hspi3) handle_dma_done2();
+void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef *hspi) {
+    if (hspi == &hspi2) handle_dma_done1();
+    else if (hspi == &hspi3) handle_dma_done2();
 }
 
 
@@ -108,30 +108,33 @@ int main(void)
   MX_USART2_UART_Init();
   MX_RTC_Init();
   /* USER CODE BEGIN 2 */
-  /* INIT CODE HERE */
-  if(init_can()) Error_Handler();
-  if(init_storage()) Error_Handler();
-  if(init_bt()) Error_Handler();
-  HAL_UART_Transmit(&huart1, (uint8_t*)"Canlogger v0.1 boot successful\n", 31, HAL_MAX_DELAY);
+    /* INIT CODE HERE */
+#ifndef TEST_DATA_GEN
+    if (init_can()) Error_Handler();
+#endif
+    if (init_storage()) Error_Handler();
+    if (init_bt()) Error_Handler();
+    HAL_UART_Transmit(&huart1, (uint8_t *) "Canlogger v0.1 boot successful\n", 31, HAL_MAX_DELAY);
 
-  #ifdef TEST_DATA_GEN
+#ifdef TEST_DATA_GEN
     test_generate_data();
-  #endif
+#endif
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
-  {
-    if (flush_storage()) Error_Handler();
-    #ifdef TEST_DATA_OFFLOAD
-      test_offload_data();
-    #endif
+    while (1) {
+#ifndef TEST_DATA_OFFLOAD
+        if (flush_storage()) Error_Handler();
+#endif
+#ifdef TEST_DATA_OFFLOAD
+        test_offload_data();
+#endif
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-  }
+    }
   /* USER CODE END 3 */
 }
 
@@ -198,10 +201,10 @@ void SystemClock_Config(void)
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
-  /* User can add his own implementation to report the HAL error return state */
+    /* User can add his own implementation to report the HAL error return state */
 
-  // Current error handler is a fast eternal blinky.
-    while(1){
+    // Current error handler is a fast eternal blinky.
+    while (1) {
         HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
         HAL_Delay(100);
         HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_SET);

@@ -12,8 +12,8 @@
 // Size of data buffers, in data packets (14 bytes each)
 #define BUFF_SIZE 200
 
-struct circularBuffer{
-    const unsigned char* start_ptr;
+struct circularBuffer {
+    const unsigned char *start_ptr;
     const unsigned int len;
     const unsigned int increment;
     _Atomic volatile unsigned int read_pos;
@@ -42,8 +42,8 @@ struct bufCell {
 }__attribute__((packed, aligned(1)));
 
 // Example circular buffer implementations
-int buf_get(struct circularBuffer* buf, struct bufCell* ret);
+int buf_get(struct circularBuffer *buf, struct bufCell *ret);
 
-int buf_put(struct circularBuffer* buf, struct bufCell* dat);
+int buf_put(struct circularBuffer *buf, struct bufCell *dat);
 
 #endif //CANLOGGER_GLOBALS_H
