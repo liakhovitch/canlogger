@@ -1,9 +1,10 @@
+#include <stdint-gcc.h>
 #include "globals.h"
 
 // Flag to communicate fail condition from CAN code to main loop
 _Atomic volatile unsigned int overflow_flag = 0;
 
-const unsigned char buf1_array[BUFF_SIZE * sizeof(struct bufCell)];
+uint8_t buf1_array[BUFF_SIZE * sizeof(struct bufCell)];
 struct circularBuffer buf1 = {
         .start_ptr = buf1_array,
         .len = BUFF_SIZE + sizeof(struct bufCell),
@@ -12,7 +13,7 @@ struct circularBuffer buf1 = {
         .write_pos = 0
 };
 
-const unsigned char buf2_array[BUFF_SIZE * sizeof(struct bufCell)];
+uint8_t buf2_array[BUFF_SIZE * sizeof(struct bufCell)];
 struct circularBuffer buf2 = {
         .start_ptr = buf2_array,
         .len = BUFF_SIZE + sizeof(struct bufCell),
@@ -56,4 +57,35 @@ int buf_put(struct circularBuffer *buf, struct bufCell *dat) {
 void buf_clear(struct circularBuffer *buf){
     buf->read_pos = 0;
     buf->write_pos = 0;
+}
+
+void construct_packet(struct bufCell* cell, uint16_t sid, uint16_t eid, const uint8_t* dat, uint8_t dat_len) {
+    cell->STATUS   = 0;
+    cell->RXB0SIDH = (uint8_t)(sid>>8);
+    cell->RXB0SIDL = (uint8_t)(sid & 0x00FF);
+    cell->RXB0EID8 = (uint8_t)(eid>>8);
+    cell->RXB0EID0 = (uint8_t)(eid & 0x00FF);
+    cell->RXB0DLC  = dat_len & 0x0F;
+    cell->RXB0D0   = dat_len > 0 ? dat[0] : 0;
+    cell->RXB0D1   = dat_len > 1 ? dat[1] : 0;
+    cell->RXB0D2   = dat_len > 2 ? dat[2] : 0;
+    cell->RXB0D3   = dat_len > 3 ? dat[3] : 0;
+    cell->RXB0D4   = dat_len > 4 ? dat[4] : 0;
+    cell->RXB0D5   = dat_len > 5 ? dat[5] : 0;
+    cell->RXB0D6   = dat_len > 6 ? dat[6] : 0;
+    cell->RXB0D7   = dat_len > 7 ? dat[7] : 0;
+}
+
+void parse_packet(struct bufCell* cell, uint16_t* sid, uint16_t* eid, uint8_t dat[8], uint8_t* dat_len) {
+    *sid = ((uint16_t)cell->RXB0SIDH << 8) || (uint16_t)(cell->RXB0SIDL);
+    *eid = ((uint16_t)cell->RXB0EID8 << 8) || (uint16_t)(cell->RXB0EID0);
+    *dat_len = cell->RXB0DLC & 0x0F;
+    dat[0] = *dat_len > 0 ? cell->RXB0D0 : 0;
+    dat[1] = *dat_len > 1 ? cell->RXB0D1 : 0;
+    dat[2] = *dat_len > 2 ? cell->RXB0D2 : 0;
+    dat[3] = *dat_len > 3 ? cell->RXB0D3 : 0;
+    dat[4] = *dat_len > 4 ? cell->RXB0D4 : 0;
+    dat[5] = *dat_len > 5 ? cell->RXB0D5 : 0;
+    dat[6] = *dat_len > 6 ? cell->RXB0D6 : 0;
+    dat[7] = *dat_len > 7 ? cell->RXB0D7 : 0;
 }

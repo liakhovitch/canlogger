@@ -218,11 +218,11 @@ void handle_dma_done2() {
 }
 
 void test_offload_data() {
-    struct bufCell *cell;
-    if (!buf_get(&buf1, cell)) {
-        HAL_UART_Transmit(&huart1, (uint8_t *) cell, 14, HAL_MAX_DELAY);
+    struct bufCell cell;
+    if (!buf_get(&buf1, &cell)) {
+        HAL_UART_Transmit(&huart1, (uint8_t *) &cell, 14, HAL_MAX_DELAY);
     }
-    if (!buf_get(&buf2, cell)) {
-        HAL_UART_Transmit(&huart1, (uint8_t *) cell, 14, HAL_MAX_DELAY);
+    if (!buf_get(&buf2, &cell)) {
+        HAL_UART_Transmit(&huart1, (uint8_t *) &cell, 14, HAL_MAX_DELAY);
     }
 }
