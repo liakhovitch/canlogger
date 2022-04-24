@@ -3,11 +3,11 @@
 
 // Test defines
 // Comment these for production code
-#define TEST_DATA_GEN
+// #define TEST_DATA_GEN
 #define TEST_DATA_OFFLOAD
 
 // Uncomment if using PCB rev 2
-// #define PCB_V2
+#define PCB_V2
 
 // Size of data buffers, in data packets (14 bytes each)
 #define BUFF_SIZE 200

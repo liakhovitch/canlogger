@@ -63,7 +63,6 @@ int init_single_mcp2515() {
     MCP2515_WriteByte(MCP2515_CANINTE, 0b00000100);
 #endif
     if (MCP2515_SetNormalMode() == false) return 1;
-    // Set general purpose interrupt to only report errors
     return 0;
 }
 
@@ -98,6 +97,8 @@ void clear_errors_all() {
 }
 
 int init_can() {
+    HAL_GPIO_WritePin(CAN2_CS_GPIO_Port, CAN2_CS_Pin, 1);
+    HAL_GPIO_WritePin(CAN1_CS_GPIO_Port, CAN1_CS_Pin, 1);
     disable_can_irq();
     // In case this function is being called as a last-ditch recovery attempt for some awful situation
     HAL_SPI_Abort_IT(&hspi2);
