@@ -47,20 +47,21 @@ int init_single_mcp2515() {
     // Put MCP2515 back into config mode for custom initialization steps
     if (MCP2515_SetConfigMode() == false) return 1;
     // Set RX0BF to act as buffer full interrupt
-    // Write 0b11100000 to BPFCTRL
-    MCP2515_WriteByte(0x0C, 0b10100000);
+    // Write BFPCTRL
+    MCP2515_WriteByte(0x0C, 0b00000101);
+    //MCP2515_WriteByte(0x0C, 0b00000100);
     // Set RXB0 to receive any message and not rollover to RXB1
-    // Write 0b00000110 to RXB0CTRL
-    MCP2515_WriteByte(MCP2515_RXB0CTRL, 0b10100000);
+    // Write RXB0CTRL
+    MCP2515_WriteByte(MCP2515_RXB0CTRL, 0b01100000);
 #ifndef PCB_V2
     // Enable "Receive buffer full" interrupt on INT
-    // Set CANINTE to 0b10000000
+    // Write CANINTE
     MCP2515_WriteByte(MCP2515_CANINTE, 0b10100000);
 #endif
 #ifdef PCB_V2
     // Enable error interrupt on INT
-    // Set CANINTE to 0b00000100
-    MCP2515_WriteByte(MCP2515_CANINTE, 0b00000100);
+    // Write CANINTE
+    MCP2515_WriteByte(MCP2515_CANINTE, 0b10100000);
 #endif
     if (MCP2515_SetNormalMode() == false) return 1;
     return 0;
@@ -71,7 +72,7 @@ void clear_errors() {
     // Clear all pending errors
     MCP2515_WriteByte(MCP2515_EFLG, 0b00000000);
     // Clear error interrupt without clearing buffer full interrupt
-    MCP2515_BitModify(MCP2515_CANINTF, 0b00000101, 0b00000000);
+    MCP2515_BitModify(MCP2515_CANINTF, 0b10100000, 0b00000000);
 }
 
 // Set the CAN controller that the MCP2515 library will interact with.
@@ -97,12 +98,14 @@ void clear_errors_all() {
 }
 
 int init_can() {
+    // Disable IRQ so that we don't try to process messages while in the middle of setup
+    disable_can_irq();
     HAL_GPIO_WritePin(CAN2_CS_GPIO_Port, CAN2_CS_Pin, 1);
     HAL_GPIO_WritePin(CAN1_CS_GPIO_Port, CAN1_CS_Pin, 1);
-    disable_can_irq();
-    // In case this function is being called as a last-ditch recovery attempt for some awful situation
+    // In case this function is being called as a last-ditch recovery attempt for some awful situation, abort DMAs
     HAL_SPI_Abort_IT(&hspi2);
     HAL_SPI_Abort_IT(&hspi3);
+    // Clear synchronization state
     dmalock1 = 0;
     dmalock2 = 0;
     // Note: this is an ugly way to do things, but it lets the MCP2515 library work with multiple chips with only
@@ -119,11 +122,13 @@ int init_can() {
     return 0;
 }
 
+// Enter CAN Panic state, disabling message handling and waiting on main loop code to re-initialize CAN
 void can_panic() {
     overflow_flag = 1;
     disable_can_irq();
 }
 
+// Definitions of various parameters that differ between rev1 and rev2 PCBs
 #ifdef PCB_V2
 #define CAN1_ERR()   !HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_0)
 #define CAN2_ERR()   !HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_1)
@@ -137,6 +142,7 @@ void can_panic() {
 #define CAN2_READY() !HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_1)
 #endif
 
+// Called from GPIO interrupt handler
 void handle_can_spi() {
     if (CAN1_ERR()) {
         set_mcp2515_iface(0);
@@ -192,6 +198,7 @@ void handle_can_spi() {
     }
 }
 
+// Do circular buffer and synchronization state maintenance at the end of a transfer
 void handle_dma_done1() {
     // Set CS pin high to tell the MCP2515 that the transfer is over
     HAL_GPIO_WritePin(CAN1_CS_GPIO_Port, CAN1_CS_Pin, 1);
@@ -205,6 +212,7 @@ void handle_dma_done1() {
     }
 }
 
+// Do circular buffer and synchronization state maintenance at the end of a transfer
 void handle_dma_done2() {
     // Set CS pin high to tell the MCP2515 that the transfer is over
     HAL_GPIO_WritePin(CAN2_CS_GPIO_Port, CAN2_CS_Pin, 1);

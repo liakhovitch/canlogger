@@ -70,7 +70,6 @@ void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef *hspi) {
     else if (hspi == &hspi3) handle_dma_done2();
 }
 
-
 /* USER CODE END 0 */
 
 /**
