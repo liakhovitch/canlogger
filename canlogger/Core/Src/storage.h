@@ -1,3 +1,5 @@
+#include "fatfs.h"
+
 #ifndef CANLOGGER_STORAGE_H
 #define CANLOGGER_STORAGE_H
 

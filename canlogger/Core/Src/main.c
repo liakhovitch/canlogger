@@ -79,7 +79,9 @@ void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef *hspi) {
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
+  FATFS FatFs;
+  FIL fil;
+  FRESULT fres;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -113,7 +115,7 @@ int main(void)
 #ifndef TEST_DATA_GEN
     if (init_can()) Error_Handler();
 #endif
-    if (init_storage()) Error_Handler();
+    if (init_storage(&FatFs)) Error_Handler();
     if (init_bt()) Error_Handler();
     HAL_UART_Transmit(&huart1, (uint8_t *) "Canlogger v0.1 boot successful\n", 31, HAL_MAX_DELAY);
 
@@ -127,7 +129,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
     while (1) {
 #ifndef TEST_DATA_OFFLOAD
-        if (flush_storage()) Error_Handler();
+        if (flush_storage(&FatFs)) Error_Handler();
 #endif
 #ifdef TEST_DATA_OFFLOAD
         test_offload_data();
