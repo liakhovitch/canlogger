@@ -2,9 +2,13 @@
 #define CANLOGGER_GLOBALS_H
 
 // Test defines
-// Comment these for production code
-// #define TEST_DATA_GEN
-#define TEST_DATA_OFFLOAD
+// Pick one of these
+#define PRODUCTION_GEN
+//#define TEST_GEN_FIXED
+//#define TEST_GEN_CAN
+// Pick one of these
+#define PRODUCTION_OFFLOAD
+//#define TEST_OFFLOAD_UART
 
 // Uncomment if using PCB rev 2
 #define PCB_V2

@@ -112,14 +112,16 @@ int main(void)
   MX_FATFS_Init();
   /* USER CODE BEGIN 2 */
     /* INIT CODE HERE */
-#ifndef TEST_DATA_GEN
+#if defined(PRODUCTION_GEN) || defined(TEST_GEN_CAN)
     if (init_can()) Error_Handler();
 #endif
+#ifdef PRODUCTION_OFFLOAD
     if (init_storage(&FatFs)) Error_Handler();
+#endif
     if (init_bt()) Error_Handler();
     HAL_UART_Transmit(&huart1, (uint8_t *) "Canlogger v0.1 boot successful\n", 31, HAL_MAX_DELAY);
 
-#ifdef TEST_DATA_GEN
+#ifdef TEST_GEN_FIXED
     test_generate_data();
 #endif
 
@@ -128,10 +130,13 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
     while (1) {
-#ifndef TEST_DATA_OFFLOAD
+#ifdef TEST_GEN_CAN
+        // TODO: Receive CAN messages using CANSPI library
+#endif
+#ifdef PRODUCTION_OFFLOAD
         if (flush_storage(&FatFs)) Error_Handler();
 #endif
-#ifdef TEST_DATA_OFFLOAD
+#ifdef TEST_OFFLOAD_UART
         test_offload_data();
 #endif
     /* USER CODE END WHILE */
