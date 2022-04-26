@@ -43,7 +43,7 @@ int flush_storage(FATFS *FatFs){
     	//Finish by calling f_close on fil
     		buf_state = buf_get(&buf1, &cell);
     		if(buf_state == 1){
-    			break;
+    			//break;
     		}
     		else{
     			parse_packet(&cell, &sid, &eid, data, &dat_len);
