@@ -33,6 +33,7 @@
 #include "storage.h"
 #include "globals.h"
 
+
 extern struct circularBuffer buf1;
 extern struct circularBuffer buf2;
 /* USER CODE END Includes */
@@ -55,6 +56,7 @@ extern struct circularBuffer buf2;
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+SPI_HandleTypeDef hspi1;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -113,27 +115,36 @@ int main(void)
   /* USER CODE BEGIN 2 */
     /* INIT CODE HERE */
 #ifndef TEST_DATA_GEN
-    if (init_can()) Error_Handler();
+    //if (init_can()) Error_Handler();
 #endif
-    if (init_storage(&FatFs)) Error_Handler();
-    if (init_bt()) Error_Handler();
-    HAL_UART_Transmit(&huart1, (uint8_t *) "Canlogger v0.1 boot successful\n", 31, HAL_MAX_DELAY);
+    //if (init_storage(&FatFs)) Error_Handler();
+    //if (init_bt()) Error_Handler();
+    //HAL_UART_Transmit(&huart1, (uint8_t *) "Canlogger v0.1 boot successful\n", 31, HAL_MAX_DELAY);
 
 #ifdef TEST_DATA_GEN
-    test_generate_data();
+   // test_generate_data();
 #endif
+    fres = init_storage(&FatFs);
 
+    flush_storage(&FatFs);
+
+    f_mount(NULL, "", 0);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
     while (1) {
 #ifndef TEST_DATA_OFFLOAD
-        if (flush_storage(&FatFs)) Error_Handler();
+      //  if (flush_storage(&FatFs)) Error_Handler();
 #endif
 #ifdef TEST_DATA_OFFLOAD
-        test_offload_data();
+        //test_offload_data();
 #endif
+        HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
+        HAL_Delay(1000);
+        HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_SET);
+        HAL_Delay(1000);
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

@@ -83,7 +83,6 @@ DSTATUS USER_initialize (
 )
 {
   /* USER CODE BEGIN INIT */
-    Stat = STA_NOINIT;
     return USER_SPI_initialize(pdrv);
   /* USER CODE END INIT */
 }
@@ -98,7 +97,6 @@ DSTATUS USER_status (
 )
 {
   /* USER CODE BEGIN STATUS */
-    Stat = STA_NOINIT;
     return USER_SPI_status(pdrv);
   /* USER CODE END STATUS */
 }
