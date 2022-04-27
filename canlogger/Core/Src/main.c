@@ -32,6 +32,7 @@
 #include "can.h"
 #include "storage.h"
 #include "globals.h"
+#include "test_gen_can.h"
 
 extern struct circularBuffer buf1;
 extern struct circularBuffer buf2;
@@ -131,7 +132,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
     while (1) {
 #ifdef TEST_GEN_CAN
-        // TODO: Receive CAN messages using CANSPI library
+        test_gen_can();
 #endif
 #ifdef PRODUCTION_OFFLOAD
         if (flush_storage(&FatFs)) Error_Handler();

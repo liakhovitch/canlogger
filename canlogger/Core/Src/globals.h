@@ -1,5 +1,6 @@
 #ifndef CANLOGGER_GLOBALS_H
 #define CANLOGGER_GLOBALS_H
+#include <stdint.h>
 
 // Test defines
 // Pick one of these
