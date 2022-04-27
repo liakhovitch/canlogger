@@ -1,6 +1,5 @@
 #include "can.h"
 #include "MCP2515.h"
-#include "CANSPI.h"
 #include "spi.h"
 #include "stdbool.h"
 #include "globals.h"
@@ -42,14 +41,15 @@ int init_single_mcp2515() {
     // Run 'CANSPI' library functions to initialize MCP2515s
     // Reset device
     MCP2515_Reset();
-    // Basic initialization
-    if (CANSPI_Initialize() == false) return 1;
-    // Put MCP2515 back into config mode for custom initialization steps
+    // Put MCP2515 into config mode for custom initialization steps
     if (MCP2515_SetConfigMode() == false) return 1;
+    // Set CNF timing registers (500Khz baud rate with 20MHz crystal)
+    MCP2515_WriteByte(MCP2515_CNF1, 0x00);
+    MCP2515_WriteByte(MCP2515_CNF2, 0xFA);
+    MCP2515_WriteByte(MCP2515_CNF3, 0x87);
     // Set RX0BF to act as buffer full interrupt
     // Write BFPCTRL
     MCP2515_WriteByte(0x0C, 0b00000101);
-    //MCP2515_WriteByte(0x0C, 0b00000100);
     // Set RXB0 to receive any message and not rollover to RXB1
     // Write RXB0CTRL
     MCP2515_WriteByte(MCP2515_RXB0CTRL, 0b01100000);
