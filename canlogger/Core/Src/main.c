@@ -66,7 +66,7 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef *hspi) {
+void HAL_SPI_TxRxCpltCallback(SPI_HandleTypeDef *hspi) {
     if (hspi == &hspi2) handle_dma_done1();
     else if (hspi == &hspi3) handle_dma_done2();
 }

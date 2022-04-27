@@ -45,8 +45,8 @@ int init_single_mcp2515() {
     if (MCP2515_SetConfigMode() == false) return 1;
     // Set CNF timing registers (500Khz baud rate with 20MHz crystal)
     MCP2515_WriteByte(MCP2515_CNF1, 0x00);
-    MCP2515_WriteByte(MCP2515_CNF2, 0xFA);
-    MCP2515_WriteByte(MCP2515_CNF3, 0x87);
+    MCP2515_WriteByte(MCP2515_CNF2, 0xD9);
+    MCP2515_WriteByte(MCP2515_CNF3, 0x82);
     // Set RX0BF to act as buffer full interrupt
     // Write BFPCTRL
     MCP2515_WriteByte(0x0C, 0b00000101);
@@ -61,7 +61,7 @@ int init_single_mcp2515() {
 #ifdef PCB_V2
     // Enable error interrupt on INT
     // Write CANINTE
-    MCP2515_WriteByte(MCP2515_CANINTE, 0b10100000);
+    MCP2515_WriteByte(MCP2515_CANINTE, 0b00100000);
 #endif
     if (MCP2515_SetNormalMode() == false) return 1;
     return 0;
@@ -72,7 +72,7 @@ void clear_errors() {
     // Clear all pending errors
     MCP2515_WriteByte(MCP2515_EFLG, 0b00000000);
     // Clear error interrupt without clearing buffer full interrupt
-    MCP2515_BitModify(MCP2515_CANINTF, 0b10100000, 0b00000000);
+    MCP2515_BitModify(MCP2515_CANINTF, 0b00100000, 0b00000000);
 }
 
 // Set the CAN controller that the MCP2515 library will interact with.
@@ -118,7 +118,10 @@ int init_can() {
     set_mcp2515_iface(1);
     // Init CAN2 controller
     if (init_single_mcp2515()) return 1;
+    // Don't enable interrupts if we're using some other form of data producer
+#ifdef PRODUCTION_GEN
     enable_can_irq();
+#endif
     return 0;
 }
 
@@ -170,7 +173,7 @@ void handle_can_spi() {
         // Set DMAlock1 so that CAN2 DMA handler knows not to re-enable interrupts until DMA for CAN1 is done
         dmalock1 = 1;
         // Set chip select to tell MCP2515 that transfer is happening
-        HAL_GPIO_WritePin(CAN1_CS_GPIO_Port, CAN1_CS_Pin, 1);
+        HAL_GPIO_WritePin(CAN1_CS_GPIO_Port, CAN1_CS_Pin, 0);
         // Initiate DMA
         HAL_SPI_TransmitReceive_DMA(&hspi2, (uint8_t *) read_command, (uint8_t *) (buf1.start_ptr + buf1.write_pos),
                                     14);
