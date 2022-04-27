@@ -128,10 +128,7 @@ int main(void)
 #ifdef TEST_GEN_FIXED
     test_generate_data();
 #endif
-    fres = init_storage(&FatFs);
-
-    flush_storage(&FatFs);
-
+    
     f_mount(NULL, "", 0);
   /* USER CODE END 2 */
 
@@ -148,10 +145,7 @@ int main(void)
 #ifdef TEST_OFFLOAD_UART
         test_offload_data();
 #endif
-        HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
-        HAL_Delay(1000);
-        HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_SET);
-        HAL_Delay(1000);
+
 
     /* USER CODE END WHILE */
 
