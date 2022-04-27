@@ -20,4 +20,6 @@ void handle_dma_done2();
 
 void test_offload_data();
 
+void set_mcp2515_iface(unsigned char i);
+
 #endif //CANLOGGER_CAN_H

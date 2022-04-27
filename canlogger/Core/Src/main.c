@@ -32,6 +32,7 @@
 #include "can.h"
 #include "storage.h"
 #include "globals.h"
+#include "test_gen_can.h"
 
 
 extern struct circularBuffer buf1;
@@ -67,7 +68,7 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef *hspi) {
+void HAL_SPI_TxRxCpltCallback(SPI_HandleTypeDef *hspi) {
     if (hspi == &hspi2) handle_dma_done1();
     else if (hspi == &hspi3) handle_dma_done2();
 }
@@ -114,15 +115,18 @@ int main(void)
   MX_FATFS_Init();
   /* USER CODE BEGIN 2 */
     /* INIT CODE HERE */
-#ifndef TEST_DATA_GEN
-    //if (init_can()) Error_Handler();
-#endif
-    //if (init_storage(&FatFs)) Error_Handler();
-    //if (init_bt()) Error_Handler();
-    //HAL_UART_Transmit(&huart1, (uint8_t *) "Canlogger v0.1 boot successful\n", 31, HAL_MAX_DELAY);
 
-#ifdef TEST_DATA_GEN
-   // test_generate_data();
+#if defined(PRODUCTION_GEN) || defined(TEST_GEN_CAN)
+    if (init_can()) Error_Handler();
+#endif
+#ifdef PRODUCTION_OFFLOAD
+    if (init_storage(&FatFs)) Error_Handler();
+#endif
+    if (init_bt()) Error_Handler();
+    HAL_UART_Transmit(&huart1, (uint8_t *) "Canlogger v0.1 boot successful\n", 31, HAL_MAX_DELAY);
+
+#ifdef TEST_GEN_FIXED
+    test_generate_data();
 #endif
     fres = init_storage(&FatFs);
 
@@ -134,11 +138,15 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
     while (1) {
-#ifndef TEST_DATA_OFFLOAD
-      //  if (flush_storage(&FatFs)) Error_Handler();
+
+#ifdef TEST_GEN_CAN
+        test_gen_can();
 #endif
-#ifdef TEST_DATA_OFFLOAD
-        //test_offload_data();
+#ifdef PRODUCTION_OFFLOAD
+        if (flush_storage(&FatFs)) Error_Handler();
+#endif
+#ifdef TEST_OFFLOAD_UART
+        test_offload_data();
 #endif
         HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
         HAL_Delay(1000);
