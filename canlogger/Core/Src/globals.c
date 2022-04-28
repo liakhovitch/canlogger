@@ -77,8 +77,8 @@ void construct_packet(struct bufCell* cell, uint16_t sid, uint16_t eid, const ui
 }
 
 void parse_packet(struct bufCell* cell, uint16_t* sid, uint16_t* eid, uint8_t dat[8], uint8_t* dat_len) {
-    *sid = ((uint16_t)cell->RXB0SIDH << 8) || (uint16_t)(cell->RXB0SIDL);
-    *eid = ((uint16_t)cell->RXB0EID8 << 8) || (uint16_t)(cell->RXB0EID0);
+    *sid = ((uint16_t)cell->RXB0SIDH << 8) | (uint16_t)(cell->RXB0SIDL);
+    *eid = ((uint16_t)cell->RXB0EID8 << 8) | (uint16_t)(cell->RXB0EID0);
     *dat_len = cell->RXB0DLC & 0x0F;
     dat[0] = *dat_len > 0 ? cell->RXB0D0 : 0;
     dat[1] = *dat_len > 1 ? cell->RXB0D1 : 0;
