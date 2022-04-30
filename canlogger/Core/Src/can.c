@@ -17,7 +17,7 @@ extern uint16_t SPI_PIN;
 // CAN data buffers and other methods of communication with the main loop
 extern struct circularBuffer buf1;
 extern struct circularBuffer buf2;
-extern _Atomic volatile unsigned int overflow_flag;
+extern _Atomic volatile unsigned int can_panic_flag;
 
 // DMA lock variables to ensure that "CAN data ready" interrupts are only enabled if *neither* DMA is currently in progress
 _Atomic volatile int dmalock1 = 0;
@@ -131,8 +131,15 @@ int init_can() {
 
 // Enter CAN Panic state, disabling message handling and waiting on main loop code to re-initialize CAN
 void can_panic() {
-    overflow_flag = 1;
+    can_panic_flag = 1;
     disable_can_irq();
+}
+
+// Re-initialize CAN after CAN panic. To be called from main loop.
+void handle_can_panic(){
+    if(can_panic_flag){
+        init_can();
+    }
 }
 
 // Definitions of various parameters that differ between rev1 and rev2 PCBs

@@ -2,7 +2,7 @@
 #include "globals.h"
 
 // Flag to communicate fail condition from CAN code to main loop
-_Atomic volatile unsigned int overflow_flag = 0;
+_Atomic volatile unsigned int can_panic_flag = 0;
 
 uint8_t buf1_array[BUFF_SIZE * sizeof(struct bufCell)];
 struct circularBuffer buf1 = {

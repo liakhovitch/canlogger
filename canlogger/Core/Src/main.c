@@ -72,6 +72,12 @@ void HAL_SPI_TxRxCpltCallback(SPI_HandleTypeDef *hspi) {
     else if (hspi == &hspi3) handle_dma_done2();
 }
 
+void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t len) {
+    if(huart == &huart2){
+        handle_bt_irq(len);
+    }
+}
+
 /* USER CODE END 0 */
 
 /**
@@ -116,12 +122,12 @@ int main(void)
     /* INIT CODE HERE */
 
 #if defined(PRODUCTION_GEN) || defined(TEST_GEN_CAN)
-    if (init_can()) Error_Handler();
+    if (init_can()) Error_Handler();        if (handle_bt()) Error_Handler();
 #endif
 #ifdef PRODUCTION_OFFLOAD
     if (init_storage(&FatFs)) Error_Handler();
-#endif
     if (init_bt()) Error_Handler();
+#endif
     HAL_UART_Transmit(&huart1, (uint8_t *) "Canlogger v0.1 boot successful\n", 31, HAL_MAX_DELAY);
 
 #ifdef TEST_GEN_FIXED
@@ -139,8 +145,11 @@ int main(void)
         test_gen_can();
 #endif
 #ifdef PRODUCTION_OFFLOAD
-        if (flush_storage(&FatFs)) Error_Handler();
         if (handle_bt()) Error_Handler();
+        if (flush_storage(&FatFs)) Error_Handler();
+#endif
+#ifdef PRODUCTION_GEN
+        handle_can_panic();
 #endif
 #ifdef TEST_OFFLOAD_UART
         test_offload_data();
