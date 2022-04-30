@@ -57,7 +57,6 @@ extern struct circularBuffer buf2;
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-SPI_HandleTypeDef hspi1;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -105,8 +104,8 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_SPI3_Init();
   MX_DMA_Init();
+  MX_SPI3_Init();
   MX_SPI1_Init();
   MX_SPI2_Init();
   MX_USART1_UART_Init();
@@ -141,6 +140,7 @@ int main(void)
 #endif
 #ifdef PRODUCTION_OFFLOAD
         if (flush_storage(&FatFs)) Error_Handler();
+        if (handle_bt()) Error_Handler();
 #endif
 #ifdef TEST_OFFLOAD_UART
         test_offload_data();
