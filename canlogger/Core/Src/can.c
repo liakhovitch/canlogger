@@ -44,24 +44,28 @@ int init_single_mcp2515() {
     // Put MCP2515 into config mode for custom initialization steps
     if (MCP2515_SetConfigMode() == false) return 1;
     // Set CNF timing registers (500Khz baud rate with 20MHz crystal)
+    //MCP2515_WriteByte(MCP2515_CNF1, 0x00);
+    //MCP2515_WriteByte(MCP2515_CNF2, 0xFA);
+    //MCP2515_WriteByte(MCP2515_CNF3, 0x87);
+    // 1MHz
     MCP2515_WriteByte(MCP2515_CNF1, 0x00);
     MCP2515_WriteByte(MCP2515_CNF2, 0xD9);
     MCP2515_WriteByte(MCP2515_CNF3, 0x82);
-    // Set RX0BF to act as buffer full interrupt
-    // Write BFPCTRL
-    MCP2515_WriteByte(0x0C, 0b00000101);
     // Set RXB0 to receive any message and not rollover to RXB1
     // Write RXB0CTRL
     MCP2515_WriteByte(MCP2515_RXB0CTRL, 0b01100000);
 #ifndef PCB_V2
     // Enable "Receive buffer full" interrupt on INT
     // Write CANINTE
-    MCP2515_WriteByte(MCP2515_CANINTE, 0b10100000);
+    MCP2515_WriteByte(MCP2515_CANINTE, 0b00000001);
 #endif
 #ifdef PCB_V2
     // Enable error interrupt on INT
     // Write CANINTE
     MCP2515_WriteByte(MCP2515_CANINTE, 0b00100000);
+    // Set RX0BF to act as buffer full interrupt
+    // Write BFPCTRL
+    MCP2515_WriteByte(0x0C, 0b00000101);
 #endif
     if (MCP2515_SetNormalMode() == false) return 1;
     return 0;
