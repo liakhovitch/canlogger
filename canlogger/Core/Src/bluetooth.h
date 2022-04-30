@@ -3,4 +3,6 @@
 
 int init_bt();
 
+int handle_bt();
+
 #endif //CANLOGGER_BLUETOOTH_H
