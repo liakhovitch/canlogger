@@ -57,6 +57,8 @@ int flush_storage(FATFS *FatFs){
     	}
     }
     //Clears buf2
+    f_close(&fil1);
+    fres = f_open(&fil2, "can2.csv", FA_WRITE | FA_OPEN_ALWAYS);
     if(fres == FR_OK){
     	fres = f_lseek(&fil2, f_size(&fil2));
     	if(fres != FR_OK){
@@ -66,19 +68,28 @@ int flush_storage(FATFS *FatFs){
     	else{
     	//Perform file write here.
     	//Finish by calling f_close on fil
-    		buf_state = buf_get(&buf2, &cell);
-    		while(buf_state == 0){
-    			fres = f_printf(&fil2, "%4x, %4x,", sid, eid);
-    			for(int i = 0; i < dat_len; i++){
-    				fres = f_printf(&fil2, "%2x", data[i]);
-    			}
-    			f_printf(&fil2, ",\n");
-    			buf_state = buf_get(&buf2, &cell);
+    	buf_state = buf_get(&buf2, &cell);
+    	f_printf(&fil2, "%d, \n", buf_state);
+    	while(buf_state == 0){
+    		parse_packet(&cell, &sid, &eid, data, &dat_len);
+    		fres = f_printf(&fil2, "test, test,\n");
+    		fres = f_printf(&fil2, "%4x, %4x,", sid, eid);
+    		for(int i = 0; i < dat_len; i++){
+    			fres = f_printf(&fil2, "%2x", data[i]);
     		}
-
+    		f_printf(&fil2, ",\n");
+    		buf_state = buf_get(&buf2, &cell);
+    		}
     	}
     }
-    f_close(&fil1);
+    else{
+        while (1) {
+            HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
+            HAL_Delay(500);
+            HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_SET);
+            HAL_Delay(500);
+        }
+    }
     f_close(&fil2);
     return 0;
 }
