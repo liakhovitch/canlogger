@@ -9,19 +9,11 @@
 extern struct circularBuffer buf1;
 extern struct circularBuffer buf2;
 
+//fres returns FR_OK(0) on
 int init_storage(FATFS *FatFs){
 	FRESULT fres;
-	HAL_Delay(1000);
+	HAL_Delay(100);
 	fres = f_mount(FatFs, "", 1);
-	if(fres != FR_OK){
-		while(1){
-		    HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
-		        HAL_Delay(100);
-		        HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_SET);
-		        HAL_Delay(100);
-
-		}
-	}
 	return fres;
 }
 
@@ -29,7 +21,8 @@ int init_storage(FATFS *FatFs){
 //Then runs until the circularBuffers are empty
 int flush_storage(FATFS *FatFs){
     FRESULT fres;
-    FIL fil;
+    FIL fil1;
+    FIL fil2;
     struct bufCell cell;
     int buf_state;
 
@@ -37,90 +30,107 @@ int flush_storage(FATFS *FatFs){
     uint16_t eid;
     uint8_t data[8];
     uint8_t dat_len;
-    uint8_t temp = 160;
-
-    char buffer[250];
-    UINT bytewrote;
-
-    test_generate_data();
 
     //Clears buf1
-    fres = f_open(&fil, "can1.csv", FA_WRITE | FA_OPEN_ALWAYS);
+    fres = f_open(&fil1, "can1.csv", FA_WRITE | FA_OPEN_ALWAYS);
+    fres = f_open(&fil2, "can2.csv", FA_WRITE | FA_OPEN_ALWAYS);
     if(fres == FR_OK){
-    	fres = f_lseek(&fil, f_size(&fil));
+    	fres = f_lseek(&fil1, f_size(&fil1));
     	if(fres != FR_OK){
-    		f_close(&fil);
+    		f_close(&fil1);
     		return fres;
     	}
-    	/*else{
-    	    BYTE readBuf[31];
-    	    UINT bytesWrote;
-    	    strncpy((char*)readBuf, "This is a test message\n", 30);
-    	    HAL_Delay(1000);
-    	    fres = f_write(&fil, readBuf, 30, &bytesWrote);
-    	    for(int x = 1; x<1000; x++){
-    	       	fres = f_write(&fil, readBuf, 30, &bytesWrote);
-    	    }
-
-    	}*/
     	else{
     	//Perform file write here.
     	//Finish by calling f_close on fil
     		buf_state = buf_get(&buf1, &cell);
-    		if(buf_state == 1){
-    		    while(1){
-    			HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
-    		        HAL_Delay(100);
-    		        HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_SET);
-    		        HAL_Delay(100);
-    		    }
-
-    		}
-    		else{
-
+    		while(buf_state == 0){
     			parse_packet(&cell, &sid, &eid, data, &dat_len);
-    			int len = sprintf(buffer, "%d, %d, %d, \n  ", sid, eid, temp);
-    			fres = f_write(&fil, buffer, len, &bytewrote);
+    			fres = f_printf(&fil1, "%4x, %4x,", sid, eid);
+    			for(int i = 0; i < dat_len; i++){
+    				fres = f_printf(&fil1, "%2x", data[i]);
+    			}
+    			f_printf(&fil1, ",\n");
+    			buf_state = buf_get(&buf1, &cell);
     		}
+
     	}
     }
-    f_close(&fil);
     //Clears buf2
-    fres = f_open(&fil, "can2.csv", FA_WRITE | FA_OPEN_ALWAYS);
     if(fres == FR_OK){
-    	fres = f_lseek(&fil, f_size(&fil));
+    	fres = f_lseek(&fil2, f_size(&fil2));
     	if(fres != FR_OK){
-    		f_close(&fil);
+    		f_close(&fil2);
     		return fres;
     	}
     	else{
-    	    	    BYTE readBuf[31];
-    	    	    UINT bytesWrote;
-    	    	    strncpy((char*)readBuf, "This is a test message\n", 30);
-    	    	    HAL_Delay(1000);
-    	    	    fres = f_write(&fil, readBuf, 30, &bytesWrote);
-    	    	    for(int x = 1; x<1000; x++){
-    	    	       	fres = f_write(&fil, readBuf, 30, &bytesWrote);
-    	    	    }
+    	//Perform file write here.
+    	//Finish by calling f_close on fil
+    		buf_state = buf_get(&buf2, &cell);
+    		while(buf_state == 0){
+    			fres = f_printf(&fil2, "%4x, %4x,", sid, eid);
+    			for(int i = 0; i < dat_len; i++){
+    				fres = f_printf(&fil2, "%2x", data[i]);
+    			}
+    			f_printf(&fil2, ",\n");
+    			buf_state = buf_get(&buf2, &cell);
+    		}
 
-    		//Perform file write here
-    		//Finish by calling f_close on fil
-    	/*	buf_state = buf_get(&buf2, &cell);
-    	    		if(buf_state == 1){
-    	    		    HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
-    	    		        HAL_Delay(100);
-    	    		        HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_SET);
-    	    		        HAL_Delay(100);
-    	    		}
-    	    		else{
-    	    			parse_packet(&cell, &sid, &eid, data, &dat_len);
-    	    			int len = sprintf(buffer, '%d,', sid);
-    	    			fres = f_write(&fil, buffer, len, &byteswrote);
-    	    		}
-    	}*/}
+    	}
     }
-    f_close(&fil);
+    f_close(&fil1);
+    f_close(&fil2);
     return 0;
+}
+
+int flush_buf(int can_ch_slct, FIL *fil){
+	FRESULT fres;
+
+	struct circularBuffer* buf_select;
+    struct bufCell cell;
+    int buf_state;
+
+    uint16_t sid;
+    uint16_t eid;
+    uint8_t data[8];
+    uint8_t dat_len;
+
+    //select can buffer
+    if(can_ch_slct == 1){
+    	buf_select = &buf1;
+    }
+    else if(can_ch_slct == 2){
+    	buf_select = &buf2;
+    }
+    else{
+    	return 1;
+    }
+
+    //Flush buffer
+    //Assumes file is open and points to end of the file
+	buf_state = buf_get(buf_select, &cell);
+	while(buf_state == 0){
+		parse_packet(&cell, &sid, &eid, data, &dat_len);
+		HAL_Delay(10);
+		fres = f_printf(fil, "%16b, %16b,", sid, eid);
+		for(int i = 0; i < dat_len; i++){
+			fres = f_printf(fil, "%8b", data[i]);
+		}
+		f_printf(fil, ",\n");
+		buf_state = buf_get(buf_select, &cell);
+	}
+	return fres;
+}
+
+
+
+
+
+int demount_storage(){
+    FRESULT fres;
+    HAL_Delay(100);
+	fres = f_mount(NULL, "", 0);
+    return fres;
 }
 
 // Generate some data and push it to buf1 and buf2. To be used for testing only.
