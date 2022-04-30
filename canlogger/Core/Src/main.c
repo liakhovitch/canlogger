@@ -34,6 +34,7 @@
 #include "globals.h"
 #include "test_gen_can.h"
 
+
 extern struct circularBuffer buf1;
 extern struct circularBuffer buf2;
 /* USER CODE END Includes */
@@ -56,6 +57,7 @@ extern struct circularBuffer buf2;
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+SPI_HandleTypeDef hspi1;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -113,6 +115,7 @@ int main(void)
   MX_FATFS_Init();
   /* USER CODE BEGIN 2 */
     /* INIT CODE HERE */
+
 #if defined(PRODUCTION_GEN) || defined(TEST_GEN_CAN)
     if (init_can()) Error_Handler();
 #endif
@@ -125,12 +128,14 @@ int main(void)
 #ifdef TEST_GEN_FIXED
     test_generate_data();
 #endif
-
+    
+    f_mount(NULL, "", 0);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
     while (1) {
+
 #ifdef TEST_GEN_CAN
         test_gen_can();
 #endif
@@ -140,6 +145,8 @@ int main(void)
 #ifdef TEST_OFFLOAD_UART
         test_offload_data();
 #endif
+
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
