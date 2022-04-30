@@ -138,6 +138,8 @@ void can_panic() {
 // Re-initialize CAN after CAN panic. To be called from main loop.
 void handle_can_panic(){
     if(can_panic_flag){
+        buf_clear(&buf1);
+        buf_clear(&buf2);
         init_can();
     }
 }
