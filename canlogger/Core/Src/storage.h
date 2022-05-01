@@ -29,6 +29,8 @@ int delete_file(uint8_t can_ch_slct);
 
 int demount_storage();
 
+void handle_unmount();
+
 void test_generate_data();
 
 #endif //CANLOGGER_STORAGE_H

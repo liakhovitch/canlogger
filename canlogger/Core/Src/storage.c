@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdarg.h>
+#include "can.h"
 
 
 extern struct circularBuffer buf1;
@@ -96,9 +97,6 @@ int flush_storage(){
 //Attempts to pop one value on the buffer for each buffer
 //Assumes pointers are at the end of file
 int pop_buf(){
-	FRESULT fres = 0;
-
-
     struct bufCell cell;
     int buf_state;
 
@@ -113,9 +111,9 @@ int pop_buf(){
 	buf_state = buf_get(&buf1, &cell);
 	if(buf_state == 0){
 		parse_packet(&cell, &sid, &eid, data, &dat_len);
-		fres = f_printf(&fil1, "%x, %x,", sid, eid);
+		f_printf(&fil1, "%x, %x,", sid, eid);
 		for(int i = 0; i < dat_len; i++){
-			fres = f_printf(&fil1, "%x", data[i]);
+			f_printf(&fil1, "%x", data[i]);
 		}
 		f_printf(&fil1, ",\n");
 	}
@@ -123,13 +121,13 @@ int pop_buf(){
 	buf_state = buf_get(&buf2, &cell);
 	if(buf_state == 0){
 		parse_packet(&cell, &sid, &eid, data, &dat_len);
-		fres = f_printf(&fil2, "%x, %x,", sid, eid);
+		f_printf(&fil2, "%x, %x,", sid, eid);
 		for(int i = 0; i < dat_len; i++){
-			fres = f_printf(&fil2, "%x", data[i]);
+			f_printf(&fil2, "%x", data[i]);
 		}
 		f_printf(&fil2, ",\n");
 	}
-	return fres;
+	return 0;
 }
 
 int read_storage(uint8_t can_ch_slct, BYTE * buffer, UINT btr, UINT * br){
@@ -211,6 +209,20 @@ int demount_storage(){
     HAL_Delay(100);
 	fres = f_mount(NULL, "", 0);
     return fres;
+}
+
+void handle_unmount() {
+    if(HAL_GPIO_ReadPin(USR_BTN_GPIO_Port, USR_BTN_Pin)){
+        can_panic();
+        close_fil();
+        demount_storage();
+        while (1) {
+            HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
+            HAL_Delay(20);
+            HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_SET);
+            HAL_Delay(1000);
+        }
+    }
 }
 
 // Generate some data and push it to buf1 and buf2. To be used for testing only.

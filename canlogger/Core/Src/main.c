@@ -145,6 +145,7 @@ int main(void)
         test_gen_can();
 #endif
 #ifdef PRODUCTION_OFFLOAD
+        handle_unmount();
         if (pop_buf()) Error_Handler();
         if (handle_bt()) Error_Handler();
 #endif
