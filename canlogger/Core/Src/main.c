@@ -124,6 +124,7 @@ int main(void)
 
 #ifdef PRODUCTION_OFFLOAD
     if (init_storage(&FatFs)) Error_Handler();
+    find_eof();
     if (init_bt()) Error_Handler();
 #endif
 #if defined(PRODUCTION_GEN) || defined(TEST_GEN_CAN)
