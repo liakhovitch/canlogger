@@ -121,12 +121,13 @@ int main(void)
   /* USER CODE BEGIN 2 */
     /* INIT CODE HERE */
 
-#if defined(PRODUCTION_GEN) || defined(TEST_GEN_CAN)
-    if (init_can()) Error_Handler();        if (handle_bt()) Error_Handler();
-#endif
+
 #ifdef PRODUCTION_OFFLOAD
     if (init_storage(&FatFs)) Error_Handler();
     if (init_bt()) Error_Handler();
+#endif
+#if defined(PRODUCTION_GEN) || defined(TEST_GEN_CAN)
+    if (init_can()) Error_Handler();
 #endif
     HAL_UART_Transmit(&huart1, (uint8_t *) "Canlogger v0.1 boot successful\n", 31, HAL_MAX_DELAY);
 
@@ -134,7 +135,6 @@ int main(void)
     test_generate_data();
 #endif
     
-    f_mount(NULL, "", 0);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -145,8 +145,8 @@ int main(void)
         test_gen_can();
 #endif
 #ifdef PRODUCTION_OFFLOAD
+        if (pop_buf()) Error_Handler();
         if (handle_bt()) Error_Handler();
-        if (flush_storage(&FatFs)) Error_Handler();
 #endif
 #ifdef PRODUCTION_GEN
         handle_can_panic();

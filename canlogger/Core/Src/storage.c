@@ -96,7 +96,7 @@ int flush_storage(){
 //Attempts to pop one value on the buffer for each buffer
 //Assumes pointers are at the end of file
 int pop_buf(){
-	FRESULT fres;
+	FRESULT fres = 0;
 
 
     struct bufCell cell;
