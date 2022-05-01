@@ -221,6 +221,9 @@ void handle_unmount() {
             HAL_Delay(20);
             HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_SET);
             HAL_Delay(1000);
+            if(!HAL_GPIO_ReadPin(USR_BTN_GPIO_Port, USR_BTN_Pin)){
+                NVIC_SystemReset();
+            }
         }
     }
 }
