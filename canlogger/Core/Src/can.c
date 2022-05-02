@@ -25,6 +25,15 @@ _Atomic volatile int dmalock2 = 0;
 unsigned int buf1_write_pos_new = 0;
 unsigned int buf2_write_pos_new = 0;
 
+const uint8_t configs[3][3] = {
+        {0x41, 0xFB, 0x86},
+        {0x00, 0xFA, 0x87},
+        {0x00, 0xD9, 0x82}
+};
+
+unsigned int can1_cfg = 2;
+unsigned int can2_cfg = 2;
+
 void disable_can_irq() {
     NVIC_DisableIRQ(EXTI0_IRQn);
     NVIC_DisableIRQ(EXTI1_IRQn);
@@ -37,20 +46,39 @@ void enable_can_irq() {
     NVIC_EnableIRQ(EXTI9_5_IRQn);
 }
 
-int init_single_mcp2515() {
+// Clear errors and interrupt flags on a single MCP2515. Expects library to be set to use the right interface.
+void clear_errors() {
+    // Clear all pending errors
+    MCP2515_WriteByte(MCP2515_EFLG, 0b00000000);
+    // Clear error interrupt without clearing buffer full interrupt
+    MCP2515_BitModify(MCP2515_CANINTF, 0b00100000, 0b00000000);
+}
+
+// Set the CAN controller that the MCP2515 library will interact with.
+// if i==0, we use CAN1. If i==1, we use CAN2.
+void set_mcp2515_iface(unsigned char channel) {
+    if (!channel) {
+        SPI_CAN = &hspi2;
+        SPI_PORT = CAN1_CS_GPIO_Port;
+        SPI_PIN = CAN1_CS_Pin;
+    } else {
+        SPI_CAN = &hspi3;
+        SPI_PORT = CAN2_CS_GPIO_Port;
+        SPI_PIN = CAN2_CS_Pin;
+    }
+}
+
+int init_single_mcp2515(unsigned int channel) {
+    set_mcp2515_iface(channel);
     // Run 'CANSPI' library functions to initialize MCP2515s
     // Reset device
     MCP2515_Reset();
     // Put MCP2515 into config mode for custom initialization steps
     if (MCP2515_SetConfigMode() == false) return 1;
-    // Set CNF timing registers (500Khz baud rate with 20MHz crystal)
-    //MCP2515_WriteByte(MCP2515_CNF1, 0x00);
-    //MCP2515_WriteByte(MCP2515_CNF2, 0xFA);
-    //MCP2515_WriteByte(MCP2515_CNF3, 0x87);
-    // 1MHz
-    MCP2515_WriteByte(MCP2515_CNF1, 0x00);
-    MCP2515_WriteByte(MCP2515_CNF2, 0xD9);
-    MCP2515_WriteByte(MCP2515_CNF3, 0x82);
+    unsigned int config = channel ? can2_cfg : can1_cfg;
+    MCP2515_WriteByte(MCP2515_CNF1, configs[config][0]);
+    MCP2515_WriteByte(MCP2515_CNF2, configs[config][1]);
+    MCP2515_WriteByte(MCP2515_CNF3, configs[config][2]);
     // Set RXB0 to receive any message and not rollover to RXB1
     // Write RXB0CTRL
     MCP2515_WriteByte(MCP2515_RXB0CTRL, 0b01100000);
@@ -69,28 +97,6 @@ int init_single_mcp2515() {
 #endif
     if (MCP2515_SetNormalMode() == false) return 1;
     return 0;
-}
-
-// Clear errors and interrupt flags on a single MCP2515. Expects library to be set to use the right interface.
-void clear_errors() {
-    // Clear all pending errors
-    MCP2515_WriteByte(MCP2515_EFLG, 0b00000000);
-    // Clear error interrupt without clearing buffer full interrupt
-    MCP2515_BitModify(MCP2515_CANINTF, 0b00100000, 0b00000000);
-}
-
-// Set the CAN controller that the MCP2515 library will interact with.
-// if i==0, we use CAN1. If i==1, we use CAN2.
-void set_mcp2515_iface(unsigned char i) {
-    if (!i) {
-        SPI_CAN = &hspi2;
-        SPI_PORT = CAN1_CS_GPIO_Port;
-        SPI_PIN = CAN1_CS_Pin;
-    } else {
-        SPI_CAN = &hspi3;
-        SPI_PORT = CAN2_CS_GPIO_Port;
-        SPI_PIN = CAN2_CS_Pin;
-    }
 }
 
 // Clears errors and interrupt flags on both MCP2515s
@@ -112,20 +118,15 @@ int init_can() {
     // Clear synchronization state
     dmalock1 = 0;
     dmalock2 = 0;
-    // Note: this is an ugly way to do things, but it lets the MCP2515 library work with multiple chips with only
-    //       minimal modification to the library.
-    // Set MCP2515 library to use SPI2
-    set_mcp2515_iface(0);
     // Init CAN1 controller
-    if (init_single_mcp2515()) return 1;
-    // Set MCP2515 library to use SPI3
-    set_mcp2515_iface(1);
+    if (init_single_mcp2515(0)) return 1;
     // Init CAN2 controller
-    if (init_single_mcp2515()) return 1;
+    if (init_single_mcp2515(1)) return 1;
     // Don't enable interrupts if we're using some other form of data producer
 #ifdef PRODUCTION_GEN
     enable_can_irq();
 #endif
+    can_panic_flag = 0;
     return 0;
 }
 
@@ -133,6 +134,8 @@ int init_can() {
 void can_panic() {
     can_panic_flag = 1;
     disable_can_irq();
+    HAL_SPI_Abort_IT(&hspi2);
+    HAL_SPI_Abort_IT(&hspi3);
 }
 
 // Re-initialize CAN after CAN panic. To be called from main loop.
@@ -239,6 +242,14 @@ void handle_dma_done2() {
     // If all DMAs are finished, re-enable EXTI interrupts so that we can handle more incoming data
     if (!dmalock1) {
         enable_can_irq();
+    }
+}
+
+void set_can_cfg(unsigned int channel, unsigned int cfg){
+    if(!channel){
+        can1_cfg = cfg;
+    }else{
+        can2_cfg = cfg;
     }
 }
 

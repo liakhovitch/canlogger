@@ -12,7 +12,7 @@
 //#define TEST_OFFLOAD_UART
 
 // Uncomment if using PCB rev 2
-//#define PCB_V2
+#define PCB_V2
 
 // Size of data buffers, in data packets (14 bytes each)
 #define BUFF_SIZE 200
