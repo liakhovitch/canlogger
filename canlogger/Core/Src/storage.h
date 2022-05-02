@@ -15,15 +15,15 @@ int flush_storage();
 //Assume file pointers are at eof
 int pop_buf();
 
-int close_fil();
+int close_fil(unsigned int can_ch_slct);
 
-int open_fil();
+int open_fil(unsigned int can_ch_slct);
 
 int find_eof();
 
 int read_storage(uint8_t can_ch_slct, BYTE * buffer, UINT btr, UINT * br);
 
-int get_file_size(uint8_t can_ch_slct);
+uint32_t get_file_size(uint8_t can_ch_slct);
 
 int delete_file(uint8_t can_ch_slct);
 

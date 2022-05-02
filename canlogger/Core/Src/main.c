@@ -124,7 +124,6 @@ int main(void)
 
 #ifdef PRODUCTION_OFFLOAD
     if (init_storage(&FatFs)) Error_Handler();
-    find_eof();
     if (init_bt()) Error_Handler();
 #endif
 #if defined(PRODUCTION_GEN) || defined(TEST_GEN_CAN)
@@ -224,7 +223,14 @@ void Error_Handler(void)
     /* User can add his own implementation to report the HAL error return state */
 
     // Current error handler is a fast eternal blinky.
+    uint8_t switch_state = 0;
     while (1) {
+        if(!HAL_GPIO_ReadPin(USR_BTN_GPIO_Port, USR_BTN_Pin) && switch_state == 1){
+            HAL_NVIC_SystemReset();
+        }
+        if(HAL_GPIO_ReadPin(USR_BTN_GPIO_Port, USR_BTN_Pin) && switch_state == 0){
+            switch_state = 1;
+        }
         HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
         HAL_Delay(100);
         HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_SET);

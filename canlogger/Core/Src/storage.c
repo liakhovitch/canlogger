@@ -16,20 +16,21 @@ static char can2[20] = "can2.csv";
 
 //fres returns FR_OK(0) on
 int init_storage(FATFS *FatFs){
-	FRESULT fres;
+	volatile FRESULT fres;
 	HAL_Delay(100);
 	fres = f_mount(FatFs, "", 1);
 	if(fres != FR_OK){
 		return fres;
 	}
-	fres = f_open(&fil1, can1, FA_WRITE | FA_OPEN_ALWAYS);
+	fres = f_open(&fil1, can1, FA_WRITE | FA_READ | FA_OPEN_ALWAYS);
 	if(fres != FR_OK){
 		return fres;
 	}
-	fres = f_open(&fil2, can2, FA_WRITE | FA_OPEN_ALWAYS);
+	fres = f_open(&fil2, can2, FA_WRITE | FA_READ | FA_OPEN_ALWAYS);
 	if(fres != FR_OK){
 		return fres;
 	}
+    find_eof();
 	return 0;
 }
 
@@ -57,9 +58,11 @@ int flush_storage(){
     	buf_state = buf_get(&buf1, &cell);
     	while(buf_state == 0){
     		parse_packet(&cell, &sid, &eid, data, &dat_len);
-    		fres = f_printf(&fil1, "%x,%x,", sid, eid);
+
+    		fres = f_printf(&fil1, "%u,%u,", sid, eid);
+
     		for(int i = 0; i < dat_len; i++){
-    			fres = f_printf(&fil1, "%x", data[i]);
+    			fres = f_printf(&fil1, "%u", data[i]);
     		}
     		f_printf(&fil1, ",\n");
     		buf_state = buf_get(&buf1, &cell);
@@ -76,9 +79,10 @@ int flush_storage(){
     	buf_state = buf_get(&buf2, &cell);
     	while(buf_state == 0){
     		parse_packet(&cell, &sid, &eid, data, &dat_len);
-    		fres = f_printf(&fil2, "%x,%x,", sid, eid);
+    		fres = f_printf(&fil2, "%u,%u,", sid, eid);
+
     		for(int i = 0; i < dat_len; i++){
-    			fres = f_printf(&fil2, "%x", data[i]);
+    			fres = f_printf(&fil2, "%u", data[i]);
     		}
     		f_printf(&fil2, ",\n");
     		buf_state = buf_get(&buf2, &cell);
@@ -111,9 +115,11 @@ int pop_buf(){
 	buf_state = buf_get(&buf1, &cell);
 	if(buf_state == 0){
 		parse_packet(&cell, &sid, &eid, data, &dat_len);
-		f_printf(&fil1, "%x,%x,", sid, eid);
+
+		f_printf(&fil1, "%u,%u,", sid, eid);
+
 		for(int i = 0; i < dat_len; i++){
-			f_printf(&fil1, "%x", data[i]);
+			f_printf(&fil1, "%u", data[i]);
 		}
 		f_printf(&fil1, ",\n");
 	}
@@ -121,9 +127,10 @@ int pop_buf(){
 	buf_state = buf_get(&buf2, &cell);
 	if(buf_state == 0){
 		parse_packet(&cell, &sid, &eid, data, &dat_len);
-		f_printf(&fil2, "%x,%x,", sid, eid);
+
+		f_printf(&fil2, "%u,%u,", sid, eid);
 		for(int i = 0; i < dat_len; i++){
-			f_printf(&fil2, "%x", data[i]);
+			f_printf(&fil2, "%u", data[i]);
 		}
 		f_printf(&fil2, ",\n");
 	}
@@ -132,7 +139,7 @@ int pop_buf(){
 
 int read_storage(uint8_t can_ch_slct, BYTE * buffer, UINT btr, UINT * br){
 	FIL *fil;
-	FRESULT fres;
+	volatile FRESULT fres;
 
 	if(can_ch_slct == 0){
 		fil = &fil1;
@@ -147,9 +154,9 @@ int read_storage(uint8_t can_ch_slct, BYTE * buffer, UINT btr, UINT * br){
 
 
 //File pointer must be open to work
-int get_file_size(uint8_t can_ch_slct){
+uint32_t get_file_size(uint8_t can_ch_slct){
 	//Simple f_size() wrapper;
-	int file_size = 0;
+	uint32_t file_size = 0;
 	if(can_ch_slct == 0){
 		file_size = f_size(&fil1);
 	}
@@ -161,31 +168,37 @@ int get_file_size(uint8_t can_ch_slct){
 
 int delete_file(uint8_t can_ch_slct){
 	FRESULT fres;
+    close_fil(can_ch_slct);
 	if(can_ch_slct == 0){
 		fres = f_unlink(can1);
 	}
 	else if(can_ch_slct == 1){
 		fres = f_unlink(can2);
 	}
+    open_fil(can_ch_slct);
+    find_eof();
 	return fres;
 }
 
-int close_fil(){
-	f_close(&fil1);
-	f_close(&fil2);
+int close_fil(unsigned int can_ch_slct){
+    if(!can_ch_slct) f_close(&fil1);
+	else f_close(&fil2);
 	return 0;
 }
 
-int open_fil(){
+int open_fil(unsigned int can_ch_slct){
 	FRESULT fres;
-	fres = f_open(&fil1, can1, FA_WRITE | FA_OPEN_ALWAYS);
-	if(fres != FR_OK){
-		return fres;
-	}
-	fres = f_open(&fil2, can2, FA_WRITE | FA_OPEN_ALWAYS);
-	if(fres != FR_OK){
-		return fres;
-	}
+    if(!can_ch_slct){
+        fres = f_open(&fil1, can1, FA_WRITE | FA_READ | FA_OPEN_ALWAYS);
+        if(fres != FR_OK){
+            return fres;
+        }
+    }else{
+        fres = f_open(&fil2, can2, FA_WRITE | FA_READ | FA_OPEN_ALWAYS);
+        if(fres != FR_OK){
+            return fres;
+        }
+    }
 	return 0;
 }
 
@@ -214,7 +227,8 @@ int demount_storage(){
 void handle_unmount() {
     if(HAL_GPIO_ReadPin(USR_BTN_GPIO_Port, USR_BTN_Pin)){
         can_panic();
-        close_fil();
+        close_fil(0);
+        close_fil(1);
         demount_storage();
         while (1) {
             HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
