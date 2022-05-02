@@ -43,7 +43,7 @@ int flush_storage(){
     int buf_state;
 
     uint16_t sid;
-    uint16_t eid;
+    uint32_t eid;
     uint8_t data[8];
     uint8_t dat_len;
 
@@ -60,9 +60,9 @@ int flush_storage(){
     		parse_packet(&cell, &sid, &eid, data, &dat_len);
     		fres = f_printf(&fil1, "%u,%u,", sid, eid);
     		for(int i = 0; i < dat_len; i++){
-    			fres = f_printf(&fil1, "%u", data[i]);
+    			fres = f_printf(&fil1, "%u,", data[i]);
     		}
-    		f_printf(&fil1, ",\n");
+    		f_printf(&fil1, "\n");
     		buf_state = buf_get(&buf1, &cell);
     	}
    	}
@@ -79,9 +79,9 @@ int flush_storage(){
     		parse_packet(&cell, &sid, &eid, data, &dat_len);
     		fres = f_printf(&fil2, "%u,%u,", sid, eid);
     		for(int i = 0; i < dat_len; i++){
-    			fres = f_printf(&fil2, "%u", data[i]);
+    			fres = f_printf(&fil2, "%u,", data[i]);
     		}
-    		f_printf(&fil2, ",\n");
+    		f_printf(&fil2, "\n");
     		buf_state = buf_get(&buf2, &cell);
     	}
     }
@@ -102,7 +102,7 @@ int pop_buf(){
     int buf_state;
 
     uint16_t sid;
-    uint16_t eid;
+    uint32_t eid;
     uint8_t data[8];
     uint8_t dat_len;
 
@@ -114,9 +114,9 @@ int pop_buf(){
 		parse_packet(&cell, &sid, &eid, data, &dat_len);
 		f_printf(&fil1, "%u,%u,", sid, eid);
 		for(int i = 0; i < dat_len; i++){
-			f_printf(&fil1, "%u", data[i]);
+			f_printf(&fil1, "%u,", data[i]);
 		}
-		f_printf(&fil1, ",\n");
+		f_printf(&fil1, "\n");
 	}
 
 	buf_state = buf_get(&buf2, &cell);
@@ -124,9 +124,9 @@ int pop_buf(){
 		parse_packet(&cell, &sid, &eid, data, &dat_len);
 		f_printf(&fil2, "%u,%u,", sid, eid);
 		for(int i = 0; i < dat_len; i++){
-			f_printf(&fil2, "%u", data[i]);
+			f_printf(&fil2, "%u,", data[i]);
 		}
-		f_printf(&fil2, ",\n");
+		f_printf(&fil2, "\n");
 	}
 	return 0;
 }

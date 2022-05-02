@@ -7,7 +7,7 @@ _Atomic volatile unsigned int can_panic_flag = 0;
 uint8_t buf1_array[BUFF_SIZE * sizeof(struct bufCell)];
 struct circularBuffer buf1 = {
         .start_ptr = buf1_array,
-        .len = BUFF_SIZE + sizeof(struct bufCell),
+        .len = BUFF_SIZE * sizeof(struct bufCell),
         .increment = sizeof(struct bufCell),
         .read_pos = 0,
         .write_pos = 0
@@ -16,7 +16,7 @@ struct circularBuffer buf1 = {
 uint8_t buf2_array[BUFF_SIZE * sizeof(struct bufCell)];
 struct circularBuffer buf2 = {
         .start_ptr = buf2_array,
-        .len = BUFF_SIZE + sizeof(struct bufCell),
+        .len = BUFF_SIZE * sizeof(struct bufCell),
         .increment = sizeof(struct bufCell),
         .read_pos = 0,
         .write_pos = 0
@@ -59,6 +59,7 @@ void buf_clear(struct circularBuffer *buf){
     buf->write_pos = 0;
 }
 
+//TODO: Fix this to correctly construct identifiers
 void construct_packet(struct bufCell* cell, uint16_t sid, uint16_t eid, const uint8_t* dat, uint8_t dat_len) {
     cell->STATUS   = 0;
     cell->RXB0SIDH = (uint8_t)(sid>>8);
@@ -76,9 +77,16 @@ void construct_packet(struct bufCell* cell, uint16_t sid, uint16_t eid, const ui
     cell->RXB0D7   = dat_len > 7 ? dat[7] : 0;
 }
 
-void parse_packet(struct bufCell* cell, uint16_t* sid, uint16_t* eid, uint8_t dat[8], uint8_t* dat_len) {
-    *sid = ((uint16_t)cell->RXB0SIDH << 8) | (uint16_t)(cell->RXB0SIDL);
-    *eid = ((uint16_t)cell->RXB0EID8 << 8) | (uint16_t)(cell->RXB0EID0);
+void parse_packet(struct bufCell* cell, uint16_t* sid, uint32_t* eid, uint8_t dat[8], uint8_t* dat_len) {
+    *sid = 0;
+    *eid = 0;
+    *sid = (((uint16_t)(cell->RXB0SIDH)) << 3) | (((uint16_t)(cell->RXB0SIDL)) >> 5);
+    if(((cell->RXB0SIDL) & 0b00001000) == 0b00001000) {
+        *eid = (((uint32_t)(cell->RXB0SIDL & 0b00000011)) << 16) | (((uint32_t)cell->RXB0EID8) << 8) | (uint32_t)(cell->RXB0EID0);
+    }
+    else {
+        *eid = 0;
+    }
     *dat_len = cell->RXB0DLC & 0x0F;
     dat[0] = *dat_len > 0 ? cell->RXB0D0 : 0;
     dat[1] = *dat_len > 1 ? cell->RXB0D1 : 0;

@@ -15,7 +15,7 @@
 #define PCB_V2
 
 // Size of data buffers, in data packets (14 bytes each)
-#define BUFF_SIZE 200
+#define BUFF_SIZE 3500
 
 struct circularBuffer {
     uint8_t * start_ptr;
@@ -56,6 +56,6 @@ void buf_clear(struct circularBuffer *buf);
 
 void construct_packet(struct bufCell* cell, uint16_t sid, uint16_t eid, const uint8_t* dat, uint8_t dat_len);
 
-void parse_packet(struct bufCell* cell, uint16_t* sid, uint16_t* eid, uint8_t dat[8], uint8_t* dat_len);
+void parse_packet(struct bufCell* cell, uint16_t* sid, uint32_t* eid, uint8_t dat[8], uint8_t* dat_len);
 
 #endif //CANLOGGER_GLOBALS_H

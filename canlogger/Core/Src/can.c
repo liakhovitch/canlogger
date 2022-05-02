@@ -118,6 +118,8 @@ int init_can() {
     // Clear synchronization state
     dmalock1 = 0;
     dmalock2 = 0;
+    buf1_write_pos_new = 0;
+    buf2_write_pos_new = 0;
     // Init CAN1 controller
     if (init_single_mcp2515(0)) return 1;
     // Init CAN2 controller
@@ -227,6 +229,10 @@ void handle_dma_done1() {
     dmalock1 = 0;
     // If all DMAs are finished, re-enable EXTI interrupts so that we can handle more incoming data
     if (!dmalock2) {
+        for(volatile int i = 0; i < 10; i++);
+        HAL_NVIC_ClearPendingIRQ(EXTI0_IRQn);
+        HAL_NVIC_ClearPendingIRQ(EXTI1_IRQn);
+        HAL_NVIC_ClearPendingIRQ(EXTI9_5_IRQn);
         enable_can_irq();
     }
 }
@@ -241,6 +247,10 @@ void handle_dma_done2() {
     dmalock2 = 0;
     // If all DMAs are finished, re-enable EXTI interrupts so that we can handle more incoming data
     if (!dmalock1) {
+        for(volatile int i = 0; i < 10; i++);
+        HAL_NVIC_ClearPendingIRQ(EXTI0_IRQn);
+        HAL_NVIC_ClearPendingIRQ(EXTI1_IRQn);
+        HAL_NVIC_ClearPendingIRQ(EXTI9_5_IRQn);
         enable_can_irq();
     }
 }
