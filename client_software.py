@@ -5,58 +5,52 @@ import struct
 import os
 
 # this port address is for the serial tx/rx pins on the GPIO header
-SERIAL_PORT = 'COM7'
+SERIAL_PORT = 'COM10'
 # be sure to set this to the same rate used on the Arduino
 # test comment
 SERIAL_RATE = 9600
 
-
 def can_1():
     ser = serial.Serial(SERIAL_PORT, SERIAL_RATE)
-    ser.write(b'read can1\n')
-    # print(struct.unpack('<l', ser.read(4)))
-    # length, = (struct.unpack('<i', ser.read(4)))
-    #x = length.decode('utf-8')
-    # print(x)
-    length = (int(ser.read(4), 2))
+
+    message = "read can1\n"
+    ser.write(message.encode('ascii'))
+
+    text = ser.read(4)
+    #length, = (struct.unpack('l', ser.read(4)))
+    length = int.from_bytes(text, byteorder='big', signed=False)
     print(length)
 
-    reading = ser.read(100).decode('utf-8')
-    print(repr(reading))
-    print("after")
+    reading = ser.read(length).decode('ascii')
+    x = reading.replace('\r', '')
+    print(repr(x))
 
-    start = 0
-    slice = length
     with open("can_1.csv", "a") as f:
-        while slice < len(reading):
-            writer = csv.writer(f, delimiter=",")
-            writer.writerow([time.time(), reading[start:slice]])
-            start += length
-            slice += length
-    os.chmod("test_data.csv", 0o777)
+        f.write(x)
+        f.close()
+
+    os.chmod("can_1.csv", 0o777)
 
 
 def can_2():
     ser = serial.Serial(SERIAL_PORT, SERIAL_RATE)
-    ser.write(b'read can2\n')
-    # print(struct.unpack('i', ser.read(4)))
-    # length, = (struct.unpack('i', ser.read(4)))
-    length = (int(ser.read(4), 2))
+    message = "read can2\n"
+    ser.write(message.encode('ascii'))
+
+    text = ser.read(4)
+    #length, = (struct.unpack('l', ser.read(4)))
+    length = int.from_bytes(text, byteorder='big', signed=False)
     print(length)
 
-    reading = ser.read(100).decode('utf-8')
-    print(repr(reading))
-    print("after")
+    reading = ser.read(length).decode('ascii')
+    x = reading.replace('\r', '')
+    print(repr(x))
 
-    start = 0
-    slice = length
     with open("can_2.csv", "a") as f:
-        while slice < len(reading):
-            writer = csv.writer(f, delimiter=",")
-            writer.writerow([time.time(), reading[start:slice]])
-            start += length
-            slice += length
-    os.chmod("test_data.csv", 0o777)
+        f.write(x)
+        f.close()
+
+    os.chmod("can_2.csv", 0o777)
 
 
 def delete_can1():
@@ -83,9 +77,9 @@ def set_baud():
     rate = input()
 
     message = "baud can" + num + " " + rate + "\n"
-    ser.write(message.encode('utf-8'))
+    ser.write(message.encode('ascii'))
 
-    ans = ser.readline().decode('utf-8')
+    ans = ser.readline().decode('ascii')
     if ans == 'ok\n':
         print("success")
 
